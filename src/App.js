@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from 'react'
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import Home from './pages/Home'
+import Layout from './container/Layout'
+import ScrollRestore from './components/ScrollRestore'
+import Contact from './pages/Contact'
+import About from './pages/About'
+import NotFound from './pages/NotFound'
+import Departments from './pages/Departments'
+import DepartmentDetailed from './pages/DepartmentDetailed'
+import { GlobalStyles } from './styles/GlobalStyles'
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   <>
+   <Router>
+<GlobalStyles/>
+     <Layout>
+<ScrollRestore/>
+       <Switch>
+         <Route exact component={Home} path='/'/>
+         <Route exact component={Contact} path='/contact'/>
+         <Route exact component={About} path='/about'/>
+         <Route exact component={Departments} path='/department'/>
+         <Route exact component={DepartmentDetailed} path='/department/:slug'/>
+         <Route exact component={Home} path='/'/>
+         <Route component={NotFound} />
+       </Switch>
+     </Layout>
+   </Router>
+
+
+   </>
+  )
 }
 
-export default App;
+export default App
