@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { grabboColors } from '../styles/ColorStyles'
-import { smallText } from '../styles/TextStyles'
+import { bodyText } from '../styles/TextStyles'
 import FooterTop from './FooterTop'
 
 const Footer = () => {
@@ -35,7 +35,7 @@ justify-content: center;
 align-items: center;
 padding: 10px 25px;
 `
-const Copy = styled(smallText)`
+const Copy = styled(bodyText)`
 color:  ${grabboColors.white};
 text-align: center;
 `

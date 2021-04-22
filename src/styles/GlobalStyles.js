@@ -1,26 +1,29 @@
 import { createGlobalStyle } from "styled-components";
-// import Bold from '../fonts/Bold.otf'
-// import Regular from '../fonts/Regular.otf'
-// import Light from '../fonts/Light.otf'
-// import Medium from '../fonts/Medium.otf'
+import Bold from '../fonts/Gilroy-Bold.ttf'
+import Regular from '../fonts/Gilroy-Regular.ttf'
+import Light from '../fonts/Gilroy-Light.ttf'
+import Medium from '../fonts/Gilroy-Medium.ttf'
 export const GlobalStyles = createGlobalStyle`
+a{
+  text-decoration: none;
+}
 
-${'' /* @font-face {
-  font-family: "Usual Bold";
+@font-face {
+  font-family: "Gilroy Bold";
   src: url(${Bold});
 }
 @font-face {
-  font-family: "Usual Medium";
+  font-family: "Gilroy Medium";
   src: url(${Medium});
 }
 @font-face {
-  font-family: "Usual Regular";
+  font-family: "Gilroy Regular";
   src: url(${Regular});
 }
 @font-face {
-  font-family: "Usual Light";
+  font-family: "Gilroy Light";
   src: url(${Light});
-} */}
+}
 
 body{
     overflow-x:hidden;
