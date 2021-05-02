@@ -89,3 +89,32 @@ text-align: center;
     font-size: 16px;
 }
 `
+
+export const formButton = styled.button`
+height: 58px;
+max-width: 150px;
+width: 100%;
+background: ${grabboColors.primary};
+color: ${grabboColors.white};
+display: flex;
+justify-content: center;
+align-items: center;
+outline: none;
+border: none;
+font-family: "Gilroy Medium";
+font-size: 17px;
+font-style: normal;
+font-weight: 400;
+cursor: pointer;
+line-height: 1;
+text-align: center;
+:hover{
+    border: 1px solid  ${grabboColors.primary};
+    background: ${grabboColors.white};
+    transition: 0.4s ease-in;
+    color: ${grabboColors.primary};
+}
+@media only screen and (max-width: 650px){
+    font-size: 16px;
+}
+`

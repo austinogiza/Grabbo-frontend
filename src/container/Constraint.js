@@ -7,6 +7,18 @@ width: 100%;
 margin: 0 auto;
 height: 100%;
 `
+export const LargeContainer = styled.div`
+max-width: 1200px;
+width: 100%;
+margin: 0 auto;
+height: 100%;
+`
+export const BigContainer = styled.div`
+max-width: 1300px;
+width: 100%;
+margin: 0 auto;
+height: 100%;
+`
 
 export const Photo = styled.img`
 width: 100%;

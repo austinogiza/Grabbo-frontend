@@ -27,10 +27,9 @@ const ContactHero = ({goTo}) => {
 
 
 const Body = styled.div`
-min-height: 300px;
+min-height: 200px;
 width: 100%;
 padding: 10px 24px;
-
 display: flex;
 flex-direction: column;
 align-items: center;

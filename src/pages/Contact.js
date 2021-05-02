@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import ContactHero from '../components/contact/ContactHero'
 import ContactMain from '../components/contact/ContactMain'
+import ContactSection from '../components/contact/ContactSection'
 import Message from '../components/Message'
 
 const Contact = () => {
@@ -15,6 +16,7 @@ document.title = "Contact Us - Grabbo Fertility Clinic"
 
 <ContactHero/>
 <ContactMain/>
+<ContactSection/>
 
 
            </BodyContainer>
