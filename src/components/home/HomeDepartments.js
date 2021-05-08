@@ -42,7 +42,7 @@ align-items: center;
 justify-content: center;
 width: 100%;
 margin: 40px 0;
-padding: 10px 24px;
+padding: 10px 40px;
 background: ${grabboColors.dark};
 `
 const Title = styled.div`

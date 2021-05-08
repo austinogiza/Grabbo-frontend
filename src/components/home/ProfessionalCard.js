@@ -34,7 +34,7 @@ background: ${grabboColors.white};
 align-items: center;
 position: relative;
 border-radius: 20px;
-padding: 10px 32px;
+
 `
 const Name = styled(tinyHeader)`
 position: relative;

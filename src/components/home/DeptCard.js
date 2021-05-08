@@ -26,7 +26,7 @@ background: url(${props => props.img})  no-repeat center center/cover;
 align-items: center;
 position: relative;
 border-radius: 20px;
-padding: 10px 32px;
+padding: 10px 40px;
 
 `
 const Name = styled(smallHeader)`

@@ -26,7 +26,7 @@ const HomeMessage = () => {
 const Body = styled.div`
 min-height: 500px;
 width: 100%;
-padding: 10px 24px;
+padding: 10px 40px;
 position: relative;
 display: flex;
 flex-direction: column;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import styled from 'styled-components'
 import Gallery from '../components/home/Gallery'
 import Goal from '../components/home/Goal'
@@ -11,6 +11,10 @@ import Specialty from '../components/home/Specialty'
 // import Testimonials from '../components/home/Testimonials'
 import {Container} from '../container/Constraint'
 const Home = () => {
+
+     useEffect(()=>{
+          document.title = "Home - Grabbo Fertility Clinic"
+     },[])
     return (
      <Body>
      <HomeHero/>
@@ -39,7 +43,7 @@ flex-direction: column;
 align-items: center;
 `
 const LargeContainer = styled(Container)`
-padding: 10px 24px;
+padding: 10px 40px;
 display: flex;
 flex-direction: column;
 

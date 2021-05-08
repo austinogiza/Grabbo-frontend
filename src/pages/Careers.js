@@ -38,6 +38,7 @@ width: 100%;
 height: 100%;
 display: flex;
 flex-direction: column;
+
 `
 const BodyContainer = styled.div`
 display: flex;
@@ -46,6 +47,7 @@ max-width: 1300px;
 width: 100%;
 margin: 0 auto;
 height: 100%;
+padding: 10px 40px;
 `
 
 export default Careers

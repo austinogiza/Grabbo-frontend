@@ -52,6 +52,7 @@ align-items: center;
 const Icon = styled(BsCheck)`
 height: 24px;
 width: 24px;
+color: ${grabboColors.primary};
 `
 const Text = styled.div`
 display: flex;

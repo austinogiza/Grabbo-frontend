@@ -73,7 +73,7 @@ width: 100%;
 height: 100%;
 display: grid;
 grid-template-columns: repeat(3,1fr);
-grid-gap: 24px;
+grid-gap: 16px;
 place-items: center;
 @media only screen and (max-width: 850px){
     grid-template-columns: repeat(2,1fr);

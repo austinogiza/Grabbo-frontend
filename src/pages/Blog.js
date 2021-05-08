@@ -86,7 +86,7 @@ const Container = styled(BigContainer)`
 display: flex;
 flex-direction: column;
 width: 100%;
-padding: 10px 24px;
+padding: 10px 40px;
 
 `
 const Header = styled.div`

@@ -15,16 +15,16 @@ line-height: 1.5;
 `
 
 export const bodyText = styled.p`
-font-family: "Gilroy Light";
-font-size: 17px;
+font-family: "Gilroy Regular";
+font-size: 19px;
 font-style: normal;
-font-weight: 300;
-line-height: 1.5;
+font-weight: 400;
+line-height: 1.6;
 
 
 @media only screen and (max-width: 650px){
 
-    font-size: 16px;
+    font-size: 17px;
 }
 `
 
@@ -143,10 +143,10 @@ line-height: 1.5;
 `
 
 export const tinyCaption = styled.h2`
-font-family: "Gilroy Light";
+font-family: "Gilroy Medium";
 font-size: 14px;
 font-style: normal;
-font-weight: 300;
+font-weight: 500;
 line-height: 1.5;
 @media only screen and (max-width: 650px){
 

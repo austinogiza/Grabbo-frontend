@@ -55,7 +55,7 @@ justify-content: center;
 `
 const Cover = styled.div`
 width: 100%;
-max-width: 980px;
+max-width: 900px;
 height: 100%;
 display: flex;
 flex-direction: column;
