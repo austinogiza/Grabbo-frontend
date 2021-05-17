@@ -79,9 +79,13 @@ const BodyCover = styled.div`
 height: 100%;
 width: 100%;
 display: grid;
-grid-template-columns: repeat(3,1fr);
+grid-template-columns: 2fr 1fr 1fr;
 grid-gap: 80px;
 
+@media only screen and (max-width: 1050px){
+    grid-template-columns: repeat(2,1fr);
+grid-gap: 24px;
+}
 @media only screen and (max-width: 650px){
     grid-template-columns: repeat(1,1fr);
 grid-gap: 24px;

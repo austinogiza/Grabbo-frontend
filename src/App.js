@@ -11,6 +11,7 @@ import DepartmentDetailed from './pages/DepartmentDetailed'
 import { GlobalStyles } from './styles/GlobalStyles'
 import Careers from './pages/Careers'
 import Blog from './pages/Blog'
+import BlogDetailed from './pages/BlogDetailed'
 const App = () => {
   return (
    <>
@@ -26,7 +27,7 @@ const App = () => {
          <Route exact component={Departments} path='/departments'/>
          <Route exact component={Careers} path='/careers'/>
          <Route exact component={DepartmentDetailed} path='/department/slug'/>
-         <Route exact component={Home} path='/'/>
+         <Route exact component={BlogDetailed} path='/blog/slug'/>
          <Route component={NotFound} />
        </Switch>
      </Layout>

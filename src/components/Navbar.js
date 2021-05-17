@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import { BigContainer } from '../container/Constraint'
 import { mainButton } from '../styles/Button'
@@ -13,7 +13,8 @@ const Navbar = () => {
         <Body>
             <Container>
                 <Logo>
-                    <Logoimg src={logo} alt="Grabbo Logo"/>
+                 <Link to='/'>
+                 <Logoimg src={logo} alt="Grabbo Logo"/></Link>
                 </Logo>
 
                 <Navlinks>
@@ -37,7 +38,7 @@ const Navbar = () => {
                     </Navlinksul>
                 </Navlinks>
                 <Navbutton>
-<Book>Book Appointment</Book>
+<Book to='/contact'>Book Appointment</Book>
 
                 </Navbutton>
                 <Mobilemenu>

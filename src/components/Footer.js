@@ -28,7 +28,7 @@ flex-direction: column;
 const Bottom = styled.div`
 background:  ${grabboColors.mildBlack};
 height: 100px;
-max-width: 1440px;
+
 width: 100%;
 display: flex;
 justify-content: center;

@@ -79,8 +79,30 @@ line-height: 1.5;
 
     font-size: 24px;
 }
+
+@media only screen and (max-width: 320px){
+
+    font-size: 21px;
+}
 `
 
+
+export const footerHeaderText = styled.h1`
+font-family: "Gilroy Bold";
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: 1.5;
+@media only screen and (max-width: 650px){
+
+    font-size: 24px;
+}
+
+@media only screen and (max-width: 320px){
+
+    font-size: 21px;
+}
+`
 
 export const mediumHeader = styled.h2`
 font-family: "Gilroy Bold";
@@ -120,13 +142,13 @@ line-height: 1.5;
 
 export const tinyHeader = styled.h2`
 font-family: "Gilroy Bold";
-font-size: 21px;
+font-size: 18px;
 font-style: normal;
 font-weight: 700;
 line-height: 1.5;
 @media only screen and (max-width: 650px){
 
-    font-size: 17px;
+    font-size: 16px;
 }
 `
 

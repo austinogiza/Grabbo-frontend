@@ -14,7 +14,7 @@ const Message = () => {
 <Cover>
 
 <Title>We Provide the highest level of satisfaction care & services to our patients.</Title>
-<Button to='/'>Go Home</Button>
+<Button to='/contact'>Book Appointment</Button>
 </Cover>
 
 </BodyContainer>

@@ -34,7 +34,9 @@ background: ${grabboColors.white};
 align-items: center;
 position: relative;
 border-radius: 20px;
-
+@media only screen and (max-width: 450px){
+    height: 400px;
+}
 `
 const Name = styled(tinyHeader)`
 position: relative;
@@ -71,6 +73,9 @@ max-width: 400px;
 border-radius: 20px;
 width: 100%;
 margin: 0 auto;
+@media only screen and (max-width: 450px){
+    height: 250px;
+}
 `
 
 const Thumbnail = styled(Photo)`
@@ -82,6 +87,8 @@ top: 0;
 left: 0;
 object-fit: cover;
 border-radius: 20px;
+
+
 `
 const CardLink = styled(Link)`
 position: absolute;

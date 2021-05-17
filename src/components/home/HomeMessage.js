@@ -14,7 +14,7 @@ const HomeMessage = () => {
 <Cover>
 <Subtitle>Need a Doctor for Check-up?</Subtitle>
 <Title>Make An Appointment & You're Done!</Title>
-<Button to='/'>Go Home</Button>
+<Button to='/contact'>Book Appointment</Button>
 </Cover>
 
 </BodyContainer>

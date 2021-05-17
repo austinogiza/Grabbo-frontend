@@ -1,11 +1,19 @@
 import React from 'react'
-
+import styled from 'styled-components';
 const BlogDetailed = () => {
     return (
-        <div>
-            
-        </div>
+<Body>
+
+</Body>
     )
 }
+
+const Body = styled.div`
+
+`
+
+
+
+
 
 export default BlogDetailed

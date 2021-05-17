@@ -19,7 +19,6 @@ const ContactMap = () => {
 const Body = styled.div`
 grid-area: Map;
 width: 100%;
-padding: 10px 24px;
 min-height: 600px;
 display: grid;
 grid-template-rows: repeat(2,1fr);

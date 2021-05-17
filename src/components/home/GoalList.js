@@ -27,7 +27,7 @@ flex-direction: column;
 height: 100%;
 align-items: flex-start;
 @media only screen and (max-width: 450px){
-align-items: center;
+/* align-items: center; */
 }
 `
 const Iconwrap = styled.div`
@@ -46,7 +46,7 @@ display: flex;
 justify-content: center;
 align-items: flex-start;
 @media only screen and (max-width: 450px){
-align-items: center;
+/* align-items: center; */
 }
 `
 const Icon = styled(lightHeader)`
@@ -60,8 +60,8 @@ align-items: flex-start;
 margin: 24px 0;
 text-align: left;
 @media only screen and (max-width: 450px){
-align-items: center;
-text-align: center;
+/* align-items: center;
+text-align: center; */
 }
 `
 const Top = styled(tinyHeader)`
@@ -70,8 +70,8 @@ width:100%;
 text-align: left;
 color: ${grabboColors.black};
 @media only screen and (max-width: 450px){
-align-items: center;
-text-align: center;
+/* align-items: center;
+text-align: center; */
 }
 `
 

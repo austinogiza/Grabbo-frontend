@@ -14,9 +14,9 @@ const Goal = () => {
         {text: "Internal Medicine"},
         {text: "General Surgery"},
         {text: "Eye Clinic"},
-        {text: "Full Laboratory"},
-        {text: "Radiology"},
-        {text: "Urology"},
+        // {text: "Full Laboratory"},
+        // {text: "Radiology"},
+        // {text: "Urology"},
     ]
     return (
        <Body>
@@ -98,11 +98,11 @@ place-items: center;
 @media only screen and (max-width: 650px){
     grid-template-columns: repeat(2,1fr);
 grid-gap: 16px;
-place-items: center;
+
 }
-@media only screen and (max-width: 450px){
+/* @media only screen and (max-width: 450px){
     grid-template-columns: repeat(1,1fr);
     grid-gap: 16px;
-}
+} */
 `
 export default Goal

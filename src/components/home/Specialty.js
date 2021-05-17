@@ -84,9 +84,9 @@ place-items: center;
 grid-gap: 24px;
 place-items: center;
 }
-@media only screen and (max-width: 450px){
+/* @media only screen and (max-width: 450px){
     grid-template-columns: repeat(1,1fr);
 grid-gap: 24px;
-}
+} */
 `
 export default Specialty

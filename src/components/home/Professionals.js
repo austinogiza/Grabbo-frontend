@@ -80,7 +80,7 @@ place-items: center;
 grid-gap: 16px;
 place-items: center;
 }
-@media only screen and (max-width: 450px){
+@media only screen and (max-width: 650px){
     grid-template-columns: repeat(1,1fr);
     grid-gap: 16px;
 }

@@ -92,7 +92,7 @@ const Formcover = styled.div`
 width: 100%;
 min-height: 600px;
 margin: 24px 0;
-padding: 10px 24px;
+
 grid-area: Form;
 `
 const Form = styled.form`
