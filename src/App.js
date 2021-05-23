@@ -27,7 +27,7 @@ const App = () => {
          <Route exact component={Departments} path='/departments'/>
          <Route exact component={Careers} path='/careers'/>
          <Route exact component={DepartmentDetailed} path='/department/slug'/>
-         <Route exact component={BlogDetailed} path='/blog/slug'/>
+         <Route exact component={BlogDetailed} path='/blog/:slug'/>
          <Route component={NotFound} />
        </Switch>
      </Layout>

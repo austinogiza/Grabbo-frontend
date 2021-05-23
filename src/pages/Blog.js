@@ -1,16 +1,41 @@
-import React, { useEffect } from 'react'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
+import { blogList } from '../utils/api'
 import BlogCard from '../components/blog/BlogCard'
 import Message from '../components/Message'
 import { BigContainer } from '../container/Constraint'
 import { grabboColors } from '../styles/ColorStyles'
 import { headerText } from '../styles/TextStyles'
+import { mainButton } from '../styles/Button'
+import LoadingCard from '../components/LoadingCard'
+
+
 
 const Blog = () => {
+
+    const [loading, setLoading] = useState(true)
+    const [data, setData] = useState([])
+
+    async function fetchBlogPosts(){
+        setLoading(true)
+        await axios.get(blogList)
+        .then(res=> {
+            setData(res.data)
+            setLoading(false)
+            
+        })
+        .catch(err=>{
+            setLoading(false)
+        })
+    }
 
     useEffect(()=>{
 
 document.title = `Blog - Grabbo Fertility Clinic`
+
+fetchBlogPosts()
+
     }, [])
 
   
@@ -21,52 +46,50 @@ document.title = `Blog - Grabbo Fertility Clinic`
 <Header>
 <Headertext>News</Headertext>
        </Header>
+
+
+{loading ? 
+<>
 <Depart>
 
-<BlogCard 
-img="https://res.cloudinary.com/drfdvwyob/image/upload/v1619485293/Rectangle_17_u1haqx.png"
-name="Grabbo Fertility Clinic IVF Triplet Story"
-description="Grabbo fertility clinic is designed to facilitate the provisions of efficiency 
-and reliable IVF services."
-link={`/blog/slug`}
-/>
-<BlogCard 
-img="https://res.cloudinary.com/drfdvwyob/image/upload/v1619485293/Rectangle_17_u1haqx.png"
-name="Grabbo Fertility Clinic IVF Triplet Story"
-description="Grabbo fertility clinic is designed to facilitate the provisions of efficiency 
-and reliable IVF services."
-link={`/blog/slug`}
-/>
-<BlogCard 
-img="https://res.cloudinary.com/drfdvwyob/image/upload/v1619485293/Rectangle_17_u1haqx.png"
-name="Grabbo Fertility Clinic IVF Triplet Story"
-description="Grabbo fertility clinic is designed to facilitate the provisions of efficiency 
-and reliable IVF services."
-link={`/blog/slug`}
-/>
-<BlogCard 
-img="https://res.cloudinary.com/drfdvwyob/image/upload/v1619485293/Rectangle_17_u1haqx.png"
-name="Grabbo Fertility Clinic IVF Triplet Story"
-description="Grabbo fertility clinic is designed to facilitate the provisions of efficiency 
-and reliable IVF services."
-link={`/blog/slug`}
-/>
-<BlogCard 
-img="https://res.cloudinary.com/drfdvwyob/image/upload/v1619485293/Rectangle_17_u1haqx.png"
-name="Grabbo Fertility Clinic IVF Triplet Story"
-description="Grabbo fertility clinic is designed to facilitate the provisions of efficiency 
-and reliable IVF services."
-link={`/blog/slug`}
-/>
-<BlogCard 
-img="https://res.cloudinary.com/drfdvwyob/image/upload/v1619485293/Rectangle_17_u1haqx.png"
-name="Grabbo Fertility Clinic IVF Triplet Story"
-description="Grabbo fertility clinic is designed to facilitate the provisions of efficiency 
-and reliable IVF services."
-link={`/blog/slug`}
-/>
+{loading && [1,2,3].map(load => <LoadingCard key={load}/>)}
 
 </Depart>
+    
+</>
+:
+<>
+
+{data.length > 0 ? 
+<>
+<Depart>
+{data.map(blog=> 
+    <BlogCard 
+    key={blog.id}
+img={blog.image}
+name={blog.title}
+description={blog.description}
+link={`/blog/${blog.slug}`}
+/>
+)}
+</Depart>
+</>
+
+:
+<>
+<DepartNo>
+<NoPostTitle>
+<Title>No blog post available</Title>
+<Button to='/'>Go Home</Button>
+</NoPostTitle>
+</DepartNo>
+</>
+}
+
+
+</>
+
+}
 </Container>
 <Message/>
 
@@ -119,6 +142,27 @@ margin: 80px auto;
     grid-gap: 16px;
     margin: 24px auto;
 }
+`
+
+const DepartNo = styled.div`
+
+width:100%;
+min-height: 300px;
+display: flex;
+justify-content: center;
+align-items: center;
+`
+const NoPostTitle = styled.div`
+width:100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+`
+const Title = styled(headerText)``
+const Button = styled(mainButton)`
+margin: 24px 0;
 `
 
 export default Blog

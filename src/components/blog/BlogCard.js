@@ -16,7 +16,6 @@ const BlogCard = ({name,description, img, link}) => {
 <Text>
 <Name>{name}</Name>
 <Description>{description}</Description>
-
 </Text>
 <CardLink to={link}/>
         </Body>
@@ -35,7 +34,7 @@ background: ${grabboColors.white};
 align-items: center;
 position: relative;
 border-radius: 20px;
-padding: 10px 32px;
+padding: 10px 24px 5px 24px;
 `
 const Name = styled(tinyHeader)`
 position: relative;
@@ -49,8 +48,8 @@ const Text = styled.div`
 width: 100%;
 display: flex;
 flex-direction: column;
-margin: 24px 0;
-
+margin: 0;
+height: 100%;
 `
 const Description = styled(bodyText)`
 color: ${grabboColors.grey};
@@ -59,11 +58,11 @@ margin: 24px 0;
 
 const Image = styled.div`
 position: relative;
-height: 221px;
+height: 300px;
 max-width: 326px;
-border-radius: 20px;
+border-radius: 10px;
 width: 100%;
-margin: 30px 0 0 0;
+margin: 24px 0 ;
 `
 
 const Thumbnail = styled(Photo)`
@@ -74,7 +73,9 @@ height: 100%;
 top: 0;
 left: 0;
 object-fit: cover;
-border-radius: 20px;
+border-radius: 10px;
+object-position: center;
+-o-object-position: center;
 `
 const CardLink = styled(Link)`
 position: absolute;

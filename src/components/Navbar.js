@@ -103,6 +103,8 @@ grid-gap: 24px;
 `
 const Navlinkli= styled.li`
 margin:0 12px;
+white-space: nowrap;
+
 
 .active{
     color: ${grabboColors.primary};
