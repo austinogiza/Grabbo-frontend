@@ -43,7 +43,7 @@ flex-direction: column;
 align-items: center;
 `
 const LargeContainer = styled(Container)`
-padding: 10px 40px;
+padding: 10px 24px;
 display: flex;
 flex-direction: column;
 

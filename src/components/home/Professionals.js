@@ -1,13 +1,34 @@
-import React from 'react'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { headerText } from '../../styles/TextStyles'
+import { HomePersonnelsList } from '../../utils/api'
+import LoadingCard from '../LoadingCard'
 import ProfessionalCard from './ProfessionalCard'
 
 
 
 const Professionals = () => {
+    const [data, setData]= useState([])
+    const [loading, setLoading] = useState(false)
+const fetchPros =()=>{
+    setLoading(true)
 
+    axios.get(HomePersonnelsList)
+    .then(res=>{
+        setData(res.data)
+        setLoading(false)
 
+    })
+    .catch(err=>{
+        setLoading(false)
+
+    })
+}
+
+useEffect(()=>{
+    fetchPros()
+}, [])
     return (
        <Body>
 
@@ -17,15 +38,32 @@ const Professionals = () => {
            </Title>
            <Pros>
 <ProsGrid>
-<ProfessionalCard img="https://res.cloudinary.com/drfdvwyob/image/upload/v1619969251/dr_kate_yyfwnt.jpg" name="DR. KATE O. ONOJA (MBBS,FMCOG, FWACS)" description="Chief Medical Director"/>
-<ProfessionalCard img="https://res.cloudinary.com/drfdvwyob/image/upload/v1619969251/dr_kate_yyfwnt.jpg" name="DR. KATE O. ONOJA (MBBS,FMCOG, FWACS)" description="Chief Medical Director"/>
-<ProfessionalCard img="https://res.cloudinary.com/drfdvwyob/image/upload/v1619969251/dr_kate_yyfwnt.jpg" name="DR. KATE O. ONOJA (MBBS,FMCOG, FWACS)" description="Chief Medical Director"/>
 
-<ProfessionalCard img="https://res.cloudinary.com/drfdvwyob/image/upload/v1619969251/dr_kate_yyfwnt.jpg" name="DR. KATE O. ONOJA (MBBS,FMCOG, FWACS)" description="Chief Medical Director"/>
-<ProfessionalCard img="https://res.cloudinary.com/drfdvwyob/image/upload/v1619969251/dr_kate_yyfwnt.jpg" name="DR. KATE O. ONOJA (MBBS,FMCOG, FWACS)" description="Chief Medical Director"/>
+{loading? 
+<>
+{loading && [1,2,3,4,5].map(res=> 
+<LoadingCard key={res}/>
+)}
 
-<ProfessionalCard img="https://res.cloudinary.com/drfdvwyob/image/upload/v1619969251/dr_kate_yyfwnt.jpg" name="DR. KATE O. ONOJA (MBBS,FMCOG, FWACS)" description="Chief Medical Director"/>
+</>:
 
+<>
+{data && data.map(data=>
+    <ProfessionalCard 
+     key={data.id}
+    img={data.photo} 
+    name={data.name} 
+    description={data.title}
+    link={`/professional/${data.slug}`}
+
+    />
+
+)
+
+}
+
+
+</>}
 
 </ProsGrid>
 

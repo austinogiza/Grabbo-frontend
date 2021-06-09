@@ -9,6 +9,11 @@ import { grabboColors } from '../styles/ColorStyles'
 const Navbar = () => {
 
     const [toggle, setToggle] = useState(false)
+
+    const clickMenu =  ()=>{
+        setToggle(!toggle)
+
+    }
     return (
         <Body>
             <Container>
@@ -17,7 +22,7 @@ const Navbar = () => {
                  <Logoimg src={logo} alt="Grabbo Logo"/></Link>
                 </Logo>
 
-                <Navlinks>
+                <Navlinks toggle={toggle}>
 
                     <Navlinksul>
                         <Navlinkli>
@@ -41,11 +46,11 @@ const Navbar = () => {
 <Book to='/contact'>Book Appointment</Book>
 
                 </Navbutton>
-                <Mobilemenu>
-                    <Menucover>
-                        <Mobiletop />
-                        <Mobilecenter/>
-                        <Mobilebot/>
+                <Mobilemenu onClick={clickMenu} toggle={toggle}>
+                    <Menucover toggle={toggle}>
+                        <Mobiletop toggle={toggle}/>
+                        <Mobilecenter toggle={toggle}/>
+                        <Mobilebot toggle={toggle}/>
                     </Menucover>
                 </Mobilemenu>
             </Container>
@@ -66,7 +71,7 @@ grid-gap: 30px;
 
 @media only screen and (max-width: 1200px){
     grid-gap: 24px;   
-    padding: 10px 40px;
+    padding: 10px 24px;
 }
 `
 const Logo= styled.div`
@@ -87,8 +92,20 @@ width: 100%;
 height: 100%;
 display: flex;
 align-items: center;
-@media only screen and (max-width: 970px){
-    display: none;
+@media only screen and (max-width: 720px){
+position: absolute;
+background: ${grabboColors.white};
+max-width: 90%;
+width: 90%;
+border-radius: 5px;
+top: 10px;
+left: 5%;
+z-index: 30;
+height: 85vh;
+margin: 0 auto;
+margin-top: 20px;
+transition: 0.3s ease-in;
+transform:  ${props=> props.toggle ? "translateY(0%)": "translateY(-900px)"};
 }
 `
 const Navlinksul= styled.ul`
@@ -100,11 +117,16 @@ grid-template-columns: repeat(5,2fr);
 justify-items: center;
 align-items: center;
 grid-gap: 24px;
+
+@media only screen and (max-width: 720px){
+    grid-template-columns: repeat(1,1fr);
+}
 `
 const Navlinkli= styled.li`
 margin:0 12px;
 white-space: nowrap;
-
+cursor: pointer;
+transition: 0.3s ease-in;
 
 .active{
     color: ${grabboColors.primary};
@@ -114,6 +136,9 @@ max-width:240px;
 width: 100%;
 text-align: left;
 width: 100%;
+@media only screen and (max-width: 720px){
+    text-align: center;
+}
 a{
     font-family: "Gilroy Medium";
     font-size: 16px;
@@ -131,7 +156,8 @@ height: 100%;
 display: flex;
 justify-content: flex-end;
 align-items: center;
-@media only screen and (max-width: 970px){
+white-space: nowrap;
+@media only screen and (max-width: 880px){
     display: none;
 }
 `
@@ -147,7 +173,8 @@ position: absolute;
 top: 30%;
 cursor: pointer;
 right: 40px;
-@media only screen and (max-width: 970px){
+z-index: 35;
+@media only screen and (max-width: 720px){
     display: block;
 }
 
@@ -168,6 +195,9 @@ height: 3px;
 background: ${grabboColors.black};
 border-radius: 5px;
 margin: 3px 0;
+transform : ${props => props.toggle ? "rotate(-45deg) translate(-5px, 6px)": "rotate(0)"};
+transition: 0.3s ease-in;
+
 `
 const Mobilecenter = styled.span`
 width:100%;
@@ -175,6 +205,7 @@ height: 3px;
 background: ${grabboColors.black};
 border-radius: 5px;
 margin: 3px 0;
+display : ${props => props.toggle ? "none": "flex"}
 `
 const Mobilebot = styled.span`
 width:100%;
@@ -182,6 +213,8 @@ height: 3px;
 background: ${grabboColors.black};
 border-radius: 5px;
 margin: 3px 0;
+transform : ${props => props.toggle ? "rotate(45deg) translate(-4px, -3px)": "rotate(0)"};
+transition: 0.3s ease-in;
 `
 
 export default Navbar

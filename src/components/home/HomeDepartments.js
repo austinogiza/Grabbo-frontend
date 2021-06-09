@@ -1,12 +1,35 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { mainButton } from '../../styles/Button'
 import { grabboColors } from '../../styles/ColorStyles'
 import {  headerText } from '../../styles/TextStyles'
 import DeptCard from './DeptCard'
 import noise from '../../assets/noise.png'
+import axios from 'axios'
+import { HomeDepartmentsList } from '../../utils/api'
+import LoadingCard from '../LoadingCard'
 
 const HomeDepartments = () => {
+    const [data, setData]=useState([])
+    const [loading, setLoading]=useState(false)
+
+    const fetchDepartment = ()=>{
+
+        setLoading(true)
+        axios.get(HomeDepartmentsList)
+        .then(res=>{
+            setData(res.data)
+            setLoading(false)
+        })
+        .catch(err=>{
+            setLoading(false)
+        })
+    }
+
+    useEffect(()=>{
+
+fetchDepartment()
+    }, [])
 
     return (
        <Body>
@@ -17,10 +40,23 @@ const HomeDepartments = () => {
            </Title>
            <Pros>
 <ProsGrid>
-<DeptCard img="https://res.cloudinary.com/drfdvwyob/image/upload/v1619485293/Rectangle_17_u1haqx.png" name="Obstetrics & Gynaecology"/>
-<DeptCard img="https://res.cloudinary.com/drfdvwyob/image/upload/v1619485293/Rectangle_17_u1haqx.png" name="Obstetrics & Gynaecology"/>
-<DeptCard img="https://res.cloudinary.com/drfdvwyob/image/upload/v1619485293/Rectangle_17_u1haqx.png" name="Obstetrics & Gynaecology"/>
-<DeptCard img="https://res.cloudinary.com/drfdvwyob/image/upload/v1619485293/Rectangle_17_u1haqx.png" name="Obstetrics & Gynaecology"/>
+
+{loading? 
+
+<>
+{loading && [1,2,3,4].map(item => 
+
+<LoadingCard key={item}/>)}
+</>:
+
+<>
+{data && data.map(data=>
+    <DeptCard key={data.id} img={data.image} name={data.title} link={`/department/${data.slug}`}/>
+)}
+
+</>}
+
+
 </ProsGrid>
 
            </Pros>

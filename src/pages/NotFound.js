@@ -23,7 +23,7 @@ const NotFound = () => {
 const Body = styled.div`
 min-height: 800px;
 width: 100%;
-padding: 10px 40px;
+padding: 10px 24px;
 margin: 40px 0;
 @media only screen and (max-width:660px){
     min-height: 500px;

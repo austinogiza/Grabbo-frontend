@@ -33,7 +33,7 @@ width: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
-padding: 10px 25px;
+padding: 10px 24px;
 `
 const Copy = styled(bodyText)`
 color:  ${grabboColors.white};

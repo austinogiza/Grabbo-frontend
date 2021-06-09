@@ -12,6 +12,8 @@ import { GlobalStyles } from './styles/GlobalStyles'
 import Careers from './pages/Careers'
 import Blog from './pages/Blog'
 import BlogDetailed from './pages/BlogDetailed'
+import ProfessionalDetail from './pages/ProfessionalDetail'
+import CareerDetail from './pages/CareerDetail'
 const App = () => {
   return (
    <>
@@ -26,7 +28,10 @@ const App = () => {
          <Route exact component={Blog} path='/blog'/>
          <Route exact component={Departments} path='/departments'/>
          <Route exact component={Careers} path='/careers'/>
-         <Route exact component={DepartmentDetailed} path='/department/slug'/>
+         <Route exact component={DepartmentDetailed} path='/department/:slug'/>
+         <Route exact component={ProfessionalDetail} path='/professional/:slug'/>
+         <Route exact component={CareerDetail} path='/career/:slug'/>
+  
          <Route exact component={BlogDetailed} path='/blog/:slug'/>
          <Route component={NotFound} />
        </Switch>

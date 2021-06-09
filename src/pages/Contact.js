@@ -38,7 +38,7 @@ max-width: 1200px;
 width: 100%;
 margin: 0 auto;
 height: 100%;
-padding: 10px 40px;
+padding: 10px 24px;
 `
 
 export default Contact

@@ -1,12 +1,37 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { mainButton } from '../../styles/Button'
 import { grabboColors } from '../../styles/ColorStyles'
 import { headerText, bodyText,mediumHeader,smallText, tinyHeader } from '../../styles/TextStyles'
 import {FiArrowUpRight} from 'react-icons/fi'
+import { CareerList } from '../../utils/api'
+import axios from 'axios'
+import LoadingCard from '../LoadingCard'
+import { Link } from 'react-router-dom'
 
 
 const CareerPositions = ({positionRef}) => {
+
+    const [data, setData] = useState([])
+    const [loading, setLoading] = useState(false)
+
+
+    const fetchPlacement = ()=>{
+        setLoading(true)
+        axios.get(CareerList)
+        .then(res=>{
+            setData(res.data)
+            setLoading(false)
+        })
+        .catch(err=>{
+
+            setLoading(false)
+        })
+    }
+    
+useEffect(() => {
+    fetchPlacement()
+}, [])
     return (
         <Body ref={positionRef}>
 
@@ -19,35 +44,65 @@ const CareerPositions = ({positionRef}) => {
         </Cover>
         <Positions>
 
-            <Wrapper>
-                <Coverbox>
-                    <Textwrap>
-                    <TextTitle>Experience Medical Officer</TextTitle>
-        <Textsmall>FCT Abuja</Textsmall>
-                    </Textwrap>
-                      <IconWrap><Icon/></IconWrap>
-                </Coverbox>
-                <Coverbox>
-                    <Textwrap>
-                    <TextTitle>Experience Medical Officer</TextTitle>
-        <Textsmall>FCT Abuja</Textsmall>
-                    </Textwrap>
-                      <IconWrap><Icon/></IconWrap>
-                </Coverbox>
-                <Coverbox>
-                    <Textwrap>
-                    <TextTitle>Experience Medical Officer</TextTitle>
-        <Textsmall>FCT Abuja</Textsmall>
-                    </Textwrap>
-                      <IconWrap><Icon/></IconWrap>
-                </Coverbox>
-            </Wrapper>
+        {loading ?
+        
+        <>
+        <Wrapper>
+<LoadingCard/>
+<LoadingCard/>
+<LoadingCard/>
+</Wrapper>
 
-            <Empty>
+
+        </>:
+        
+        <>
+   
+
+        {data &&
+        
+        <>
+
+{data.length > 0 ? 
+
+<>
+<Wrapper>
+{data.map(data=>
+
+    <Coverbox>
+
+    <CoverboxLink to={`/career/${data.slug}`}/>
+                    <Textwrap>
+                    <TextTitle>Hello {data.title}</TextTitle>
+        <Textsmall>{data.location}</Textsmall>
+                    </Textwrap>
+                      <IconWrap><Icon/></IconWrap>
+                </Coverbox>
+)}
+                </Wrapper>
+</>
+
+:<>
+
+
+
+<Empty>
             <EmptyTitle>No job placement yet</EmptyTitle>
 
             <Button to='/' >Head Home</Button>
             </Empty>
+
+</>}
+
+        </>
+        }
+            
+
+
+
+        </>}
+
+         
         </Positions>
         
         </BodyContainer>
@@ -163,6 +218,7 @@ margin: 0 auto;
 padding: 10px 24px;
 border-radius: 10px;
 align-items: center;
+position: relative;
 justify-content: center;
 background: ${grabboColors.white};
 box-shadow: 0px 20px 40px rgba(57, 108, 240, 0.05);
@@ -195,6 +251,15 @@ justify-content: center;
 const TextTitle = styled(tinyHeader)`
 margin:  0;
 `
+
+const CoverboxLink = styled(Link)`
+
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+` 
 const Textsmall = styled(smallText)`
 margin: 16px 0;
 color: ${grabboColors.grey};

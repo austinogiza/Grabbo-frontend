@@ -7,18 +7,17 @@ import Message from '../components/Message'
 import PageLoading from '../components/PageLoading'
 import { LargeContainer } from '../container/Constraint'
 import { headerText } from '../styles/TextStyles'
-import { DepartmentDetail } from '../utils/api'
+import { ProfessionalInfo } from '../utils/api'
 
-const DepartmentDetailed = () => {
+const ProfessionalDetail = () => {
 
     const [data, setData]=useState([])
-
     const [loading, setLoading]=useState(false)
     const {slug} = useParams()
 
     const fetchDetail =()=>{
         setLoading(true)
-        axios.get(DepartmentDetail(slug))
+        axios.get(ProfessionalInfo(slug))
         .then(res=>{
             setData(res.data)
             setLoading(false)
@@ -32,9 +31,10 @@ const DepartmentDetailed = () => {
 
     useEffect(()=>{
         fetchDetail()
-        
-        document.title = `Department - Grabbo Fertility Clinic`
+        console.log(data)
 
+
+ document.title = `Professionals - Grabbo Fertility Clinic`
     }, [])
 
 
@@ -47,13 +47,12 @@ const DepartmentDetailed = () => {
 <PageLoading/>
 
         </>:<>
+{data && (
 
-        {data && data.map(data=>
-        
-        <>
+    <>
         <Hero 
-        img={data.image} 
-        header={data.title}
+        img={data.photo} 
+        header={data.name}
         />
 <Container>
 <Depart>
@@ -64,8 +63,9 @@ const DepartmentDetailed = () => {
 </Depart>
 </Container>
 <Message/>        
-        </>)}
+        </>
 
+)}
 
 
         </>}
@@ -87,6 +87,7 @@ display: flex;
 flex-direction: column;
 width: 100%;
 padding: 10px 24px;
+
 `
 const Depart = styled.div`
 display: flex;
@@ -123,4 +124,4 @@ line-height: 1.6;
 }
 
 `
-export default DepartmentDetailed
+export default ProfessionalDetail

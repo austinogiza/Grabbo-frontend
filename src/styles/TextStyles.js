@@ -80,9 +80,9 @@ line-height: 1.5;
     font-size: 24px;
 }
 
-@media only screen and (max-width: 320px){
+@media only screen and (max-width: 350px){
 
-    font-size: 21px;
+    font-size: 18px;
 }
 `
 

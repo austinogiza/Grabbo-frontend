@@ -125,7 +125,7 @@ color: ${grabboColors.white};
 justify-items: center;
 align-items: center;
 margin-top: 120px;
-padding: 10px 32px;
+padding: 10px 24px;
 @media only screen and (max-width: 1030px){
     grid-template-columns: repeat(3,1fr);
 }

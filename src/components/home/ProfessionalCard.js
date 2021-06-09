@@ -34,6 +34,7 @@ background: ${grabboColors.white};
 align-items: center;
 position: relative;
 border-radius: 20px;
+cursor: pointer;
 @media only screen and (max-width: 450px){
     height: 400px;
 }
@@ -44,6 +45,7 @@ z-index: 42;
 margin: 0;
 color: ${grabboColors.black};
 transition: 0.3s ease-in;
+
 ${Body}:hover &{
     color: ${grabboColors.primary};
 }
@@ -98,6 +100,7 @@ height: 100%;
 top: 0;
 left: 0;
 object-fit: cover;
+cursor: pointer;
 `
 
 export default ProfessionalCard
