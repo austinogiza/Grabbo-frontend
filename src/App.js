@@ -14,13 +14,17 @@ import Blog from './pages/Blog'
 import BlogDetailed from './pages/BlogDetailed'
 import ProfessionalDetail from './pages/ProfessionalDetail'
 import CareerDetail from './pages/CareerDetail'
+import BackToTop from './components/BackToTop'
 const App = () => {
   return (
    <>
    <Router>
 <GlobalStyles/>
-     <Layout>
+
 <ScrollRestore/>
+<BackToTop/>
+     <Layout>
+
        <Switch>
          <Route exact component={Home} path='/'/>
          <Route exact component={Contact} path='/contact'/>

@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import styled from 'styled-components'
 import { BigContainer } from '../container/Constraint'
 import { mainButton } from '../styles/Button'
@@ -10,10 +10,17 @@ const Navbar = () => {
 
     const [toggle, setToggle] = useState(false)
 
+    const location = useLocation()
+
     const clickMenu =  ()=>{
         setToggle(!toggle)
 
     }
+
+    useEffect(()=>{
+        setToggle(false)
+
+    }, [location])
     return (
         <Body>
             <Container>
@@ -100,7 +107,7 @@ width: 90%;
 border-radius: 5px;
 top: 10px;
 left: 5%;
-z-index: 30;
+z-index: 998;
 height: 85vh;
 margin: 0 auto;
 margin-top: 20px;
@@ -173,7 +180,7 @@ position: absolute;
 top: 30%;
 cursor: pointer;
 right: 40px;
-z-index: 35;
+z-index: 999;
 @media only screen and (max-width: 720px){
     display: block;
 }

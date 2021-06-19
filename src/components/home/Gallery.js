@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { grabboColors } from '../../styles/ColorStyles'
 import { headerText, tinyCaption } from '../../styles/TextStyles'
@@ -64,6 +64,12 @@ const Gallery = () => {
   
     ]
 const [data, setData]=useState(staff)
+const [activeAll, setActiveAll]=useState(false)
+const [activeStaff, setActiveStaff]=useState(false)
+const [activeSpecial, setActiveSpecial]=useState(false)
+const [activeFaci, setActiveFaci]=useState(false)
+const [activeper, setActivePer]=useState(false)
+
 
 const handleFilter = e=>{
 const word = e.target.value
@@ -72,29 +78,53 @@ const word = e.target.value
 if(word === 'all'){
    
     setData(staff)
+    setActiveAll(true)
+    setActiveStaff(false)
+    setActiveSpecial(false)
+    setActiveFaci(false)
+    setActivePer(false)
 
 }
 
 if(word === 'staff'){
     const role = staff.filter(item => item.role ==='staff')
     setData(role)
-
+    setActiveAll(false)
+    setActiveStaff(true)
+    setActiveSpecial(false)
+    setActiveFaci(false)
+    setActivePer(false)
 }
 
 if(word === 'specialguests'){
     const role = staff.filter(item => item.role ==='specialguests')
     setData(role)
+    setActiveAll(false)
+    setActiveStaff(false)
+    setActiveSpecial(true)
+    setActiveFaci(false)
+    setActivePer(false)
 
 }
 
 if(word === 'personnels'){
     const role = staff.filter(item => item.role ==='personnels')
     setData(role)
+    setActiveAll(false)
+    setActiveStaff(false)
+    setActiveSpecial(false)
+    setActiveFaci(false)
+    setActivePer(true)
 
 }
 if(word === 'facilities'){
     const role = staff.filter(item => item.role ==='facilities')
     setData(role)
+    setActiveAll(false)
+    setActiveStaff(false)
+    setActiveSpecial(false)
+    setActiveFaci(true)
+    setActivePer(false)
 
 }
 
@@ -102,6 +132,10 @@ if(word === 'facilities'){
 
 
     }
+
+    useEffect(()=>{
+        setActiveAll(true)
+    }, [])
 
     return (
 <Body>
@@ -116,11 +150,11 @@ if(word === 'facilities'){
 <Pros>
 <ProTitle className="grid xl:grid-cols-5 lg:grid-cols-5 grid-cols-2 gap-3 my-1 max-w-4xl mx-auto">
 
-<Roles value="all" onClick={handleFilter}  className="cursor-pointer m-3 w-12 focus:outline-none py-3 rounded-xl transition  px-14 h-10 flex justify-center items-center shadow text-black font-medium  max-w-xs hover:bg-blue-600 hover:text-white">All</Roles> 
-<Roles value="staff" className="cursor-pointer m-3 w-12 py-3 rounded-xl hover:bg-white-500 hover:text-white transition  px-14 h-10 flex justify-center items-center shadow font-medium focus:outline-none max-w-xs hover:bg-blue-500 bg-white text-black" onClick={handleFilter}> Staff</Roles> 
-<Roles value="specialguests" onClick={handleFilter}  className="cursor-pointer w-12 py-3 shadow rounded-xl m-3 hover:text-white hover:bg-blue-500 transition px-20 h-10 flex justify-center items-center  font-medium  max-w-xs focus:outline-none bg-white text-black whitespace-nowrap">Special Guests  </Roles> 
-<Roles onClick={handleFilter} className="cursor-pointer w-12 py-3 rounded-xl m-3 hover:text-white hover:bg-blue-500 transition  px-14 h-10 flex justify-center items-center shadow bg-white text-black font-medium focus:outline-none max-w-xs " value="facilities">Facilities </Roles> 
-<Roles onClick={handleFilter} className="cursor-pointer w-12 py-3 shadow rounded-xl m-3 hover:text-white bg-white text-black hover:bg-blue-500 transition  px-14 h-10 flex justify-center items-center font-medium focus:outline-none max-w-xs " value="personnels">Personnels</Roles> 
+<Roles value="all" onClick={handleFilter}  className={`${activeAll ? 'hover:bg-blue-400 bg-blue-700 text-white' : "hover:bg-blue-600 hover:text-white"} cursor-pointer m-3 w-12 focus:outline-none py-3 rounded-xl transition  px-14 h-10 flex justify-center items-center shadow text-black font-medium  max-w-xs `}>All</Roles> 
+<Roles value="staff" className={`${activeStaff ? 'hover:bg-blue-400 bg-blue-700 text-white' : "hover:bg-blue-600 hover:text-white"} cursor-pointer m-3 w-12 py-3 rounded-xl hover:bg-white-500 hover:text-white transition  px-14 h-10 flex justify-center items-center shadow font-medium focus:outline-none max-w-xs hover:bg-blue-500 bg-white text-black`} onClick={handleFilter}> Staff</Roles> 
+<Roles value="specialguests" onClick={handleFilter}  className={`${activeSpecial ? 'hover:bg-blue-400 bg-blue-700 text-white' : "hover:bg-blue-600 hover:text-white"} cursor-pointer w-12 py-3 shadow rounded-xl m-3 hover:text-white hover:bg-blue-500 transition px-20 h-10 flex justify-center items-center  font-medium  max-w-xs focus:outline-none bg-white text-black whitespace-nowrap`}>Special Guests  </Roles> 
+<Roles onClick={handleFilter} className={` ${activeFaci ? 'hover:bg-blue-400 bg-blue-700 text-white' : "hover:bg-blue-600 hover:text-white"}  cursor-pointer w-12 py-3 rounded-xl m-3 hover:text-white hover:bg-blue-500 transition  px-14 h-10 flex justify-center items-center shadow bg-white text-black font-medium focus:outline-none max-w-xs `} value="facilities">Facilities </Roles> 
+<Roles onClick={handleFilter} className={`  ${activeper ? 'hover:bg-blue-400 bg-blue-700 text-white' : "hover:bg-blue-600 hover:text-white"}  cursor-pointer w-12 py-3 shadow rounded-xl m-3 hover:text-white bg-white text-black hover:bg-blue-500 transition  px-14 h-10 flex justify-center items-center font-medium focus:outline-none max-w-xs `} value="personnels">Personnels</Roles> 
 
 
 </ProTitle>
