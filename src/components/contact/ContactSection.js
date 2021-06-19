@@ -4,6 +4,7 @@ import ContactForm from './ContactForm'
 import ContactMap from './ContactMap'
 
 const ContactSection = () => {
+
     return (
       <Body>
       <ContactMap/>

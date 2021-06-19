@@ -30,6 +30,7 @@ width: 100%;
 background: url('https://res.cloudinary.com/drfdvwyob/image/upload/v1623202302/hero_image_1_la5rko.jpg') no-repeat center center/cover;
 justify-content: center;
 display: flex;
+padding: 10px 24px;
 align-items: center;
 @media only screen and (max-width: 550px){
     min-height: 482px;

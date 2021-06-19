@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { grabboColors } from "./ColorStyles";
 
 export const FormInput = styled.input`
-height: 56px;
+height: 48px;
 max-width: 500px;
 width: 100%;
 border-radius: 5px;

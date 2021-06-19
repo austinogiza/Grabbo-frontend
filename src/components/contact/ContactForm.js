@@ -1,10 +1,11 @@
 import axios from 'axios'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { formButton } from '../../styles/Button'
 import { FormArea, FormInput } from '../../styles/InputStyles'
 import { tinyHeader } from '../../styles/TextStyles'
 import Loader from '../Spinner'
+import {ContactURL} from '../../utils/api'
 
 const ContactForm = () => {
 
@@ -17,6 +18,18 @@ const ContactForm = () => {
 
     const [form, setForm] =useState(initial)
     const [loading, setLoading] =useState(false)
+    const [sent, setSent] =useState(false)
+
+
+
+
+  
+  
+  
+    useEffect(()=>{
+  
+axios.post('http://localhost:3005/send')
+    }, [])
 
     const {
 
@@ -35,8 +48,10 @@ const ContactForm = () => {
 e.preventDefault()
 
 setLoading(true)
+
+
 axios
-.post("url", {
+.post(ContactURL, {
     name,
     email,
     subject,
@@ -45,46 +60,57 @@ axios
 .then(res=> {
     setForm(initial)
     setLoading(false)
+    setSent(true)
 })
 .catch(err=>{
     setLoading(false)
 })
     }
     return (
-        <Formcover>
+<>
 
-            <Form onSubmit={onSubmit}>
-                <Formrow>
-                <Formlabel>
-                    <Formtitle>Name</Formtitle>
-                    <FormInput type="text" value={name} name="name"  onChange={onChange}/>
-                </Formlabel>
-                </Formrow>
-                <Formrow>
-                <Formlabel>
-                    <Formtitle>Subject</Formtitle>
-                    <FormInput value={subject} name="subject" type="text"  onChange={onChange}/>
-                </Formlabel>
-                </Formrow>
-                <Formrow>
-                <Formlabel>
-                    <Formtitle>Email</Formtitle>
-                    <FormInput value={email} name="email"  type="email" onChange={onChange}/>
-                </Formlabel>
-                </Formrow>
-                <Formrow>
-                <Formlabel>
-                    <Formtitle>Message</Formtitle>
-                    <FormArea value={message} name="message" onChange={onChange} />
-                </Formlabel>
-                </Formrow>
-                <Formrow>
-                <SubmitButton>
-                {loading ? <Loader/>: "Submit "}
-                </SubmitButton>
-                </Formrow>
-            </Form>
-        </Formcover>
+{sent ?
+
+<></>:
+<>
+<Formcover>
+
+<Form onSubmit={onSubmit}>
+    <Formrow>
+    <Formlabel>
+        <Formtitle>Name</Formtitle>
+        <FormInput type="text" value={name} name="name"  onChange={onChange}/>
+    </Formlabel>
+    </Formrow>
+    <Formrow>
+    <Formlabel>
+        <Formtitle>Subject</Formtitle>
+        <FormInput value={subject} name="subject" type="text"  onChange={onChange}/>
+    </Formlabel>
+    </Formrow>
+    <Formrow>
+    <Formlabel>
+        <Formtitle>Email</Formtitle>
+        <FormInput value={email} name="email"  type="email" onChange={onChange}/>
+    </Formlabel>
+    </Formrow>
+    <Formrow>
+    <Formlabel>
+        <Formtitle>Message</Formtitle>
+        <FormArea value={message} name="message" onChange={onChange} />
+    </Formlabel>
+    </Formrow>
+    <Formrow>
+    <SubmitButton>
+    {loading ? <Loader/>: "Submit "}
+    </SubmitButton>
+    </Formrow>
+</Form>
+</Formcover>
+</>
+}
+</>
+   
     )
 }
 

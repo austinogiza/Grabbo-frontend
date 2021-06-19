@@ -79,10 +79,10 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 width: 100%;
-margin: 40px 0;
+margin: 24px 0;
 `
 const Title = styled.div`
-min-height: 70px;
+min-height: 50px;
 display: flex;
 max-width: 700px;
 margin: 0 auto;
@@ -90,6 +90,7 @@ align-items: center;
 flex-direction: column;
 width: 100%;
 text-align: center;
+white-space: nowrap;
 `
 const Header = styled(headerText)`
 width: 100%;

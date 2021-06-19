@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { grabboColors } from "./ColorStyles";
 
 export const mainButton = styled(Link)`
-height: 58px;
+height: 48px;
 max-width: 180px;
 width:100%;
 background: ${grabboColors.primary};
@@ -33,7 +33,7 @@ text-align: center;
 `
 
 export const GhostButton = styled(Link)`
-height: 58px;
+height: 48px;
 max-width: 180px;
 border-radius: 5px;
 width:100%;
@@ -64,7 +64,7 @@ transition: 0.4s ease-in;
 `
 
 export const dummyButton = styled.button`
-height: 58px;
+height: 48px;
 max-width: 180px;
 border-radius: 5px;
 width:100%;
@@ -94,7 +94,7 @@ text-align: center;
 `
 
 export const formButton = styled.button`
-height: 58px;
+height: 48px;
 max-width: 150px;
 border-radius: 5px;
 width: 100%;
