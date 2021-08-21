@@ -79,25 +79,25 @@ axios
     <Formrow>
     <Formlabel>
         <Formtitle>Name</Formtitle>
-        <FormInput type="text" value={name} name="name"  onChange={onChange}/>
+        <FormInput type="text" value={name} name="name" required  onChange={onChange}/>
     </Formlabel>
     </Formrow>
     <Formrow>
     <Formlabel>
         <Formtitle>Subject</Formtitle>
-        <FormInput value={subject} name="subject" type="text"  onChange={onChange}/>
+        <FormInput value={subject} name="subject" type="text" required onChange={onChange}/>
     </Formlabel>
     </Formrow>
     <Formrow>
     <Formlabel>
         <Formtitle>Email</Formtitle>
-        <FormInput value={email} name="email"  type="email" onChange={onChange}/>
+        <FormInput value={email} name="email"  type="email" required onChange={onChange}/>
     </Formlabel>
     </Formrow>
     <Formrow>
     <Formlabel>
         <Formtitle>Message</Formtitle>
-        <FormArea value={message} name="message" onChange={onChange} />
+        <FormArea value={message} name="message" required onChange={onChange} />
     </Formlabel>
     </Formrow>
     <Formrow>
