@@ -113,10 +113,9 @@ cursor: pointer;
 line-height: 1;
 text-align: center;
 :hover{
-    border: 1px solid  ${grabboColors.primary};
-    background: ${grabboColors.white};
+    opacity: 0.7;
     transition: 0.4s ease-in;
-    color: ${grabboColors.primary};
+
 }
 @media only screen and (max-width: 650px){
     font-size: 16px;

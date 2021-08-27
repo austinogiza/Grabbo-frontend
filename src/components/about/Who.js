@@ -17,7 +17,7 @@ The brand-new, three-story reproductive center is 13,700 square feet and will of
 
 
 const Body = styled.div`
-max-width: 810px;
+max-width: 1000px;
 width: 100%;
 margin: 40px auto;
 min-height: 340px;

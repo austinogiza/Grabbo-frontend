@@ -6,6 +6,7 @@ import { FormArea, FormInput } from '../../styles/InputStyles'
 import { tinyHeader } from '../../styles/TextStyles'
 import Loader from '../Spinner'
 import {ContactURL} from '../../utils/api'
+import MessageNotification from '../MessageNotification'
 
 const ContactForm = () => {
 
@@ -23,7 +24,12 @@ const ContactForm = () => {
 
 
 
-  
+    if(sent){
+
+        setTimeout(() => {
+            setSent(false)
+        }, 5000);
+      }
   
   
     useEffect(()=>{
@@ -58,8 +64,9 @@ axios
     message
 })
 .then(res=> {
-    setForm(initial)
     setLoading(false)
+ 
+    setForm(initial)
     setSent(true)
 })
 .catch(err=>{
@@ -69,9 +76,7 @@ axios
     return (
 <>
 
-{sent ?
-
-<></>:
+{sent && <MessageNotification/>}
 <>
 <Formcover>
 
@@ -108,7 +113,7 @@ axios
 </Form>
 </Formcover>
 </>
-}
+
 </>
    
     )
