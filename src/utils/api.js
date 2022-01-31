@@ -16,10 +16,3 @@ export const commentFetchURL = `${host}${api}comment-fetch/`
 
 
 export const CareerDetailInfo = slug => `${host}${api}careers/${slug}/`
-
-
-
-
-
-
-
