@@ -14,6 +14,7 @@ const BlogDetailed = () => {
     name: "",
     comment: "",
     email: "",
+    phone: "",
   }
   const [data, setData] = useState([])
   const [commentData, setCommentData] = useState([])
@@ -23,7 +24,7 @@ const BlogDetailed = () => {
   const [commentLoading, setCommentLoading] = useState(false)
   const [form, setForm] = useState(initial)
 
-  const { name, comment, email } = form
+  const { name, comment, phone, email } = form
 
   const fetchComment = () => {
     setCommentLoading(true)
@@ -42,7 +43,7 @@ const BlogDetailed = () => {
     setFormLoading(true)
     e.preventDefault()
     axios
-      .post(commentDoneURL, { slug, name, email, comment })
+      .post(commentDoneURL, { slug, name, email, phone, comment })
       .then((res) => {
         setCommented(true)
         fetchComment()
@@ -235,6 +236,25 @@ const BlogDetailed = () => {
                         name="email"
                         type="email"
                         value={email}
+                        onChange={handleChange}
+                        required
+                        className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                      />
+                    </div>
+                  </div>{" "}
+                  <div>
+                    <label
+                      htmlFor="phone"
+                      className="block text-lg mt-5 font-medium text-gray-700"
+                    >
+                      Phone Number
+                    </label>
+                    <div className="mt-2">
+                      <input
+                        id="phone"
+                        name="phone"
+                        type="text"
+                        value={phone}
                         onChange={handleChange}
                         required
                         className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
