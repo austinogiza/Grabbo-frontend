@@ -1,8 +1,8 @@
-import { createGlobalStyle } from "styled-components";
-import Bold from '../fonts/Gilroy-Bold.ttf'
-import Regular from '../fonts/Gilroy-Regular.ttf'
-import Light from '../fonts/Gilroy-Light.ttf'
-import Medium from '../fonts/Gilroy-Medium.ttf'
+import { createGlobalStyle } from "styled-components"
+import Bold from "../fonts/Gilroy-Bold.ttf"
+import Regular from "../fonts/Gilroy-Regular.ttf"
+import Light from "../fonts/Gilroy-Light.ttf"
+import Medium from "../fonts/Gilroy-Medium.ttf"
 export const GlobalStyles = createGlobalStyle`
 a{
   text-decoration: none;
@@ -29,7 +29,8 @@ body{
     overflow-x:hidden;
     width: 100%;
     height: 100%;
-  
+    font-family: 'Inter', sans-serif;
+
 }
 html{
   scroll-behavior: smooth;
