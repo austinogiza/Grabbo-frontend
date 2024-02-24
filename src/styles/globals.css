@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button {
+  user-select: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  overflow-x: hidden;
+  font-family: "InterTight Regular";
+  background-color: #fff;
+  color: #000;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 32px;
+  border-radius: 32px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px transparent;
+  border-radius: 32px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #8f4ead;
+  border-radius: 32px;
+  outline: 1px solid #8f4ead;
+}
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+@font-face {
+  font-family: "InterTight Regular";
+  src: url("/fonts/InterTight/InterTight-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "ClashDisplay Medium";
+  src: url("/fonts/clash/ClashDisplay-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "ClashDisplay Regular";
+  src: url("/fonts/clash/ClashDisplay-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "ClashDisplay Semibold";
+  src: url("/fonts/clash/ClashDisplay-Semibold.ttf") format("truetype");
+}
