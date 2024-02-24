@@ -79,5 +79,10 @@
     "tailwindcss": "^3.3.0",
     "eslint": "^8",
     "eslint-config-next": "14.1.0"
+  },
+  "engines": {
+    "npm": "please-use-yarn",
+    "node": ">=17.x",
+    "yarn": ">=1.22"
   }
 }
