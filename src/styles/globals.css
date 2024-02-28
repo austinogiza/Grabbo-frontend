@@ -52,20 +52,27 @@ li {
 }
 
 @font-face {
-  font-family: "InterTight Regular";
-  src: url("/fonts/InterTight/InterTight-Regular.ttf") format("truetype");
+  font-family: "Manrope-Light";
+  src: url("/fonts/Manrope/Manrope-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Manrope-ExtraLight";
+  src: url("/fonts/Manrope/Manrope-ExtraLight.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Manrope-Regular";
+  src: url("/fonts/Manrope/Manrope-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Manrope-Medium";
+  src: url("/fonts/Manrope/Manrope-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Manrope-Bold";
+  src: url("/fonts/Manrope/Manrope-Bold.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "ClashDisplay Medium";
-  src: url("/fonts/clash/ClashDisplay-Medium.ttf") format("truetype");
-}
-@font-face {
-  font-family: "ClashDisplay Regular";
-  src: url("/fonts/clash/ClashDisplay-Regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "ClashDisplay Semibold";
-  src: url("/fonts/clash/ClashDisplay-Semibold.ttf") format("truetype");
+  font-family: "Manrope-SemiBold";
+  src: url("/fonts/Manrope/Manrope-SemiBold.ttf") format("truetype");
 }

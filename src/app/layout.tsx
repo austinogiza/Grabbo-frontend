@@ -2,6 +2,7 @@ import { siteConfig } from "@/config/site"
 import SiteContainer from "@/container/SiteContainer"
 import ReactQueryProvider from "@/provider/ReactQueryProvider"
 import ReduxProvider from "@/provider/ReduxProvider"
+import "@/styles/globals.css"
 import StyledComponentProvider from "@/provider/StyledComponentProvider"
 import type { Metadata } from "next"
 import { Toaster } from "sonner"
@@ -32,7 +33,7 @@ export default function RootLayout({
                 richColors
                 expand={true}
                 visibleToasts={1}
-              />{" "}
+              />
               <SiteContainer>{children}</SiteContainer>
             </body>
           </html>

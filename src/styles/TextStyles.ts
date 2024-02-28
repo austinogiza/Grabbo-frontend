@@ -1,10 +1,10 @@
 import styled from "styled-components"
 
 export const smallText = styled.p`
-  font-family: "Inter", sans-serif;
+  font-family: "Manrope-Regular";
   font-size: 16px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.5;
 
   @media only screen and (max-width: 650px) {
@@ -13,7 +13,7 @@ export const smallText = styled.p`
 `
 
 export const bodyText = styled.p`
-  font-family: "Inter", sans-serif;
+  font-family: "Manrope-Regular";
   font-size: 19px;
   font-style: normal;
   font-weight: 400;
@@ -25,7 +25,7 @@ export const bodyText = styled.p`
 `
 
 export const LargeText = styled.h1`
-  font-family: "Inter", sans-serif;
+  font-family: "Manrope-Medium";
   font-size: 96px;
   font-style: normal;
   font-weight: 600;
@@ -37,7 +37,7 @@ export const LargeText = styled.h1`
 `
 
 export const bigHeader = styled.h1`
-  font-family: "Inter", sans-serif;
+  font-family: "Manrope-Medium";
   font-size: 60px;
   font-style: normal;
   font-weight: 600;
@@ -49,7 +49,7 @@ export const bigHeader = styled.h1`
 `
 
 export const subHeader = styled.h1`
-  font-family: "Inter", sans-serif;
+  font-family: "Manrope-Medium";
   font-size: 28px;
   font-style: normal;
   font-weight: 600;
@@ -60,7 +60,7 @@ export const subHeader = styled.h1`
   }
 `
 export const headerText = styled.h1`
-  font-family: "Inter", sans-serif;
+  font-family: "Manrope-Medium";
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
@@ -75,7 +75,7 @@ export const headerText = styled.h1`
 `
 
 export const footerHeaderText = styled.h1`
-  font-family: "Inter", sans-serif;
+  font-family: "Manrope-Medium";
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
@@ -90,7 +90,7 @@ export const footerHeaderText = styled.h1`
 `
 
 export const mediumHeader = styled.h2`
-  font-family: "Inter", sans-serif;
+  font-family: "Manrope-Medium";
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
@@ -100,7 +100,7 @@ export const mediumHeader = styled.h2`
   }
 `
 export const lightHeader = styled.h2`
-  font-family: "Inter", sans-serif;
+  font-family: "Manrope-Medium";
   font-size: 40px;
   font-style: normal;
   font-weight: 300;
@@ -111,7 +111,7 @@ export const lightHeader = styled.h2`
 `
 
 export const aboutText = styled.h2`
-  font-family: "Inter", sans-serif;
+  font-family: "Manrope-Medium";
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
@@ -122,7 +122,7 @@ export const aboutText = styled.h2`
 `
 
 export const tinyHeader = styled.h2`
-  font-family: "Inter", sans-serif;
+  font-family: "Manrope-Medium";
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -133,7 +133,7 @@ export const tinyHeader = styled.h2`
 `
 
 export const tinyHeaderLight = styled.h2`
-  font-family: "Inter", sans-serif;
+  font-family: "Manrope-Medium";
   font-size: 21px;
   font-style: normal;
   font-weight: 300;
@@ -144,7 +144,7 @@ export const tinyHeaderLight = styled.h2`
 `
 
 export const tinyCaption = styled.h2`
-  font-family: "Inter", sans-serif;
+  font-family: "Manrope-Medium";
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -155,7 +155,7 @@ export const tinyCaption = styled.h2`
 `
 
 export const smallHeader = styled.h2`
-  font-family: "Inter", sans-serif;
+  font-family: "Manrope-Medium";
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
