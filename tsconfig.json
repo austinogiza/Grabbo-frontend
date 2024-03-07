@@ -24,6 +24,8 @@
       "@/config/*": ["config/*"],
       "@/provider/*": ["provider/*"],
       "@/components/*": ["components/*"],
+      "@/navbar/*": ["navbar/*"],
+      "@/footer/*": ["footer/*"],
       "@/container/*": ["container/*"],
       "@/constants/*": ["constants/*"],
       "@/data/*": ["data/*"],
