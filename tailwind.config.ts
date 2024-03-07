@@ -17,6 +17,7 @@ module.exports = {
         smokeWhite: "#f4f4f5",
         smoothBG: "#FFFDFB",
         outlineColor: "#DEE0E3",
+        strokeColor: "#C2C8DC",
         primary: {
           "50": "#eaf3ff",
           "100": "#d9e8ff",

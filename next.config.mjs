@@ -1,4 +1,14 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
+const { withContentlayer } = require("next-contentlayer")
 
-export default nextConfig;
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
+
+  images: {
+    domains: ["res.cloudinary.com"],
+  },
+  swcMinify: true,
+}
+
+module.exports = withContentlayer(nextConfig)

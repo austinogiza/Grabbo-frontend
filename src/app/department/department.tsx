@@ -1,7 +1,14 @@
+import DepartmentHero from "@/components/department/DepartmentHero"
+import DepartmentSection from "@/components/department/DepartmentSection"
 import React from "react"
 
-const department = () => {
-  return <div>department</div>
+const Department = () => {
+  return (
+    <>
+      <DepartmentHero />
+      <DepartmentSection />
+    </>
+  )
 }
 
-export default department
+export default Department

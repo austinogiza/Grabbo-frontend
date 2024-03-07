@@ -22,8 +22,8 @@ export const PrivacyHeader = styled.h2`
     font-size: 48px;
   }
 `
-export const GrabboHeader2Medium25 = styled.h2`
-  font-family: "Geist-Medium25";
+export const GrabboHeader2Medium = styled.h2`
+  font-family: "Geist-Medium";
   font-size: 72px;
   font-weight: 500;
   line-height: 1.2;
@@ -36,7 +36,7 @@ export const GrabboHeader2Medium25 = styled.h2`
   }
 `
 
-export const GrabboHeader2Medium = styled.h2`
+export const GrabboHeader2Medium25 = styled.h2`
   font-family: "Geist-Medium";
   font-size: 72px;
   font-weight: 500;
@@ -52,7 +52,7 @@ export const GrabboHeader2Medium = styled.h2`
 
 export const GrabboHeader3 = styled.h3`
   font-family: "Geist-Medium";
-  font-size: 51px;
+  font-size: 54px;
   font-weight: 500;
   line-height: 1.2;
   @media only screen and (max-width: 800px) {
@@ -60,8 +60,8 @@ export const GrabboHeader3 = styled.h3`
   }
 `
 export const BoldGrabboHeader3 = styled.h3`
-  font-family: "Geist-SemiBold25";
-  font-size: 51px;
+  font-family: "Geist-SemiBold";
+  font-size: 54px;
   font-weight: 600;
   line-height: 1.2;
   @media only screen and (max-width: 800px) {
@@ -78,7 +78,7 @@ export const MainGrabboHeader4 = styled.h3`
   }
 `
 export const BoldGrabboHeader4 = styled.h3`
-  font-family: "Geist-SemiBold25";
+  font-family: "Geist-SemiBold";
   font-size: 36px;
   font-weight: 600;
   line-height: 1.2;
@@ -87,8 +87,8 @@ export const BoldGrabboHeader4 = styled.h3`
   }
 `
 export const MediumGrabboHeader3 = styled.h3`
-  font-family: "Geist-Medium25";
-  font-size: 51px;
+  font-family: "Geist-Medium";
+  font-size: 54px;
   font-weight: 500;
   line-height: 1.2;
   @media only screen and (max-width: 800px) {
@@ -115,7 +115,7 @@ export const GrabboHeader5 = styled.h5`
   }
 `
 export const BoldGrabboHeader5 = styled.h5`
-  font-family: "Geist-SemiBold25";
+  font-family: "Geist-SemiBold";
   font-size: 25px;
   font-weight: 500;
   line-height: 1.2;
@@ -142,7 +142,7 @@ export const GrabboHeader5Italic = styled.h5`
     font-size: px;
   }
 `
-export const GrabboHeader5Medium25 = styled.h5`
+export const GrabboHeader5Medium = styled.h5`
   font-family: "Geist-RegularItalic";
   font-size: 25px;
   font-weight: 400;

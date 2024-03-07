@@ -4,26 +4,26 @@ import { grabboColors } from "./ColorStyles"
 import Link from "next/link"
 
 export const PrimaryButton = styled(Link)`
-  height: 48px;
-  max-width: 180px;
+  height: 44px;
+  max-width: 720px;
   width: 100%;
-  background: ${grabboColors.sitePrimary};
+  background: ${grabboColors.primary[600]};
   color: ${grabboColors.white};
   display: flex;
   justify-content: center;
   align-items: center;
   outline: none;
   border: none;
-  border-radius: 5px;
+  border-radius: 12px;
   font-family: "Geist-Medium";
-  font-size: 17px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 400;
   cursor: pointer;
   line-height: 1;
   text-align: center;
   :hover {
-    border: 1px solid ${grabboColors.sitePrimary};
+    border: 1px solid ${grabboColors.primary[800]};
     background: ${grabboColors.white};
     transition: 0.4s ease-in;
     color: ${grabboColors.sitePrimary};
@@ -32,7 +32,35 @@ export const PrimaryButton = styled(Link)`
     font-size: 16px;
   }
 `
-
+export const FormPrimaryButton = styled.button`
+  height: 44px;
+  max-width: 720px;
+  width: 100%;
+  background: ${grabboColors.primary[600]};
+  color: ${grabboColors.white};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+  border-radius: 12px;
+  font-family: "Geist-Medium";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  cursor: pointer;
+  line-height: 1;
+  text-align: center;
+  :hover {
+    border: 1px solid ${grabboColors.primary[800]};
+    background: ${grabboColors.white};
+    transition: 0.4s ease-in;
+    color: ${grabboColors.sitePrimary};
+  }
+  @media only screen and (max-width: 650px) {
+    font-size: 16px;
+  }
+`
 export const GhostButton = styled(Link)`
   height: 44px;
   max-width: 220px;
