@@ -9,7 +9,7 @@ const MessageSection = () => {
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <MessageInfoRow className="lg:max-w-lg flex flex-col items-start justify-center">
             <MessageTitle className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Need a Doctor for Check-up?
+              Need a Doctor ?
             </MessageTitle>
             <MessageText className="mt-6 text-lg leading-8 text-gray-600">
               We Provide the highest level of satisfaction care & services to

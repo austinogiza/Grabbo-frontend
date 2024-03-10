@@ -1,7 +1,14 @@
+import BlogContent from "@/components/blog/BlogContent"
+import BlogHero from "@/components/blog/BlogHero"
 import React from "react"
 
-const blog = () => {
-  return <div>blog</div>
+const BlogPage = () => {
+  return (
+    <>
+      <BlogHero />
+      <BlogContent />
+    </>
+  )
 }
 
-export default blog
+export default BlogPage

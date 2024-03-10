@@ -11,6 +11,7 @@
   "dependencies": {
     "@contentlayer/core": "^0.3.4",
     "@contentlayer/source-files": "^0.3.4",
+    "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^2.1.1",
     "@hookform/resolvers": "^3.1.0",
     "@nextui-org/react": "^2.2.10",
@@ -38,7 +39,7 @@
     "iconsax-react": "^0.0.8",
     "isbot": "^4.1.0",
     "keen-slider": "^6.8.6",
-    "lucide-react": "^0.341.0",
+    "lucide-react": "^0.354.0",
     "next": "14.1.0",
     "next-auth": "^4.22.1",
     "next-contentlayer": "^0.3.1",

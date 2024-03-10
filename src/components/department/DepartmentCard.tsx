@@ -1,74 +1,46 @@
-"use client"
-
-import type { CardProps } from "@nextui-org/react"
-
+import { GrabboBody3, GrabboHeader7Medium } from "@/styles/TextStyles"
+import { ArrowUpRight } from "lucide-react"
 import React, { FC } from "react"
-import { Card, CardBody, Image, CardHeader } from "@nextui-org/react"
-import { motion, useMotionValue, useMotionTemplate } from "framer-motion"
-
-const DepartmentCard: FC<CardProps> = (props) => {
-  let mouseX = useMotionValue(0)
-  let mouseY = useMotionValue(0)
-
-  const cardRef = React.useRef<HTMLDivElement>(null)
-
-  function onMouseMove({
-    clientX,
-    clientY,
-  }: React.MouseEvent<HTMLDivElement, MouseEvent>) {
-    if (!cardRef?.current) return
-
-    let { left, top } = cardRef.current?.getBoundingClientRect()
-
-    mouseX.set(clientX - left)
-    mouseY.set(clientY - top)
-  }
-
+import { twc } from "react-twc"
+interface DepartmentProps {
+  imageUrl?: string
+  name?: string
+  title?: string
+}
+const DepartmentCard: FC<DepartmentProps> = (props) => {
+  const { imageUrl, name, title } = props
   return (
-    <Card
-      {...props}
-      ref={cardRef}
-      className="group relative w-[420px] bg-neutral-900 shadow-large"
-      radius="lg"
-      onMouseMove={onMouseMove}
-    >
-      <motion.div
-        className="pointer-events-none absolute -inset-px rounded-xl opacity-0 transition duration-250 group-hover:opacity-100"
-        style={{
-          background: useMotionTemplate`
-            radial-gradient(
-              450px circle at ${mouseX}px ${mouseY}px,
-              rgba(120, 40, 200, 0.2),
-              transparent 80%
-            )
-          `, // <- Add your own color here
-        }}
-      />
-      <CardHeader className="relative h-60 p-0">
-        <Image
-          removeWrapper
-          alt="Acme Planner"
-          className="h-full object-cover"
-          src="https://nextuipro.nyc3.cdn.digitaloceanspaces.com/components-images/calendar.png"
-          style={{
-            // @ts-ignore
-            "-webkit-mask-image":
-              "linear-gradient(to bottom, #000 70%, transparent 100%)",
-          }}
+    <>
+      <article className="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80">
+        <img
+          src={imageUrl}
+          alt=""
+          className="absolute inset-0 -z-10 h-full w-full object-cover"
         />
-      </CardHeader>
-      <CardBody className="px-6 pb-8 pt-4">
-        <div className="flex flex-col gap-2">
-          <p className="text-xl text-neutral-50">
-            Get started with Acme Planner
-          </p>
-          <p className="text-small text-neutral-400">
-            Outline, monitor, and deliver extensive work elements from inception
-            to completion using project management and strategic roadmaps.
-          </p>
+        <div>
+          <div>
+            {" "}
+            <h2>{name}</h2>{" "}
+            <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
+              {title}
+            </h3>
+          </div>
+          <div></div>
         </div>
-      </CardBody>
-    </Card>
+      </article>
+    </>
   )
 }
+const BlogContentRow = twc.div`
+flex flex-row justify-between items-center
+`
+const BlogTitleText = twc(GrabboHeader7Medium)`
+mt-5`
+const BlogDescriptionText = twc(GrabboBody3)`
+text-neutral-400
+mt-2 line-clamp-3
+`
+const BlogArrow = twc(ArrowUpRight)`
+text-black w-8 h-10 ml-4
+`
 export default DepartmentCard

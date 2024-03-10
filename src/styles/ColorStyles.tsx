@@ -10,6 +10,7 @@ export const grabboColors = {
   darkGrey: "#3E3E3E",
   smoothBG: "#FFFDFB",
   outlineColor: "#DEE0E3",
+  links: "#108554",
   strokeColor: "#C2C8DC",
   primary: {
     "50": "#eaf3ff",
