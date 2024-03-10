@@ -1,46 +1,91 @@
-import { GrabboBody3, GrabboHeader7Medium } from "@/styles/TextStyles"
+"use client"
+import {
+  GrabboBody3,
+  GrabboHeader5,
+  GrabboHeader7Medium,
+} from "@/styles/TextStyles"
 import { ArrowUpRight } from "lucide-react"
+import Link from "next/link"
 import React, { FC } from "react"
 import { twc } from "react-twc"
-interface DepartmentProps {
+import styled from "styled-components"
+interface DepartmentInfoProps {
   imageUrl?: string
-  name?: string
   title?: string
+  departmentLink?: string
+  description?: string
 }
-const DepartmentCard: FC<DepartmentProps> = (props) => {
-  const { imageUrl, name, title } = props
+const DepartmentCard: FC<DepartmentInfoProps> = (props) => {
+  const {
+    imageUrl,
+
+    title,
+
+    departmentLink,
+    description,
+  } = props
   return (
     <>
-      <article className="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80">
-        <img
-          src={imageUrl}
-          alt=""
-          className="absolute inset-0 -z-10 h-full w-full object-cover"
-        />
-        <div>
-          <div>
-            {" "}
-            <h2>{name}</h2>{" "}
-            <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
-              {title}
-            </h3>
-          </div>
-          <div></div>
-        </div>
-      </article>
+      <Link href={`/blog/${departmentLink}`}>
+        <DepartmentCover imageUrl={imageUrl} className="relative w-full">
+          <MainOverlay />
+          <BlogContentRow className="group relative">
+            <div>
+              <BlogTitleText>{title}</BlogTitleText>
+              <BlogDescriptionText>{description}</BlogDescriptionText>
+            </div>{" "}
+            <div>
+              <CardArrowCover>
+                <BlogArrow />
+              </CardArrowCover>
+            </div>
+          </BlogContentRow>
+        </DepartmentCover>
+      </Link>
     </>
   )
 }
+
+const DepartmentCover = styled.div<DepartmentInfoProps>`
+  max-width: 850px;
+  width: 100%;
+  min-height: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 12px 24px;
+  border-radius: 20px;
+  background: ${(props) =>
+    props.imageUrl && `url(${props.imageUrl}) no-repeat center center/cover`};
+`
 const BlogContentRow = twc.div`
 flex flex-row justify-between items-center
+relative z-[3]
+mb-10
 `
-const BlogTitleText = twc(GrabboHeader7Medium)`
-mt-5`
+const MainOverlay = styled.div`
+  position: absolute;
+  border-radius: 20px;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.44);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  display: flex;
+`
+const BlogTitleText = twc(GrabboHeader5)`
+mt-5  text-white`
 const BlogDescriptionText = twc(GrabboBody3)`
-text-neutral-400
+text-white
 mt-2 line-clamp-3
 `
 const BlogArrow = twc(ArrowUpRight)`
-text-black w-8 h-10 ml-4
+text-black w-8 h-8
 `
+const CardArrowCover = twc.span`
+bg-white w-16 h-16 rounded-full flex items-center justify-center`
+
 export default DepartmentCard

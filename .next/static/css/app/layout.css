@@ -555,6 +555,9 @@ video {
 .z-\[5\] {
   z-index: 5;
 }
+.z-\[3\] {
+  z-index: 3;
+}
 .order-first {
   order: -9999;
 }
@@ -650,6 +653,12 @@ video {
 .mt-8 {
   margin-top: 2rem;
 }
+.mb-20 {
+  margin-bottom: 5rem;
+}
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
 .line-clamp-3 {
   overflow: hidden;
   display: -webkit-box;
@@ -731,6 +740,9 @@ video {
 .h-screen {
   height: 100vh;
 }
+.h-16 {
+  height: 4rem;
+}
 .max-h-\[70vh\] {
   max-height: 70vh;
 }
@@ -769,6 +781,9 @@ video {
 }
 .w-full {
   width: 100%;
+}
+.w-16 {
+  width: 4rem;
 }
 .max-w-2xl {
   max-width: 42rem;
