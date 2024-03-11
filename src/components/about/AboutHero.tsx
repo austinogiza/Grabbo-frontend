@@ -1,5 +1,6 @@
 "use client"
 import { GrabboHeader3, GrabboHeaderCaption } from "@/styles/TextStyles"
+import SiteDivider from "@/utils/SiteDivider"
 import { ArrowRight } from "iconsax-react"
 import { twc } from "react-twc"
 import styled from "styled-components"
@@ -26,7 +27,7 @@ const AboutHero = () => {
           <MainOverlay />
           <div className="mx-auto max-w-7xl  ">
             <img
-              className="rounded-xl mb-[-3%] "
+              className="rounded-xl "
               src="/images/abouthero.webp"
               alt="grabbo about us hero"
             />
@@ -42,12 +43,13 @@ const MainOverlay = styled.div`
   background: rgba(0, 0, 0, 0.24);
   top: 0;
   left: 0;
-  border-radius: 12px 12px 0 0;
+  border-radius: 12px;
   width: 100%;
   height: 100%;
   content: "";
   display: flex;
 `
+
 const AboutHeroContainer = styled.div`
   background: url("/images/backgroundpattern.webp") no-repeat center
     center/contain;

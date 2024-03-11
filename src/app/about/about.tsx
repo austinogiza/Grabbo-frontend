@@ -1,5 +1,5 @@
+import AboutDepartment from "@/components/about/AboutDepartment"
 import AboutHero from "@/components/about/AboutHero"
-import AboutSector from "@/components/about/AboutSector"
 import AboutValues from "@/components/about/AboutValues"
 import AboutWeAre from "@/components/about/AboutWeAre"
 import React from "react"
@@ -10,7 +10,7 @@ const About = () => {
       <AboutHero />
       <AboutWeAre />
       <AboutValues />
-      <AboutSector />
+      <AboutDepartment />
     </>
   )
 }
