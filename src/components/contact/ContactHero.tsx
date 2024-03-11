@@ -20,7 +20,8 @@ const ContactHero = () => {
         {" "}
         <ContactTitleRow>
           <ContactSubTitle>
-            Get in Touch <ContactMessageIcon />
+            Get in Touch
+            <ContactMessageIcon />
           </ContactSubTitle>
 
           <ContactTitle>CONTACT US</ContactTitle>
@@ -50,19 +51,20 @@ text-white
 mt-4
 `
 const ContactSubTitle = twc(GrabboHeaderCaptionLarge)`
-text-white
+
 rounded-full
 max-w-[160px]
 py-1 px-3
 h-8
-
+text-primary-800
 border border-primary-600
 flex flex-row items-center justify-center bg-primary-50
 mb-3
-text-primary-700
+
 `
+
 const ContainHelperText = twc(GrabboHeader7)`
-text-white
+text-neutral-50
 `
 const ContactHeroImage = twc.img`
 w-full h-full object-cover object-center

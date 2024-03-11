@@ -6,6 +6,7 @@ import { useAppDispatch } from "@/store/hooks"
 import MessageSection from "@/components/MessageSection"
 import SiteNavbar from "@/navbar/SiteNavbar"
 import SiteFoooter from "@/footer/SiteFoooter"
+import { usePathname } from "next/navigation"
 
 interface ContainerProps {
   children: React.ReactNode
@@ -17,12 +18,27 @@ const SiteContainer: React.FC<ContainerProps> = (props) => {
   useEffect(() => {
     dispatch(authCheckState())
   }, [dispatch])
-
+  const pathname = usePathname()
+  console.log("pathnameeee", pathname)
+  const showMessage =
+    pathname === "/" ||
+    pathname === "/about" ||
+    pathname === "/contact" ||
+    pathname === "/blog" ||
+    pathname === "/department" ||
+    pathname.startsWith("/department") ||
+    pathname.startsWith("/blog")
   return (
     <>
       <SiteNavbar />
       {children}
-      <MessageSection />
+      {showMessage ? (
+        <>
+          {" "}
+          <MessageSection />
+        </>
+      ) : null}
+
       <SiteFoooter />
     </>
   )
