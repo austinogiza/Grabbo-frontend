@@ -36,10 +36,10 @@ export const GrabboHeader2Medium = styled.h2`
   }
 `
 
-export const GrabboHeader2Medium25 = styled.h2`
-  font-family: "Geist-Medium";
+export const GrabboHeader2SemiBold = styled.h2`
+  font-family: "Geist-SemiBold";
   font-size: 72px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.2;
 
   @media only screen and (max-width: 800px) {
@@ -54,6 +54,15 @@ export const GrabboHeader3 = styled.h3`
   font-family: "Geist-Medium";
   font-size: 54px;
   font-weight: 500;
+  line-height: 1.2;
+  @media only screen and (max-width: 800px) {
+    font-size: 32px;
+  }
+`
+export const GrabboHeader3Regular = styled.h3`
+  font-family: "Geist-Regular";
+  font-size: 54px;
+  font-weight: 400;
   line-height: 1.2;
   @media only screen and (max-width: 800px) {
     font-size: 32px;

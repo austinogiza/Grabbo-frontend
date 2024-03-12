@@ -1,10 +1,19 @@
 import { FormPrimaryButton } from "@/styles/ButtonStyles"
 import { FormPrimary, FormTextAreaPrimary } from "@/styles/InputStyles"
 import { twc } from "react-twc"
-
+import { useForm } from "react-hook-form"
 const Contactform = () => {
+  const {
+    handleSubmit,
+    formState: { errors, isSubmitting, isSubmitSuccessful },
+    watch,
+  } = useForm()
+  const onSubmit = () => {}
   return (
-    <form className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48">
+    <form
+      className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48"
+      onSubmit={handleSubmit(onSubmit)}
+    >
       <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>

@@ -5,6 +5,8 @@ export const grabboColors = {
   dark: "#061C55",
   light: "#F6F8FE",
   mildBlack: "#2A2A2A",
+  sweetDark: "#111111",
+
   grey: "#767676",
   smoke: "#fafafa",
   darkGrey: "#3E3E3E",

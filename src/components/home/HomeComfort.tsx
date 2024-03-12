@@ -1,3 +1,5 @@
+import ComfortSection from "./ComfortSection"
+
 const jobOpenings = [
   {
     id: 1,
@@ -27,20 +29,42 @@ const jobOpenings = [
     location: "San Francisco, CA",
   },
 ]
-
+const items = [
+  {
+    title: "100+ Payment Method",
+    content:
+      "Test your product idea by launching payments with little to no code.",
+    icon: "/images/content/icons/credit-card.svg",
+  },
+  {
+    title: "Convert Automatically",
+    content:
+      "Test your product idea by launching payments with little to no code.",
+    icon: "/images/content/icons/credit-card-refresh.svg",
+  },
+  {
+    title: "Manage Funds",
+    content:
+      "Test your product idea by launching payments with little to no code.",
+    icon: "/images/content/icons/coins-hand.svg",
+  },
+]
 const HomeComfort = () => {
   return (
     <div className="bg-white py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto flex max-w-2xl flex-col items-end justify-between gap-16 lg:mx-0 lg:max-w-none lg:flex-row">
+        <div className="mx-auto flex max-w-[750px] flex-col items-end justify-between gap-16 lg:mx-0 lg:max-w-none lg:flex-row">
           <div className="w-full lg:max-w-lg lg:flex-auto">
+            <span>
+              <p>Our General And Specialized Services</p>
+            </span>
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              We’re always looking for awesome people to join us
+              Our Goal Is To Treat Our Patients With Comfort And Compassion.
             </h2>
             <p className="mt-6 text-xl leading-8 text-gray-600">
-              Diam nunc lacus lacus aliquam turpis enim. Eget hac velit est
-              euismod lacus. Est non placerat nam arcu. Cras purus nibh cursus
-              sit eu in id.
+              At Urban Luxe, we pride ourselves on offering a range of essential
+              features that set us apart. Explore what makes us your ideal
+              interior design partner
             </p>
             <img
               src="https://images.unsplash.com/photo-1606857521015-7f9fcf423740?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1344&h=1104&q=80"
@@ -48,51 +72,16 @@ const HomeComfort = () => {
               className="mt-16 aspect-[6/5] w-full rounded-2xl bg-gray-50 object-cover lg:aspect-auto lg:h-[34.5rem]"
             />
           </div>
-          <div className="w-full lg:max-w-xl lg:flex-auto">
-            <h3 className="sr-only">Job openings</h3>
-            <ul className="-my-8 divide-y divide-gray-100">
-              {jobOpenings.map((opening) => (
-                <li key={opening.id} className="py-8">
-                  <dl className="relative flex flex-wrap gap-x-3">
-                    <dt className="sr-only">Role</dt>
-                    <dd className="w-full flex-none text-lg font-semibold tracking-tight text-gray-900">
-                      <a href={opening.href}>
-                        {opening.role}
-                        <span className="absolute inset-0" aria-hidden="true" />
-                      </a>
-                    </dd>
-                    <dt className="sr-only">Description</dt>
-                    <dd className="mt-2 w-full flex-none text-base leading-7 text-gray-600">
-                      {opening.description}
-                    </dd>
-                    <dt className="sr-only">Salary</dt>
-                    <dd className="mt-4 text-base font-semibold leading-7 text-gray-900">
-                      {opening.salary}
-                    </dd>
-                    <dt className="sr-only">Location</dt>
-                    <dd className="mt-4 flex items-center gap-x-3 text-base leading-7 text-gray-500">
-                      <svg
-                        viewBox="0 0 2 2"
-                        className="h-0.5 w-0.5 flex-none fill-gray-300"
-                        aria-hidden="true"
-                      >
-                        <circle cx={1} cy={1} r={1} />
-                      </svg>
-                      {opening.location}
-                    </dd>
-                  </dl>
-                </li>
-              ))}
-            </ul>
-            <div className="mt-8 flex border-t border-gray-100 pt-8">
-              <a
-                href="#"
-                className="text-sm font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
-              >
-                View all openings <span aria-hidden="true">&rarr;</span>
-              </a>
-            </div>
-          </div>
+        </div>{" "}
+        <div className="mt-20 flex flex-row gap-2">
+          {items.map((item, index: number) => (
+            <ComfortSection
+              key={index}
+              title={item.title}
+              content={item.content}
+              icon={item.icon}
+            />
+          ))}
         </div>
       </div>
     </div>

@@ -27,6 +27,48 @@ export default function RootLayout({
       <ReactQueryProvider>
         <ReduxProvider>
           <html lang="en">
+            <head>
+              {" "}
+              <meta name="description" content={`${siteConfig.name}`} />
+              {/* Product Name */}
+              <meta name="product-name" content={`${siteConfig.name}`} />
+              {/* Twitter Card data */}
+              <meta name="twitter:card" content="summary" />
+              <meta name="twitter:site" content={`${siteConfig.username}`} />
+              <meta name="twitter:title" content={`${siteConfig.name}`} />
+              <meta
+                name="twitter:description"
+                content={`${siteConfig.description}`}
+              />
+              <meta name="twitter:creator" content={`${siteConfig.username}`} />
+              {/* Twitter Summary card images must be at least 120x120px */}
+              <meta name="twitter:image" content={`${siteConfig.ogImage}`} />
+              {/* Open Graph data for Facebook */}
+              <meta property="og:title" content={`${siteConfig.name}`} />
+              <meta property="og:type" content="Article" />
+              <meta property="og:url" content={`${siteConfig.ogImage}`} />
+              <meta property="og:image" content={`${siteConfig.ogImage}`} />
+              <meta
+                property="og:description"
+                content={`${siteConfig.description}`}
+              />
+              <meta property="og:site_name" content={`${siteConfig.name}`} />
+              {/* Open Graph data for LinkedIn */}
+              <meta property="og:title" content={`${siteConfig.name}`} />
+              <meta property="og:url" content={`${siteConfig.ogImage}`} />
+              <meta property="og:image" content={`${siteConfig.ogImage}`} />
+              <meta
+                property="og:description"
+                content={`${siteConfig.description}`}
+              />
+              <meta property="og:title" content={`${siteConfig.name}`} />
+              <meta property="og:url" content={`${siteConfig.username}`} />
+              <meta property="og:image" content={`${siteConfig.ogImage}`} />
+              <meta
+                property="og:description"
+                content={`${siteConfig.description}`}
+              />
+            </head>
             <body>
               <Toaster
                 position="top-right"

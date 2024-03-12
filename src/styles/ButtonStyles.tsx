@@ -152,3 +152,36 @@ export const formButton = styled.button`
     font-size: 16px;
   }
 `
+
+export const AboutSectionButton = styled.button`
+  height: 64px;
+  max-width: 720px;
+  width: 100%;
+  background: ${grabboColors.primary[600]};
+  color: ${grabboColors.white};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+  border-radius: 999px;
+  font-family: "Geist-Medium";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  cursor: pointer;
+  line-height: 1;
+  text-align: center;
+  overflow: visible;
+  backdrop-filter: blur(5px);
+  background-color: #ffffff1a;
+  :hover {
+    border: 1px solid ${grabboColors.primary[800]};
+    background: ${grabboColors.white};
+    transition: 0.4s ease-in;
+    color: ${grabboColors.sitePrimary};
+  }
+  @media only screen and (max-width: 650px) {
+    font-size: 16px;
+  }
+`
