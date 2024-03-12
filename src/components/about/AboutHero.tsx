@@ -1,13 +1,12 @@
 "use client"
 import { GrabboHeader3, GrabboHeaderCaption } from "@/styles/TextStyles"
-import SiteDivider from "@/utils/SiteDivider"
 import { ArrowRight } from "iconsax-react"
 import { twc } from "react-twc"
 import styled from "styled-components"
 
 const AboutHero = () => {
   return (
-    <AboutHeroContainer className="bg-white py-10 sm:py-24 mt-10 ">
+    <AboutHeroContainer className="bg-white py-10 sm:py-24 mt-10 lg:px-0 px-4 ">
       <div className=" flex flex-col items-start justify-center max-w-[1328px]  mx-auto">
         <div className="max-w-[1328px]">
           <div className=" items-start flex flex-col">

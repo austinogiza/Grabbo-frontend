@@ -102,6 +102,7 @@ mb-8 text-black py-2 px-5 rounded-full border border-white bg-white
 const AboutContentHeader = twc.div`
 max-w-[1150px]
 my-3
+
 `
 const HeaderTitle = twc(GrabboHeader3Regular)`
 text-white
@@ -109,7 +110,8 @@ text-white
 `
 
 const AboutContent = twc.div`
-flex flex-row gap-3
+flex
+lg:flex-row flex-col gap-3
 mt-10
 `
 
