@@ -69,13 +69,13 @@ flex flex-col
 `
 
 const ValueContainer = twc.div`
-rounded-fullflex justify-start items-center
+rounded-full flex justify-start items-center
 mr-2
 w-full flex flex-row
 my-3
 `
 const ValuesIcon = twc(TickCircle)`
-w-6 h-6 text-primary-600
+w-5 h-5 text-primary-600
 `
 const MainOverlay = styled.div`
   position: absolute;

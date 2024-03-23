@@ -1,6 +1,5 @@
 import {
   GrabboHeader2Medium,
-  GrabboHeader2Medium25,
   GrabboHeader7,
   GrabboHeaderCaptionLarge,
 } from "@/styles/TextStyles"

@@ -1,7 +1,9 @@
 export interface SiteConfig {
-  username: string
+  title: string
   name: string
   description: string
+  social?: string
+
   url: string
   ogImage: string
   links: {
@@ -10,8 +12,10 @@ export interface SiteConfig {
 }
 
 export const siteConfig: SiteConfig = {
-  username: "@GrabboFertilityClinic",
-  name: "Grabbo Fertility Clinic",
+  name: "@rabboFertilityClinic",
+  social: "@GrabboFertilityClinic",
+
+  title: "Grabbo Fertility Clinic",
   description:
     "Grabbo Fertility Clinic and Diagnostic Centre is one of the best Medical Centre in Gwarinpa, Abuja, Nigeria. We give you a precise and reliable medical",
   url: "http://grabbofertilityclinic.com",

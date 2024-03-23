@@ -6,9 +6,40 @@ import "@/styles/globals.css"
 import StyledComponentProvider from "@/provider/StyledComponentProvider"
 import type { Metadata } from "next"
 import { Toaster } from "sonner"
-export const metadata: Metadata = {
-  title: "Home | Grabbo Fertility Clinic",
-  description: "",
+
+export const metadata = {
+  title: {
+    default: siteConfig.name,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  keywords: [],
+  authors: [
+    {
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
+  ],
+  creator: siteConfig.name,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteConfig.url,
+    title: siteConfig.name,
+    description: siteConfig.description,
+    siteName: siteConfig.name,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: [`${siteConfig.url}/og.png`],
+    creator: siteConfig.social,
+  },
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon-16x16.png",
@@ -26,49 +57,7 @@ export default function RootLayout({
     <StyledComponentProvider>
       <ReactQueryProvider>
         <ReduxProvider>
-          <html lang="en">
-            <head>
-              {" "}
-              <meta name="description" content={`${siteConfig.name}`} />
-              {/* Product Name */}
-              <meta name="product-name" content={`${siteConfig.name}`} />
-              {/* Twitter Card data */}
-              <meta name="twitter:card" content="summary" />
-              <meta name="twitter:site" content={`${siteConfig.username}`} />
-              <meta name="twitter:title" content={`${siteConfig.name}`} />
-              <meta
-                name="twitter:description"
-                content={`${siteConfig.description}`}
-              />
-              <meta name="twitter:creator" content={`${siteConfig.username}`} />
-              {/* Twitter Summary card images must be at least 120x120px */}
-              <meta name="twitter:image" content={`${siteConfig.ogImage}`} />
-              {/* Open Graph data for Facebook */}
-              <meta property="og:title" content={`${siteConfig.name}`} />
-              <meta property="og:type" content="Article" />
-              <meta property="og:url" content={`${siteConfig.ogImage}`} />
-              <meta property="og:image" content={`${siteConfig.ogImage}`} />
-              <meta
-                property="og:description"
-                content={`${siteConfig.description}`}
-              />
-              <meta property="og:site_name" content={`${siteConfig.name}`} />
-              {/* Open Graph data for LinkedIn */}
-              <meta property="og:title" content={`${siteConfig.name}`} />
-              <meta property="og:url" content={`${siteConfig.ogImage}`} />
-              <meta property="og:image" content={`${siteConfig.ogImage}`} />
-              <meta
-                property="og:description"
-                content={`${siteConfig.description}`}
-              />
-              <meta property="og:title" content={`${siteConfig.name}`} />
-              <meta property="og:url" content={`${siteConfig.username}`} />
-              <meta property="og:image" content={`${siteConfig.ogImage}`} />
-              <meta
-                property="og:description"
-                content={`${siteConfig.description}`}
-              />
-            </head>
+          <html lang="en" suppressHydrationWarning>
             <body>
               <Toaster
                 position="top-right"
