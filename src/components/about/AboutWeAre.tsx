@@ -9,7 +9,12 @@ import {
   GrabboHeader2SemiBold,
   GrabboHeader3,
   GrabboHeader3Regular,
+  GrabboHeader4,
+  GrabboHeader6,
   GrabboHeader7,
+  GrabboHeader7Medium,
+  GrabboLargeBody,
+  MainGrabboHeader4,
 } from "@/styles/TextStyles"
 import { ArrowRight } from "iconsax-react"
 import React from "react"
@@ -19,33 +24,36 @@ import styled from "styled-components"
 const AboutWeAre = () => {
   return (
     <WeContainer>
-      <AboutWrapper>
-        <AboutTitleContent>
-          <ContentTitle>Who Are We</ContentTitle>
-        </AboutTitleContent>
-        <AboutContentHeader>
-          <HeaderTitle>
-            We Provide the highest level of satisfaction care & services to our
-            patients.
-          </HeaderTitle>
-        </AboutContentHeader>
-        <AboutContent>
-          <ContentSubText>
-            Grabbo Fertility Clinic is ready and able to care for your little
-            ones. With staff members who are certified in pediatric life
-            support, we’re experienced in treating children from infancy through
-            young adulthood. The Grabbo Fertility Clinic Gwarinpa is an
-            extraordinary achievement in clinical fertility care.
-          </ContentSubText>
-          <ContentSubText>
-            The three-story reproductive center is 13,700 square feet and will
-            offer our patients the latest fertility technology and patient
-            comfort. With a larger, more advanced clinic, GFC will be able to
-            help even more people with infertility or reproductive difficulties
-            who dream of starting a family.
-          </ContentSubText>
-        </AboutContent>
-      </AboutWrapper>{" "}
+      <AboutTopWrapper>
+        {" "}
+        <AboutWrapper>
+          <AboutTitleContent>
+            <ContentTitle>Who Are We</ContentTitle>
+          </AboutTitleContent>
+          <AboutContentHeader>
+            <HeaderTitle>
+              We Provide the highest level of satisfaction care & services to
+              our patients.
+            </HeaderTitle>
+          </AboutContentHeader>
+          <AboutContent>
+            <ContentSubText>
+              Grabbo Fertility Clinic is ready and able to care for your little
+              ones. With staff members who are certified in pediatric life
+              support, we’re experienced in treating children from infancy
+              through young adulthood. The Grabbo Fertility Clinic Gwarinpa is
+              an extraordinary achievement in clinical fertility care.
+            </ContentSubText>
+            <ContentSubText>
+              The three-story reproductive center is 13,700 square feet and will
+              offer our patients the latest fertility technology and patient
+              comfort. With a larger, more advanced clinic, GFC will be able to
+              help even more people with infertility or reproductive
+              difficulties who dream of starting a family.
+            </ContentSubText>
+          </AboutContent>
+        </AboutWrapper>{" "}
+      </AboutTopWrapper>
       <GrabboShowCase>
         <MainOverlay />
         <ShowcaseWrapper>
@@ -80,7 +88,7 @@ const WeContainer = styled.div`
   margin: 120px 0;
   background: ${grabboColors.black};
   width: 100%;
-  padding: 88px 0 0 0;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -90,42 +98,56 @@ const AboutWrapper = twc.div`
 flex flex-col
 max-w-[1320px]
 mx-auto my-10 w-full
-p-8
+
 
 `
+
+const AboutTopWrapper = styled.div`
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 88px 16px 120px 16px;
+  min-height: 750px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("/images/marker.svg") repeat center center/cover;
+`
+
 const AboutTitleContent = twc.div`
-max-w-[270px]
+max-w-[170px]
 flex items-center justify-center
 
 mb-8 text-black py-2 px-5 rounded-full border border-white bg-white
 `
 const AboutContentHeader = twc.div`
-max-w-[1150px]
+max-w-[1320px]
 my-3
 
 `
-const HeaderTitle = twc(GrabboHeader3Regular)`
+const HeaderTitle = twc(MainGrabboHeader4)`
 text-white
-
+w-full max-w-[950px]
 `
 
 const AboutContent = twc.div`
 flex
-lg:flex-row flex-col gap-3
+lg:flex-row flex-col gap-10
 mt-10
 `
 
-const ContentTitle = twc(BoldGrabboHeader4)`
+const ContentTitle = twc(GrabboHeader7Medium)`
 text-black
 `
-const ContentSubText = twc(GrabboHeader7)`
+const ContentSubText = twc(GrabboHeader6)`
 text-neutral-300
 
 `
 const GrabboShowCase = styled.div`
   min-height: 950px;
   width: 100%;
-  margin: 120px 0 0 0;
+
   background: url("/images/grabbooo.webp") no-repeat center center/cover;
   position: relative;
   display: flex;
@@ -135,22 +157,22 @@ const GrabboShowCase = styled.div`
 `
 const ShowcaseWrapper = twc.div`
 text-white
-max-w-[1150px]
+max-w-[1320px]
 max-auto p-4
 text-center
 relative z-10
 flex flex-col items-center justify-center
 
 `
-const ShowCaseText = twc(GrabboHeader2SemiBold)`
+const ShowCaseText = twc(GrabboHeader3)`
 text-white
 text-center
-
+max-w-[750px] mx-auto
 `
-const ShowcaseSubText = twc(GrabboHeader7)`
+const ShowcaseSubText = twc(GrabboLargeBody)`
 text-neutral-200
 text-center
-max-w-[850px]
+max-w-[800px]
 mx-auto
 `
 const ShowcaseWrapperButton = twc.div`

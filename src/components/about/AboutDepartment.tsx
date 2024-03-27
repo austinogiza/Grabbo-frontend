@@ -1,65 +1,34 @@
 "use client"
+import { GrabboHeader4, GrabboHeaderCaptionLarge } from "@/styles/TextStyles"
+import React from "react"
+import { twc } from "react-twc"
 
-import Image from "next/image"
-
-const items = [
-  {
-    title: "Powered by People",
-    content:
-      "Tortor pulvinar vestibulum eget aliquet penatibus interdum pellentesque. Diam ultrices in risus ac nunc imperdiet ultricies. Viverra est nunc condimentum aliquam pharetra ac.",
-    icon: "/images/content/icons/user-circle.svg",
-  },
-  {
-    title: "Inspire and Provoke",
-    content:
-      "Tortor pulvinar vestibulum eget aliquet penatibus interdum pellentesque. Diam ultrices in risus ac nunc imperdiet ultricies. Viverra est nunc condimentum aliquam pharetra ac.",
-    icon: "/images/content/icons/trophy.svg",
-  },
-  {
-    title: "Make it Right",
-    content:
-      "Tortor pulvinar vestibulum eget aliquet penatibus interdum pellentesque. Diam ultrices in risus ac nunc imperdiet ultricies. Viverra est nunc condimentum aliquam pharetra ac.",
-    icon: "/images/content/icons/award.svg",
-  },
-  {
-    title: "Be Transparent",
-    content:
-      "Tortor pulvinar vestibulum eget aliquet penatibus interdum pellentesque. Diam ultrices in risus ac nunc imperdiet ultricies. Viverra est nunc condimentum aliquam pharetra ac.",
-    icon: "/images/content/icons/face-happy.svg",
-  },
-]
-
-type QualityProps = {}
-
-const AboutDepartment = ({}: QualityProps) => (
-  <div className="pt-22 pb-30 xl:pb-24 md:py-12">
-    <div className="container">
-      <div className="stage">Why Finto</div>
-      <div className="max-w-[57.5rem] mb-16 text-h3 xl:max-w-[44rem] xl:text-h4 md:mb-8">
-        Finto is a Place Where Everyone Can Be The Best Version of Themselves
-      </div>
-      <div className="flex flex-wrap -mt-8 -mx-4 md:-mt-6 md:mx-0">
-        {items.map((item, index) => (
-          <div
-            className="w-[calc(50%-2rem)] mt-8 mx-4 p-8 bg-greyscale-0 border border-greyscale-100 shadow-2 lg:p-6 md:w-full md:mt-6 md:mx-0"
-            key={index}
-          >
-            <div className="flex justify-center items-center w-12 h-12 mb-6 rounded-full bg-primary-300">
-              <Image
-                src={item.icon}
-                className="w-6"
-                width={24}
-                height={24}
-                alt=""
-              />
+const AboutDepartment = () => {
+  return (
+    <div className="w-full flex flex-row items-center justify-center min-h-[850px]">
+      <div className="max-w-[1320px] w-full flex items-center justify-center">
+        <div className="container">
+          <div className="mb-14 label">Driving happiness with carsova</div>
+          <div className="flex justify-between items-end mb-25 xl:items-start xl:mb-20 lg:block">
+            <div className="max-w-[38rem] mr-10 text-h1 lg:mb-8">
+              Capture your moment with carsova electric vehicle
             </div>
-            <div className="mb-3 text-h6">{item.title}</div>
-            <div className="text-greyscale-400">{item.content}</div>
+            <div className="shrink-0 w-[29.5rem] text-g-100 lg:w-full">
+              Carsova Electric Vehicles, every journey is an adventure worth
+              capturing, and this gallery is a place to share excitement and
+              inspiration with the electric car enthusiast community
+            </div>
           </div>
-        ))}
+          <div></div>
+        </div>
       </div>
     </div>
-  </div>
-)
-
+  )
+}
+const SectionTitle = twc(GrabboHeader4)`
+lg:mb-10 mb-2
+`
+const SectionSubText = twc(GrabboHeaderCaptionLarge)`
+text-neutral-500
+`
 export default AboutDepartment

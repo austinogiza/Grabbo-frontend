@@ -174,12 +174,20 @@ export const AboutSectionButton = styled.button`
   text-align: center;
   overflow: visible;
   backdrop-filter: blur(5px);
-  background-color: #ffffff1a;
-  :hover {
+  background: #ffffff1a;
+  transition: 0.4s ease-in;
+  svg {
+    transition: 0.4s ease-in;
+    color: ${grabboColors.white};
+  }
+  &:hover {
     border: 1px solid ${grabboColors.primary[800]};
     background: ${grabboColors.white};
     transition: 0.4s ease-in;
     color: ${grabboColors.sitePrimary};
+    svg {
+      color: ${grabboColors.sitePrimary};
+    }
   }
   @media only screen and (max-width: 650px) {
     font-size: 16px;

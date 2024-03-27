@@ -23,6 +23,6 @@ const BlogContent = () => {
 const BlogContainer = twc.div`
 
 w-full
-mx-auto mt-16 max-w-[1328px] flex flex-col
+mx-auto mt-16 max-w-[1320px] flex flex-col
 `
 export default BlogContent

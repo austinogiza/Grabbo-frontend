@@ -2,11 +2,12 @@
 
 import { DepartmentsData } from "@/data/DepartmentData"
 import DepartmentCard from "./DepartmentCard"
+import styled from "styled-components"
 
 const DepartmentSection = () => {
   return (
     <div className="bg-white py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <DepartmentContainer>
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Our Departments
@@ -27,8 +28,16 @@ const DepartmentSection = () => {
             />
           ))}
         </div>
-      </div>
+      </DepartmentContainer>
     </div>
   )
 }
+
+const DepartmentContainer = styled.div`
+  max-width: 1200px;
+  width: 100%;
+  margin: 32px auto;
+  padding: 12px 16px;
+  background: url("/images/marks.svg") repeat top center/contain;
+`
 export default DepartmentSection

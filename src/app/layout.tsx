@@ -4,7 +4,6 @@ import ReactQueryProvider from "@/provider/ReactQueryProvider"
 import ReduxProvider from "@/provider/ReduxProvider"
 import "@/styles/globals.css"
 import StyledComponentProvider from "@/provider/StyledComponentProvider"
-import type { Metadata } from "next"
 import { Toaster } from "sonner"
 
 export const metadata = {

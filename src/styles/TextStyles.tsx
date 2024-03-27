@@ -79,7 +79,7 @@ export const BoldGrabboHeader3 = styled.h3`
 `
 export const MainGrabboHeader4 = styled.h3`
   font-family: "Geist-Medium";
-  font-size: 48px;
+  font-size: 44px;
   font-weight: 500;
   line-height: 1.2;
   @media only screen and (max-width: 800px) {

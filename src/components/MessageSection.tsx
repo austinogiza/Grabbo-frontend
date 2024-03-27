@@ -1,65 +1,94 @@
-import { GhostButton } from "@/styles/ButtonStyles"
-import { GrabboHeader7, MainGrabboHeader4 } from "@/styles/TextStyles"
+"use client"
+import { GhostButton, PrimaryButton } from "@/styles/ButtonStyles"
+import {
+  GrabboHeader6,
+  GrabboHeader7,
+  MainGrabboHeader4,
+} from "@/styles/TextStyles"
 import { twc } from "react-twc"
+import styled from "styled-components"
 
 const MessageSection = () => {
   return (
     <MessageContainer>
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-          <MessageInfoRow className="lg:max-w-lg flex flex-col items-start justify-center">
-            <MessageTitle className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Need a Doctor ?
-            </MessageTitle>
-            <MessageText className="mt-6 text-lg leading-8 text-gray-600">
-              We Provide the highest level of satisfaction care & services to
-              our patients.
-            </MessageText>
-            <MessageButtonWrapper>
-              <MessageButton href="/">Make an appointment</MessageButton>
-            </MessageButtonWrapper>
-          </MessageInfoRow>
-          <MessageImageContainer>
-            <img
-              src="/images/message.webp"
-              alt="Grabbo "
-              className="w-[48rem] max-w-none  shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
-              width={2432}
-              height={1442}
-            />
-          </MessageImageContainer>
-        </div>
+      <div className="mx-auto   min-h-[750px] flex items-center justify-center px-6 lg:px-8 relative">
+        <MessageMainImage src="/images/message.webp" alt="Grabbo " />
+        <MainOverlay />
+        <MessageInfoRow>
+          <MessageTitle>Need a Doctor ?</MessageTitle>
+          <MessageText>
+            We Provide the highest level of satisfaction care & services to our
+            patients.
+          </MessageText>{" "}
+          <ButtonMessageWrapper>
+            <MessageButton href="/">Make an appointment</MessageButton>
+            <MessageSecondaryButton href="/">Contact us</MessageSecondaryButton>
+          </ButtonMessageWrapper>
+        </MessageInfoRow>
       </div>
     </MessageContainer>
   )
 }
 
 const MessageContainer = twc.div`
-overflow-hidden bg-smoothBG
+ bg-smoothBG
 w-full
+items-center justify-center
 
 `
 
 const MessageInfoRow = twc.div`
-flex flex-col items-start justify-center
+flex flex-col items-center justify-center
+relative z-[3]
+max-w-[550px]
+mx-auto
 
 `
 const MessageTitle = twc(MainGrabboHeader4)`
-mb-1
+mb-1 text-white
 
 `
-const MessageText = twc(GrabboHeader7)`
-mt-2
+const MessageText = twc(GrabboHeader6)`
+mt-2 text-white max-w-[450px] mx-auto
+text-center
 `
-const MessageButtonWrapper = twc.div`
+
+const MainOverlay = styled.div`
+  position: absolute;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.34);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  display: flex;
+  border-radius: inherit;
+`
+const ButtonMessageWrapper = twc.div`
 mt-10
 w-full
+max-w-[450px]
+mx-auto
+flex flex-row gap-4
 `
-const MessageButton = twc(GhostButton)``
-
-const MessageImageContainer = twc.div`
-py-24 sm:py-32
+const MessageButton = twc(GhostButton)`
+w-full
+`
+const MessageSecondaryButton = twc(PrimaryButton)`
+w-full
 `
 
-const MessageImage = twc.img``
+const MessageMainImage = styled.img`
+  position: absolute;
+  z-index: 2;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  display: flex;
+  border-radius: inherit;
+`
 export default MessageSection

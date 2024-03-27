@@ -1,4 +1,5 @@
 import AboutDepartment from "@/components/about/AboutDepartment"
+import AboutExpectation from "@/components/about/AboutExpectation"
 import AboutHero from "@/components/about/AboutHero"
 import AboutValues from "@/components/about/AboutValues"
 import AboutWeAre from "@/components/about/AboutWeAre"
@@ -8,8 +9,10 @@ const About = () => {
   return (
     <>
       <AboutHero />
-      <AboutWeAre />
       <AboutValues />
+      <AboutWeAre />
+
+      <AboutExpectation />
       <AboutDepartment />
     </>
   )
