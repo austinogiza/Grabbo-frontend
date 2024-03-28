@@ -1,29 +1,19 @@
 "use client"
-import { SectorData, ValuesData } from "@/data/ValuesData"
+
 import {
   GrabboHeader4,
-  GrabboHeader7,
   GrabboHeaderCaption,
   GrabboHeaderCaptionLargeRegular,
 } from "@/styles/TextStyles"
-import SiteOverlay from "@/utils/SiteOverlay"
-import { TickCircle } from "iconsax-react"
-import Image from "next/image"
+
 import React from "react"
 import { twc } from "react-twc"
 import styled from "styled-components"
 
-const HomeFertility = () => {
+const HomeTreatment = () => {
   return (
     <div className="min-h-[750px] items-center flex justify-center my-20">
       <AboutHighlightContainer>
-        <ValueContainer className="flex lg:flex-row flex-col gap-10 w-full">
-          <MainOverlay />
-          <ValueWrapperIcon
-            src="https://images.unsplash.com/photo-1630569267625-157f8f9d1a7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2669&q=80"
-            alt=""
-          />
-        </ValueContainer>
         <ValuesInfoRow className="">
           <ValuesText>Features and Technology</ValuesText>
           <ValuesInfoTitle>
@@ -37,7 +27,14 @@ const HomeFertility = () => {
             experience through cutting-edge features. From super-fast charging
             to smart device integration,
           </ValuesInfoSubTitle>
-        </ValuesInfoRow>
+        </ValuesInfoRow>{" "}
+        <ValueContainer className="flex lg:flex-row flex-col gap-10 w-full">
+          <MainOverlay />
+          <ValueWrapperIcon
+            src="https://images.unsplash.com/photo-1630569267625-157f8f9d1a7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2669&q=80"
+            alt=""
+          />
+        </ValueContainer>
       </AboutHighlightContainer>
     </div>
   )
@@ -55,7 +52,7 @@ const ValuesInfoSubTitle = twc(GrabboHeaderCaptionLargeRegular)`
 text-neutral-400 my-3
 `
 const ValueWrapperIcon = twc.img`
-min-h-[750px] max-w-[570px]
+min-h-[700px] max-w-[570px]
 w-full
 rounded-2xl object-cover
 flex
@@ -96,4 +93,4 @@ const AboutHighlightContainer = twc.div`
 max-w-[1320px] mx-auto w-full flex lg:flex-row flex-col lg:gap-20 gap-10  items-center justify-center lg:px-0  px-4
 `
 
-export default HomeFertility
+export default HomeTreatment

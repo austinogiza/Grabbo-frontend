@@ -1,29 +1,29 @@
 import { PhoneIcon } from "lucide-react"
 import { RssIcon } from "@heroicons/react/24/solid"
 interface NavbarDataProps {
-  name?: string
+  title?: string
   href?: string
 }
 export const NavbarData: NavbarDataProps[] = [
   {
-    name: "Home",
+    title: "Home",
     href: "/",
   },
   {
-    name: "About us",
+    title: "About us",
     href: "/about",
   },
   {
-    name: "Departments",
+    title: "Departments",
     href: "/department",
   },
   {
-    name: "Contact us",
+    title: "Contact us",
     href: "/contact",
   },
 
   {
-    name: "Blog",
+    title: "Blog",
     href: "/blog",
   },
 ]

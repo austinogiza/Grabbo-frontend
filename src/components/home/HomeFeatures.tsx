@@ -1,79 +1,104 @@
-import React from "react"
-import Link from "next/link"
-import Image from "next/image"
+import {
+  ArrowPathIcon,
+  CloudArrowUpIcon,
+  Cog6ToothIcon,
+  FingerPrintIcon,
+  LockClosedIcon,
+  ServerIcon,
+} from "@heroicons/react/20/solid"
 
-const solutions = [
+const features = [
   {
-    title: "Accept and Optimize Payment Globally",
-    stage: "Payment",
-    content:
-      "Keep your business account and all your finance needs safely organized under one roof. Manage money quickly, easily & efficiently. Whether you’re alone or leading a team.",
-    image: "/images/content/solutions-pic-1.png",
-    url: "/solutions",
+    name: "Push to deploy.",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit aute id magna.",
+    icon: CloudArrowUpIcon,
   },
   {
-    title: "Build a Fintech with Banking as a Service",
-    stage: "Custom Card",
-    content:
-      "Keep your business account and all your finance needs safely organized under one roof. Manage money quickly, easily & efficiently. Whether you’re alone or leading a team.",
-    image: "/images/content/solutions-pic-2.png",
-    url: "/solutions",
+    name: "SSL certificates.",
+    description:
+      "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
+    icon: LockClosedIcon,
+  },
+  {
+    name: "Simple queues.",
+    description:
+      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.",
+    icon: ArrowPathIcon,
+  },
+  {
+    name: "Advanced security.",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit aute id magna.",
+    icon: FingerPrintIcon,
+  },
+  {
+    name: "Powerful API.",
+    description:
+      "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
+    icon: Cog6ToothIcon,
+  },
+  {
+    name: "Database backups.",
+    description:
+      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. ",
+    icon: ServerIcon,
   },
 ]
 
+import React from "react"
+
 const HomeFeatures = () => {
   return (
-    <>
-      <div className="section">
-        <div className="container">
-          <div className="mb-30 xl:mb-24 lg:mb-18 md:mb-12">
-            <div className="stage">Solutions</div>
-            <div className="mb-4 text-h2 xl:text-h3 md:text-h4">
-              Open Your Business Account Online
+    <div className="bg-black pt-24 lg:pt-20">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl sm:text-center">
+          <h2 className="max-w-[350px] mx-auto text-primary-200  rounded-full px-4 py-2 border-[1px] border-primary-200 mb-10">
+            Nigeria’s Number 1 World Class IVF Center
+          </h2>
+          <p className="text-3xl mt-4 font-bold tracking-tight text-white sm:text-4xl">
+            Welcome To The <br />
+            World Class IVF Center In Nigeria
+          </p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            Welcome To The World Class IVF Center In Nigeria. Welcome To The
+            World Class IVF Center In Nigeria. Welcome To The World Class IVF
+            Center In Nigeria
+          </p>
+        </div>
+      </div>
+
+      <div className="mx-auto  max-w-7xl  px-6 lg:my-24 my-16 lg:px-8">
+        <dl className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 text-gray-300 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
+          {features.map((feature) => (
+            <div key={feature.name} className="relative pl-9">
+              <dt className="inline font-semibold text-white">
+                <feature.icon
+                  className="absolute left-1 top-1 h-5 w-5 text-indigo-500"
+                  aria-hidden="true"
+                />
+                {feature.name}
+              </dt>{" "}
+              <dd className="inline">{feature.description}</dd>
             </div>
-            <div className="max-w-[48rem] text-greyscale-400 md:text-lg">
-              Keep your business account and all your finance needs safely
-              organized under one roof. Manage money quickly, easily &
-              efficiently. Whether you’re alone or leading a team.
-            </div>
-          </div>
-          <div className="space-y-30 xl:space-y-24 lg:space-y-20 md:space-y-12">
-            {solutions.map((solution, index) => (
-              <div
-                className="flex items-center -mx-20 odd:flex-row-reverse 2xl:-mx-10 xl:-mx-5 lg:block lg:mx-0"
-                key={index}
-              >
-                <div className="w-[calc(50%-5rem)] mx-20 2xl:w-[calc(50%-2.5rem)] 2xl:mx-10 xl:w-[calc(50%-1.25rem)] xl:mx-5 lg:w-full lg:mx-0 lg:mb-10">
-                  <div className="stage">{solution.stage}</div>
-                  <div className="mb-4 text-h2 xl:text-h3 md:text-h4">
-                    {solution.title}
-                  </div>
-                  <div className="mb-12 text-greyscale-400 md:mb-6 md:text-lg">
-                    {solution.content}
-                  </div>
-                  <Link
-                    className="btn-primary pr-5 md:w-full"
-                    href={solution.url}
-                  >
-                    <span>Learn More</span>
-                    {/* <Icon className="w-5 h-5" name="arrow-right" /> */}
-                  </Link>
-                </div>
-                <div className="w-[calc(50%-5rem)] mx-20 bg-greyscale-25 border border-greyscale-100 2xl:w-[calc(50%-2.5rem)] 2xl:mx-10 xl:w-[calc(50%-1.25rem)] xl:mx-5 lg:w-full lg:mx-0">
-                  <Image
-                    className="w-full"
-                    src={solution.image}
-                    width={500}
-                    height={450}
-                    alt=""
-                  />
-                </div>
-              </div>
-            ))}
+          ))}
+        </dl>
+      </div>
+      <div className="relative overflow-hidden pt-16">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <img
+            src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
+            alt="App screenshot"
+            className="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-white/10"
+            width={2432}
+            height={1442}
+          />
+          <div className="relative" aria-hidden="true">
+            <div className="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-gray-900 pt-[7%]" />
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

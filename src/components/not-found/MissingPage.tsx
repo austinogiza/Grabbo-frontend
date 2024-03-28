@@ -8,7 +8,7 @@ import { twc } from "react-twc"
 
 const MissingPage = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-white mt-20">
       <main className="mx-auto w-full max-w-7xl px-6 pb-16 pt-10 sm:pb-24 lg:px-8">
         <div className="mx-auto mt-20 max-w-2xl text-center sm:mt-24">
           <p className="text-xl font-semibold leading-8 bg-primary-50 text-primary-600 px-4 py-1 rounded-full max-w-[100px] mx-auto mb-3">

@@ -6,19 +6,22 @@ import HomeGoal from "@/components/home/HomeGoal"
 import HomeHealth from "@/components/home/HomeHealth"
 import HomeHero from "@/components/home/HomeHero"
 import HomeOurTeam from "@/components/home/HomeOurTeam"
+import HomeTreatment from "@/components/home/HomeTreatment"
+import HomeWorldClass from "@/components/home/HomeWorldClass"
 import React from "react"
 
 const HomePage = () => {
   return (
     <>
       {" "}
-      <HomeHero />
-      <HomeHealth />
-      <HomeFeatures />
-      <HomeComfort />
+      <HomeHero /> <HomeFeatures />
       <HomeFertility />
+      <HomeTreatment />
+      <HomeWorldClass />
       <AboutDepartment />
       <HomeOurTeam />
+      <HomeHealth />
+      <HomeComfort />
       <HomeGoal />
     </>
   )

@@ -4,21 +4,21 @@ import { twc } from "react-twc"
 
 const NavbarLogo = () => {
   return (
-    <div className="max-w-[80px] mx-auto my-10 flex items-center justify-center">
+    <div className="max-w-[144px] mx-auto my-10 flex items-center justify-center">
       <GrabboLink href="/">
-        <LogoImage src="/images/grabbologo.png" />
+        <LogoImage src="/images/grabbonavlogo.png" />
       </GrabboLink>
     </div>
   )
 }
 
 const LogoImage = twc.img`
-object-cover w-full max-w-[44px] min-h-[32px]
+object-contain w-full max-w-[144px] min-h-[56px]
 flex items-center justify-center
 cursor-pointer
 `
 const GrabboLink = twc(Link)`
-object-cover w-full max-w-[44px] min-h-[32px]
+object-cover w-full max-w-[144px] min-h-[56px]
 flex items-center justify-center
 `
 
