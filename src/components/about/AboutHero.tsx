@@ -1,5 +1,10 @@
 "use client"
-import { GrabboHeader3, GrabboHeaderCaption } from "@/styles/TextStyles"
+import {
+  GrabboHeader3,
+  GrabboHeader7,
+  GrabboHeaderCaption,
+  GrabboSubtitle,
+} from "@/styles/TextStyles"
 import { ArrowRight } from "iconsax-react"
 import { twc } from "react-twc"
 import styled from "styled-components"
@@ -14,7 +19,7 @@ const AboutHero = () => {
             <AboutHeroTitle>
               Grabbo Fertility Clinic & Diagnostics Centre
             </AboutHeroTitle>
-            <AboutMainText className="text-left mt-2 ">
+            <AboutMainText>
               Grabbo Fertility Clinic® is a world-class fertility center in
               Gwarimpa Abuja. With more than 10 years of collective reproductive
               clinic experience diagnosing and treating infertility, GFC is a
@@ -58,20 +63,13 @@ const AboutSubText = twc(GrabboHeaderCaption)`
 bg-white rounded-full px-3 py-1
 `
 
-const AboutSubTextRow = twc(GrabboHeaderCaption)`
-flex flex-row items-center justify-center gap-2
-bg-primary-50 text-primary-800  rounded-full
-px-2 py-1
-border-2 border-strokeColor
-mb-2
-
-`
 const AboutHeroTitle = twc(GrabboHeader3)`
  max-w-[750px]
 `
-const AboutMainText = twc.div`
+const AboutMainText = twc(GrabboHeader7)`
 text-neutral-400
- max-w-[950px]
+ max-w-[1050px]
+ text-left mt-2
 `
 const AboutArrow = twc(ArrowRight)`
  w-5 h-5 text-primary-800 `

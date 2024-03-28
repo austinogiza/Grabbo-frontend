@@ -5,8 +5,9 @@ import { authCheckState } from "@/store/actions/authAction"
 import { useAppDispatch } from "@/store/hooks"
 import MessageSection from "@/components/MessageSection"
 import SiteNavbar from "@/navbar/SiteNavbar"
-import SiteFoooter from "@/footer/SiteFoooter"
+
 import { usePathname } from "next/navigation"
+import SiteFooter from "@/footer/SiteFooter"
 
 interface ContainerProps {
   children: React.ReactNode
@@ -39,7 +40,7 @@ const SiteContainer: React.FC<ContainerProps> = (props) => {
         </>
       ) : null}
 
-      <SiteFoooter />
+      <SiteFooter />
     </>
   )
 }

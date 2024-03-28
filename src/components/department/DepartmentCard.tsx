@@ -27,9 +27,9 @@ const DepartmentCard: FC<DepartmentInfoProps> = (props) => {
   return (
     <>
       <Link href={`/blog/${departmentLink}`}>
-        <DepartmentCover imageUrl={imageUrl} className="relative w-full">
+        <DepartmentCover imageUrl={imageUrl} className="relative group w-full">
           <MainOverlay />
-          <BlogContentRow className="group relative">
+          <BlogContentRow className="">
             <div>
               <BlogTitleText>{title}</BlogTitleText>
               <BlogDescriptionText>{description}</BlogDescriptionText>
@@ -48,8 +48,9 @@ const DepartmentCard: FC<DepartmentInfoProps> = (props) => {
 
 const DepartmentCover = styled.div<DepartmentInfoProps>`
   max-width: 850px;
+  min-width: 550px;
   width: 100%;
-  min-height: 550px;
+  min-height: 750px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,6 +64,7 @@ const BlogContentRow = twc.div`
 flex flex-row justify-between items-center
 relative z-[3]
 mb-10
+w-full
 `
 const MainOverlay = styled.div`
   position: absolute;
@@ -86,6 +88,8 @@ const BlogArrow = twc(ArrowUpRight)`
 text-black w-8 h-8
 `
 const CardArrowCover = twc.span`
-bg-white w-16 h-16 rounded-full flex items-center justify-center`
+bg-white w-16 h-16 rounded-full flex items-center justify-center
+group-hover:rotate-45 duration-150
+`
 
 export default DepartmentCard

@@ -14,10 +14,10 @@ import {
   Button,
 } from "@nextui-org/react"
 
-import NavbarLogo from "./NavbarLogo"
 import { cn } from "@/utils/cn"
 import { NavbarData } from "@/data/NavbarData"
 import Link from "next/link"
+import NavbarLogo from "./NavbarLogo"
 
 const menuItems = [
   "About",

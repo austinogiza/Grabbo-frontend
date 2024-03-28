@@ -1,3 +1,4 @@
+import AboutDepartment from "@/components/about/AboutDepartment"
 import HomeComfort from "@/components/home/HomeComfort"
 import HomeFeatures from "@/components/home/HomeFeatures"
 import HomeFertility from "@/components/home/HomeFertility"
@@ -16,6 +17,7 @@ const HomePage = () => {
       <HomeFeatures />
       <HomeComfort />
       <HomeFertility />
+      <AboutDepartment />
       <HomeOurTeam />
       <HomeGoal />
     </>
