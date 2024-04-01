@@ -5,6 +5,8 @@ import {
   GrabboHeader7,
   MainGrabboHeader4,
 } from "@/styles/TextStyles"
+import PrimaryLinkButton from "@/styles/button-container/PrimaryLinkButton"
+import SecondaryContactButton from "@/styles/button-container/SecondaryContactButton"
 import { twc } from "react-twc"
 import styled from "styled-components"
 
@@ -17,13 +19,13 @@ const MessageSection = () => {
         <MessageInfoRow>
           <MessageTitle>Need a Doctor ?</MessageTitle>
           <MessageText>
-            We Provide the highest level of satisfaction care & services to our
-            patients.
+            Take the first step towards building your family today and making
+            your health priority. Contact us.
           </MessageText>{" "}
-          <ButtonMessageWrapper>
-            <MessageButton href="/">Make an appointment</MessageButton>
-            <MessageSecondaryButton href="/">Contact us</MessageSecondaryButton>
-          </ButtonMessageWrapper>
+          <div className="lg:max-w-[450px] max-w-[750px] w-full lg:mx-0 mx-auto flex lg:flex-row flex-col gap-3">
+            <PrimaryLinkButton href="contact" title="Book an appointment" />{" "}
+            <SecondaryContactButton />
+          </div>
         </MessageInfoRow>
       </div>
     </MessageContainer>

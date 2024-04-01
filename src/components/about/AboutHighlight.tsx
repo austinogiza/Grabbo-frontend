@@ -7,6 +7,7 @@ import {
   GrabboHeaderCaption,
   GrabboHeaderCaptionLargeRegular,
 } from "@/styles/TextStyles"
+import PrimaryLinkButton from "@/styles/button-container/PrimaryLinkButton"
 import SiteOverlay from "@/utils/SiteOverlay"
 import { TickCircle } from "iconsax-react"
 import Image from "next/image"
@@ -16,28 +17,26 @@ import styled from "styled-components"
 
 const AboutHighlight = () => {
   return (
-    <div className="min-h-[750px] items-center flex justify-center my-20">
+    <div className="min-h-[750px] max-w-[1180px] mx-auto items-center flex justify-center lg:my-20 my-10">
       <AboutHighlightContainer>
         <ValuesInfoRow className="w-full">
-          <ValuesText>Features and Technology</ValuesText>
+          <ValuesText>Comprehensive Diagnostic Services</ValuesText>
           <ValuesInfoTitle>
-            Presenting Advanced Technology for the Driving Experience of the
-            Future
+            Our diagnostic center offers a wide range of advanced services.
           </ValuesInfoTitle>
 
           <ValuesInfoSubTitle>
-            Our electric cars not only deliver environmentally friendly
-            transportation solutions, but also bring an amazing driving
-            experience through cutting-edge features. From super-fast charging
-            to smart device integration,
+            Our hospital is equipped with the latest diagnostic tools and
+            cutting-edge technologies, allowing us to create personalized
+            treatment plans that optimize your chances of success.. We are
+            committed to staying at the forefront of reproductive medicine.
           </ValuesInfoSubTitle>
-          <ButtonMessageWrapper>
-            <MessageSecondaryButton href="/">Contact us</MessageSecondaryButton>
-          </ButtonMessageWrapper>
+
+          <PrimaryLinkButton title="Contact us" href="contact" />
         </ValuesInfoRow>
         <ValueContainer className="flex lg:flex-row flex-col gap-10 w-full">
           <MainOverlay />
-          <ValueWrapperIcon src="/images/technology-pic-1.jpg" alt="" />
+          <ValueWrapperIcon src="/images/satisfaction.webp" alt="" />
         </ValueContainer>
       </AboutHighlightContainer>
     </div>
@@ -45,15 +44,18 @@ const AboutHighlight = () => {
 }
 const ValuesText = twc(GrabboHeaderCaption)`
 mb-2 lg:mb-4
+
 `
 const ValuesInfoRow = twc.div`
 w-full justify-center items-start flex flex-col
+
 `
 const ValuesInfoTitle = twc(GrabboHeader4)`
 mb-2 text-h1 lg:mb-4
+max-w-[650px]
 `
 const ValuesInfoSubTitle = twc(GrabboHeaderCaptionLargeRegular)`
-text-neutral-400 my-3
+text-neutral-400 my-1
 `
 const ValueWrapperIcon = twc.img`
 min-h-[700px] max-w-[570px]
@@ -69,7 +71,7 @@ items-center
 const MainOverlay = styled.div`
   position: absolute;
   z-index: 2;
-  background: rgba(0, 0, 0, 0.44);
+  background: rgba(0, 0, 0, 0.04);
   top: 0;
   left: 0;
   width: 100%;
@@ -92,16 +94,7 @@ justify-center
 items-center
 `
 const AboutHighlightContainer = twc.div`
-max-w-[1320px] mx-auto w-full flex lg:flex-row flex-col lg:gap-20 gap-10  items-center justify-center lg:px-0  px-4
+max-w-[1180px] mx-auto w-full flex lg:flex-row flex-col lg:gap-20 gap-10  items-center justify-center lg:px-0  px-4
 `
-const ButtonMessageWrapper = twc.div`
-mt-4
-w-full
-max-w-[250px]
 
-flex flex-row gap-4
-`
-const MessageSecondaryButton = twc(PrimaryButton)`
-w-full
-`
 export default AboutHighlight

@@ -41,28 +41,75 @@ export const Post = defineDocumentType(() => ({
   },
 }))
 
-export const Author = defineDocumentType(() => ({
-  name: "Author",
-  filePathPattern: `authors/**/*.mdx`,
+export const Departments = defineDocumentType(() => ({
+  name: "Departments",
+  filePathPattern: `**/*.mdx`,
   contentType: "mdx",
   fields: {
     title: {
       type: "string",
       required: true,
     },
-    username: {
-      type: "string",
-      required: false,
-    },
     description: {
       type: "string",
+    },
+    date: {
+      type: "date",
+      required: true,
+    },
+    featured: {
+      type: "boolean",
       required: false,
     },
-    avatar: {
+    image: {
       type: "string",
       required: true,
     },
-    twitter: {
+    category: {
+      type: "string",
+      required: true,
+    },
+    author: {
+      type: "string",
+      required: true,
+    },
+  },
+  computedFields: {
+    slug: {
+      type: "string",
+      resolve: (doc) => doc._raw.flattenedPath.split("/").slice(1).join("/"),
+    },
+  },
+}))
+export const Personnel = defineDocumentType(() => ({
+  name: "Personnel",
+  filePathPattern: `**/*.mdx`,
+  contentType: "mdx",
+  fields: {
+    title: {
+      type: "string",
+      required: true,
+    },
+    description: {
+      type: "string",
+    },
+    date: {
+      type: "date",
+      required: true,
+    },
+    featured: {
+      type: "boolean",
+      required: false,
+    },
+    image: {
+      type: "string",
+      required: true,
+    },
+    category: {
+      type: "string",
+      required: true,
+    },
+    author: {
       type: "string",
       required: true,
     },
@@ -77,5 +124,5 @@ export const Author = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: "./src/content",
-  documentTypes: [Post, Author],
+  documentTypes: [Post, Departments, Personnel],
 })

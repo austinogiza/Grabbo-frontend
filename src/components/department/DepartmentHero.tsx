@@ -1,4 +1,5 @@
 "use client"
+import { grabboColors } from "@/styles/ColorStyles"
 import { GrabboHeader3, GrabboHeaderCaption } from "@/styles/TextStyles"
 import { ArrowRight } from "iconsax-react"
 import { twc } from "react-twc"
@@ -6,7 +7,7 @@ import styled from "styled-components"
 
 const DepartmentHero = () => {
   return (
-    <DepartmentHeroContainer className="bg-white py-24 sm:py-32">
+    <DepartmentHeroContainer className="pt-28 lg:pt-48 ">
       <div className=" flex flex-col items-center justify-center max-w-[750px] mx-auto">
         <DepartmentSubTextRow>
           {" "}
@@ -40,8 +41,11 @@ const DepartmentHero = () => {
 }
 
 const DepartmentHeroContainer = styled.div`
-  background: url("/images/backgroundpattern.webp") no-repeat center
-    center/contain;
+  background-image: url("/images/backgroundpattern.webp");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  background-color: ${grabboColors.warmLightBG};
 `
 
 const DepartmentSubText = twc(GrabboHeaderCaption)`
@@ -52,7 +56,7 @@ const DepartmentSubTextRow = twc(GrabboHeaderCaption)`
 flex flex-row items-center justify-center gap-2
 bg-primary-50 text-primary-800  rounded-full
 px-2 py-1
-border-2 border-strokeColor
+border border-primary-500
 mb-2
 
 `

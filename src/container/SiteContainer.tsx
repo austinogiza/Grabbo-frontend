@@ -3,11 +3,12 @@ import React, { useEffect } from "react"
 import "@/styles/globals.css"
 import { authCheckState } from "@/store/actions/authAction"
 import { useAppDispatch } from "@/store/hooks"
-import MessageSection from "@/components/MessageSection"
+import MessageSection from "@/components/utils/MessageSection"
 import SiteNavbar from "@/navbar/SiteNavbar"
 
 import { usePathname } from "next/navigation"
 import SiteFooter from "@/footer/SiteFooter"
+import FrequentlyQuestions from "@/components/utils/FrequentlyQuestions"
 
 interface ContainerProps {
   children: React.ReactNode
@@ -33,9 +34,10 @@ const SiteContainer: React.FC<ContainerProps> = (props) => {
     <>
       <SiteNavbar />
       {children}
+
       {showMessage ? (
         <>
-          {" "}
+          <FrequentlyQuestions />
           <MessageSection />
         </>
       ) : null}

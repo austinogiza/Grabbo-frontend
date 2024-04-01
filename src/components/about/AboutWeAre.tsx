@@ -1,9 +1,11 @@
 "use client"
 import { grabboColors } from "@/styles/ColorStyles"
 import {
+  BoldGrabboHeader4,
   GrabboHeader6,
   GrabboHeader7Medium,
   MainGrabboHeader4,
+  MediumGrabboHeader6,
 } from "@/styles/TextStyles"
 import React from "react"
 import { twc } from "react-twc"
@@ -42,6 +44,20 @@ const AboutWeAre = () => {
             </ContentSubText>
           </AboutContent>
         </AboutWrapper>{" "}
+        <div className="relative overflow-hidden pt-16">
+          <div className="mx-auto ">
+            <img
+              src="/images/welcome.webp"
+              alt="Grabbo Welcome"
+              className="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-white/10"
+              width={2432}
+              height={1442}
+            />
+            <div className="relative" aria-hidden="true">
+              <div className="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-gray-950 pt-[7%]" />
+            </div>
+          </div>
+        </div>
       </AboutTopWrapper>
       <AboutShowCase />
     </WeContainer>
@@ -60,7 +76,7 @@ const WeContainer = styled.div`
 `
 const AboutWrapper = twc.div`
 flex flex-col
-max-w-[1320px]
+max-w-[1180px]
 mx-auto my-10 w-full
 
 
@@ -68,29 +84,26 @@ mx-auto my-10 w-full
 
 const AboutTopWrapper = styled.div`
   width: 100%;
-  max-width: 1320px;
+  max-width: 1180px;
   margin: 0 auto;
-  padding: 88px 16px 120px 16px;
+  padding: 144px 16px 0 16px;
   min-height: 750px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background: url("/images/marker.svg") repeat center center/cover;
+  @media only screen and (max-width: 800px) {
+    padding: 88px 16px 0 16px;
+  }
 `
 
-const AboutTitleContent = twc.div`
-max-w-[170px]
-flex items-center justify-center
-
-mb-8 text-black py-2 px-5 rounded-full border border-white bg-white
-`
 const AboutContentHeader = twc.div`
-max-w-[1320px]
+max-w-[950px]
 my-3
 
 `
-const HeaderTitle = twc(MainGrabboHeader4)`
+const HeaderTitle = twc(BoldGrabboHeader4)`
 text-white
 w-full max-w-[950px]
 `
@@ -100,9 +113,15 @@ flex
 lg:flex-row flex-col gap-10
 mt-10
 `
+const AboutTitleContent = twc.div`
+max-w-[135px]
+flex items-center justify-center
 
-const ContentTitle = twc(GrabboHeader7Medium)`
-text-black
+mb-8 py-1 px-2 rounded-full border border-white
+`
+const ContentTitle = twc(MediumGrabboHeader6)`
+text-white
+
 `
 const ContentSubText = twc(GrabboHeader6)`
 text-neutral-300

@@ -9,26 +9,32 @@ import React from "react"
 import { twc } from "react-twc"
 import InfiniteMovingCards from "../animation/InfiniteMovingCards"
 import { GhostButton } from "@/styles/ButtonStyles"
+import GhostLinkButton from "@/styles/button-container/GhostLinkButton"
 
 const AboutDepartment = () => {
   return (
-    <div className="w-full flex flex-col items-center justify-center my-10 lg:my-20 min-h-[850px]">
-      <div className="max-w-[1320px] w-full flex items-center justify-start">
+    <div className="w-full flex relative flex-col items-center justify-center my-10 lg:my-20 min-h-[850px]">
+      <div className="max-w-[1180px] w-full flex items-center justify-start">
         <div className="max-w-[750px]">
           <DepartmentSubText className="mb-4 label">
-            Driving happiness with carsova
+            Empowering Your Healthcare Journey
           </DepartmentSubText>
           <SectionTitle>
-            Capture your moment with carsova electric vehicle
+            Comprehensive Healthcare: Diagnostics Alongside World-Class
+            Fertility Care
           </SectionTitle>
           <SectionSubText>
-            Carsova Electric Vehicles, every journey is an adventure worth
-            capturing, and this gallery is a place to share excitement and
-            inspiration with the electric car enthusiast community
+            Our dedicated Diagnostics Department offers a comprehensive suite of
+            diagnostic services to support your overall health. Learn more about
+            our hospital departments.
           </SectionSubText>{" "}
-          <ButtonMessageWrapper>
-            <MessageButton href="/">View departments</MessageButton>
-          </ButtonMessageWrapper>
+          <div className="max-w-[280px]">
+            {" "}
+            <GhostLinkButton
+              href="department"
+              title="Checkout our departments"
+            />
+          </div>
         </div>
       </div>{" "}
       <div className="lg:my-20 my-10">
@@ -40,7 +46,7 @@ const AboutDepartment = () => {
 }
 const SectionTitle = twc(GrabboHeader4)`
 lg:mb-4 mb-2
-max-w-[500px]
+max-w-[850px]
 `
 const SectionSubText = twc(GrabboHeaderCaptionLargeRegular)`
 text-neutral-500
@@ -49,14 +55,5 @@ const DepartmentSubText = twc(GrabboHeaderCaption)`
 text-neutral-400
 
 `
-const ButtonMessageWrapper = twc.div`
-mt-10
-w-full
-max-w-[450px]
 
-flex flex-row gap-4
-`
-const MessageButton = twc(GhostButton)`
-w-full
-`
 export default AboutDepartment

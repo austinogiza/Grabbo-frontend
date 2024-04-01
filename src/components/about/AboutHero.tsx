@@ -12,8 +12,8 @@ import styled from "styled-components"
 const AboutHero = () => {
   return (
     <AboutHeroContainer className="bg-white py-10 sm:py-24 mt-10 lg:px-0 px-4 ">
-      <div className=" flex flex-col items-start justify-center max-w-[1320px]  mx-auto">
-        <div className="max-w-[1320px]">
+      <div className=" flex flex-col items-start justify-center max-w-[1180px]  mx-auto">
+        <div className="max-w-[1180px]">
           <div className=" items-start flex flex-col">
             {" "}
             <AboutHeroTitle>

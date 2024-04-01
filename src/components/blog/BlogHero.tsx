@@ -7,8 +7,8 @@ import styled from "styled-components"
 const BlogHero = () => {
   return (
     <BlogHeroContainer className="bg-white py-10 sm:py-24 mt-10 ">
-      <div className=" flex flex-col items-start justify-center max-w-[1320px]  mx-auto">
-        <div className="max-w-[1320px]">
+      <div className=" flex flex-col items-start justify-center max-w-[1180px]  mx-auto">
+        <div className="max-w-[1180px]">
           <div className=" items-start flex flex-col">
             {" "}
             <DepartmentSubTextRow> Grabbo Blog</DepartmentSubTextRow>
@@ -25,7 +25,7 @@ const DepartmentSubTextRow = twc(GrabboHeaderCaption)`
 flex flex-row items-center justify-center gap-2
 bg-primary-50 text-primary-800  rounded-full
 px-2 py-1
-border-2 border-strokeColor
+border border-primary-500
 mb-2
 `
 

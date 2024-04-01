@@ -13,8 +13,9 @@ const About = () => {
       <AboutExpectation />
       <AboutWeAre />
       <AboutValues />
-      <AboutDepartment />
+
       <AboutHighlight />
+      <AboutDepartment />
     </>
   )
 }

@@ -16,9 +16,9 @@ const SiteNavbar: FC<NavbarProps> = (props) => {
 
   return (
     <NavbarCover className="absolute top-0 left-0 z-[10]  w-full flex items-center justify-center ">
-      <NavbarMenuToggle className="max-w-[1320px] w-full flex items-center justify-between" />
+      <NavbarMenuToggle className="max-w-[1180px] w-full flex items-center justify-between" />
 
-      <NavbarContainer className="max-w-[1320px] mx-auto my-10 flex flex-row items-center justify-between  w-full">
+      <NavbarContainer className="max-w-[1180px] mx-auto my-10 flex flex-row items-center justify-between  w-full">
         {" "}
         <NavbarLogo />{" "}
         <NavbarContent className=" w-full">

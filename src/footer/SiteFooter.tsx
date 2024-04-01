@@ -34,6 +34,8 @@ const SiteFooter = () => {
             <a
               key={item.name}
               href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-gray-400 hover:text-gray-500"
             >
               <item.icon className="h-6 w-6" aria-hidden="true" />

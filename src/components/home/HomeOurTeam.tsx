@@ -1,4 +1,14 @@
+"use client"
+import {
+  GrabboHeader4,
+  GrabboHeader5,
+  GrabboHeader6,
+  GrabboHeaderCaption25Large,
+  GrabboLargeBody,
+  MainGrabboHeader4,
+} from "@/styles/TextStyles"
 import React from "react"
+import { twc } from "react-twc"
 const people = [
   {
     name: "Leslie Alexander",
@@ -36,15 +46,14 @@ const people = [
 const HomeOurTeam = () => {
   return (
     <div className="bg-gray-900 py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-[1180px] px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Our team
-          </h2>
-          <p className="mt-6 text-lg text-gray-300">
-            We’re a dynamic group of individuals who are passionate about what
-            we do and dedicated to delivering the best results for our clients.
-          </p>
+          <HomeInfoTitle>Our team</HomeInfoTitle>
+          <HomeInfoSubTitle>
+            Our dedicated team ensures that here, you're not just a patient;
+            you're part of a community dedicated to helping you achieve your
+            dreams of parenthood.
+          </HomeInfoSubTitle>
         </div>
         <ul
           role="list"
@@ -71,5 +80,11 @@ const HomeOurTeam = () => {
     </div>
   )
 }
-
+const HomeInfoTitle = twc(MainGrabboHeader4)`
+text-white
+`
+const HomeInfoSubTitle = twc(GrabboLargeBody)`
+text-neutral-200
+mt-2
+`
 export default HomeOurTeam

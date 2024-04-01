@@ -6,13 +6,14 @@ import { twc } from "react-twc"
 
 interface ValuesListProps {
   title?: string
+  icon?: string
 }
 const ValuesList: FC<ValuesListProps> = (props) => {
-  const { title } = props
+  const { title, icon } = props
   return (
     <ValueWrapperContainer>
       <ValueWrapperCover>
-        <ValuesIcon />
+        <ValuesIcon src={icon} alt={title} />
       </ValueWrapperCover>
       <TextCover>
         {" "}
@@ -21,8 +22,9 @@ const ValuesList: FC<ValuesListProps> = (props) => {
     </ValueWrapperContainer>
   )
 }
-const ValuesIcon = twc(TickCircle)`
-text-primary-600 w-5 h-5
+const ValuesIcon = twc.img`
+ w-6 h-6
+object-contain
 `
 
 const TextCover = twc.div`
@@ -46,6 +48,7 @@ flex flex-row
 items-center gap-2
 justify-center
 my-1
+lg:my-3
 `
 const ValuesText = twc(GrabboHeaderCaption)`
 mb-2 lg:mb-4

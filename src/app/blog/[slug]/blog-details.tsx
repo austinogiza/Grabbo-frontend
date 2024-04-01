@@ -14,7 +14,7 @@ import styled from "styled-components"
 const BlogDetails = () => {
   return (
     <BlogDetailsContainer className="bg-white py-24 sm:py-32">
-      <div className=" flex flex-col items-center justify-center max-w-[1320px] mx-auto">
+      <div className=" flex flex-col items-center justify-center max-w-[1180px] mx-auto">
         <ContentInfoRow>
           <Link href="/blog">
             {" "}
@@ -208,7 +208,7 @@ const DepartmentSubTextRow = twc(GrabboHeaderCaption)`
 flex flex-row items-center justify-center gap-2
 bg-primary-50 text-primary-800  rounded-full
 px-2 py-1
-border-2 border-strokeColor
+border-2 border-primary-500
 mb-2
 `
 

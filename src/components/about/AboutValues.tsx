@@ -20,24 +20,22 @@ const AboutValues = () => {
       <AboutHighlightContainer>
         <ValueContainer className="flex lg:flex-row flex-col gap-10 w-full">
           <MainOverlay />
-          <ValueWrapperIcon src="/images/technology-pic-1.jpg" alt="" />
+          <ValueWrapperIcon src="/images/understanding.webp" alt="" />
         </ValueContainer>
         <ValuesInfoRow className="">
-          <ValuesText>Features and Technology</ValuesText>
-          <ValuesInfoTitle>
-            Presenting Advanced Technology for the Driving Experience of the
-            Future
-          </ValuesInfoTitle>
+          <ValuesText>We establish understanding</ValuesText>
+          <ValuesInfoTitle>Statement of Values</ValuesInfoTitle>
 
           <ValuesInfoSubTitle>
-            Our electric cars not only deliver environmentally friendly
-            transportation solutions, but also bring an amazing driving
-            experience through cutting-edge features. From super-fast charging
-            to smart device integration,
+            GFC key values are created by Grabbo Fertility Clinic employees to
+            establish a shared understanding of how we relate to our patients
+            and to the community. Together, these values form the basis of our
+            what we do,who we are strategic goals and guide our actions under
+            our code of ethical conduct: –
           </ValuesInfoSubTitle>
           <ValuesWrapper>
             {ValuesData.map((data, index: number) => (
-              <ValuesList title={data?.title} key={index} />
+              <ValuesList title={data?.title} icon={data.icon} key={index} />
             ))}
           </ValuesWrapper>
         </ValuesInfoRow>
@@ -71,7 +69,7 @@ items-center
 const MainOverlay = styled.div`
   position: absolute;
   z-index: 2;
-  background: rgba(0, 0, 0, 0.44);
+  background: rgba(0, 0, 0, 0.24);
   top: 0;
   left: 0;
   width: 100%;
@@ -96,7 +94,7 @@ justify-center
 items-center
 `
 const AboutHighlightContainer = twc.div`
-max-w-[1320px] mx-auto w-full flex lg:flex-row flex-col lg:gap-20 gap-10  items-center justify-center lg:px-0  px-4
+max-w-[1180px] mx-auto w-full flex lg:flex-row flex-col lg:gap-20 gap-10  items-center justify-center lg:px-0  px-4
 `
 
 export default AboutValues

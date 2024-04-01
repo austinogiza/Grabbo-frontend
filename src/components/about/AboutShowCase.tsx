@@ -48,7 +48,7 @@ const GrabboShowCase = styled.div`
 `
 const ShowcaseWrapper = twc.div`
 text-white
-max-w-[1320px]
+max-w-[1180px]
 max-auto p-4
 text-center
 relative z-10
@@ -61,7 +61,7 @@ text-center
 max-w-[750px] mx-auto
 `
 const ShowcaseSubText = twc(GrabboLargeBody)`
-text-neutral-200
+text-neutral-100
 text-center
 max-w-[800px]
 mx-auto

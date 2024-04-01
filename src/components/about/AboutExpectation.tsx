@@ -13,27 +13,26 @@ const AboutExpectation = () => {
   return (
     <div>
       <div className="w-full flex items-center justify-center min-h-[750px] lg:my-40 my-20 px-4">
-        <div className="max-w-[1320px] flex flex-col items-center justify-center ">
+        <div className="max-w-[1180px] flex flex-col items-center justify-center ">
           <div className="flex lg:flex-row flex-col items-start justify-center lg:gap-20 gap-10">
-            <SectionSubText>Introduction </SectionSubText>
-            <div className="grow">
+            <SectionSubText>Exceptional Care, Tailored to You</SectionSubText>
+            <div className="w-full max-w-[980px]">
               <SectionTitle>
-                Experience the thrill of eco-friendly driving with our electric
-                cars. Powered by the latest technology, our electric cars take
-                you into the future without leaving a carbon footprint.
+                At Grabbo, we understand the profound journey of aspiring
+                parents and are dedicated to making dreams of parenthood a
+                reality.
               </SectionTitle>
             </div>
           </div>
           <div className="flex lg:flex-row flex-col items-center justify-center w-full gap-10 my-20">
-            {[
-              "/images/introduction-pic-1.jpg",
-              "/images/introduction-pic-2.jpg",
-            ].map((image, index) => (
-              <ImageWrapper className="" key={index}>
-                <MainOverlay />
-                <SectionImage src={image} alt="grabbo image" />
-              </ImageWrapper>
-            ))}
+            {["/images/introduction01.webp", "/images/introduction02.webp"].map(
+              (image, index) => (
+                <ImageWrapper className="" key={index}>
+                  <MainOverlay />
+                  <SectionImage src={image} alt="grabbo image" />
+                </ImageWrapper>
+              )
+            )}
           </div>
         </div>
       </div>
@@ -66,7 +65,7 @@ mx-auto
 const MainOverlay = styled.div`
   position: absolute;
   z-index: 2;
-  background: rgba(0, 0, 0, 0.44);
+  background: rgba(0, 0, 0, 0.24);
   top: 0;
   left: 0;
   width: 100%;

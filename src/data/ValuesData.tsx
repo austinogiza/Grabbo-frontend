@@ -5,22 +5,29 @@ interface ValuesDataProps {
 }
 export const ValuesData: ValuesDataProps[] = [
   {
-    title: "Quality treament",
+    title: "Patient Commitment.",
+    icon: "/icons/ambulance.svg",
   },
   {
-    title: "Patient Commitment.",
+    title: "Quality treament",
+    icon: "/icons/health5.svg",
   },
+
   {
     title: "Integrity",
+    icon: "/icons/health6.svg",
   },
   {
     title: "Passion for excellence",
+    icon: "/icons/healthteeth.svg",
   },
   {
     title: "High performance team",
+    icon: "/icons/medical4.svg",
   },
   {
     title: "Compassion",
+    icon: "/icons/medical5.svg",
   },
 ]
 
