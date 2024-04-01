@@ -11,8 +11,8 @@ import styled from "styled-components"
 const HomeOurTeam = () => {
   return (
     <div className="bg-black ">
-      <SectionTopWrapper className="mx-auto  max-w-[1180px] ">
-        <div className="mx-auto max-w-2xl lg:mx-0">
+      <SectionTopWrapper className="mx-auto  max-w-[1180px] mt-20">
+        <div className="mt-20">
           <HomeInfoTitle>Our team</HomeInfoTitle>
           <HomeInfoSubTitle>
             Our dedicated team ensures that here, you're not just a patient;

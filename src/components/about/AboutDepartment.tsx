@@ -16,16 +16,16 @@ const AboutDepartment = () => {
       <div className="max-w-[1180px] w-full flex items-center justify-start px-6">
         <div className="max-w-[750px]">
           <DepartmentSubText className="mb-4 label">
-            Empowering Your Healthcare Journey
+            Explore Our Departments
           </DepartmentSubText>
           <SectionTitle>
-            Comprehensive Healthcare: Diagnostics Alongside World-Class
-            Fertility Care
+            Committed to providing exceptional healthcare services.
           </SectionTitle>
           <SectionSubText>
-            Our dedicated Diagnostics Department offers a comprehensive suite of
-            diagnostic services to support your overall health. Learn more about
-            our hospital departments.
+            Grabbo's world-class fertility clinic is dedicated to helping you
+            achieve your dream of parenthood. Our renowned team of reproductive
+            endocrinologists, embryologists, and support staff provide
+            personalized fertility solutions tailored to your unique needs.
           </SectionSubText>{" "}
           <div className="max-w-[280px]">
             {" "}
@@ -45,14 +45,15 @@ const AboutDepartment = () => {
 }
 const SectionTitle = twc(GrabboHeader4)`
 lg:mb-4 mb-2
-max-w-[850px]
+max-w-[580px]
 `
 const SectionSubText = twc(GrabboHeaderCaptionLargeRegular)`
 text-neutral-500
 `
 const DepartmentSubText = twc(GrabboHeaderCaption)`
-text-neutral-400
-
+text-primary-600
+w-full max-w-[200px]
+bg-primary-50 rounded-full border border-primary-600 items-center justify-center px-3 py-2
 `
 
 export default AboutDepartment
