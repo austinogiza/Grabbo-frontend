@@ -1,18 +1,29 @@
 import { FormPrimaryButton } from "@/styles/ButtonStyles"
 import { FormPrimary, FormTextAreaPrimary } from "@/styles/InputStyles"
 import { twc } from "react-twc"
-import { useForm } from "react-hook-form"
+import { SubmitHandler, useForm } from "react-hook-form"
+import { register } from "module"
+
+interface ContactFormProps {
+  firstName?: string
+  lastName?: string
+  email?: string
+  phone?: string
+  message?: string
+}
 const Contactform = () => {
   const {
     handleSubmit,
+    register,
     formState: { errors, isSubmitting, isSubmitSuccessful },
     watch,
-  } = useForm()
-  const onSubmit = () => {}
+  } = useForm<ContactFormProps>()
+  const onSubmit: SubmitHandler<ContactFormProps> = () => {}
   return (
     <form
       className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48"
       onSubmit={handleSubmit(onSubmit)}
+      method="post"
     >
       <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
@@ -26,9 +37,11 @@ const Contactform = () => {
             <div className="mt-2.5">
               <ContactFormInput
                 type="text"
-                name="first-name"
-                id="first-name"
-                autoComplete="given-name"
+                {...register("firstName", {
+                  required: "First name is required",
+                })}
+                autoComplete="on"
+                className={errors.firstName && "border-red-500"}
               />
             </div>
           </div>
@@ -42,9 +55,9 @@ const Contactform = () => {
             <div className="mt-2.5">
               <ContactFormInput
                 type="text"
-                name="last-name"
-                id="last-name"
+                {...register("lastName", { required: "Last name is required" })}
                 autoComplete="family-name"
+                className={errors.lastName && "border-red-500"}
               />
             </div>
           </div>
@@ -58,8 +71,10 @@ const Contactform = () => {
             <div className="mt-2.5">
               <ContactFormInput
                 type="email"
-                name="email"
-                id="email"
+                {...register("email", {
+                  required: "Email is required",
+                })}
+                className={errors.email && "border-red-500"}
                 autoComplete="email"
               />
             </div>
@@ -74,9 +89,12 @@ const Contactform = () => {
             <div className="mt-2.5">
               <ContactFormInput
                 type="tel"
-                name="phone-number"
                 id="phone-number"
                 autoComplete="tel"
+                {...register("phone", {
+                  required: "Phone is required",
+                })}
+                className={errors.phone && "border-red-500"}
               />
             </div>
           </div>
@@ -88,7 +106,14 @@ const Contactform = () => {
               Message
             </label>
             <div className="mt-2.5">
-              <FormMessageArea name="message" id="message" />
+              <FormMessageArea
+                className={errors.message && "border-red-500"}
+                {...register("message", {
+                  required: "Message is required",
+                })}
+                name="message"
+                id="message"
+              />
             </div>
           </div>
         </div>
