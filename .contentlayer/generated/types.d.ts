@@ -25,23 +25,6 @@ export type Departments = {
   slug: string
 }
 
-export type Personnel = {
-  /** File path relative to `contentDirPath` */
-  _id: string
-  _raw: Local.RawDocumentData
-  type: 'Personnel'
-  title: string
-  description?: string | undefined
-  date: IsoDateTimeString
-  featured?: boolean | undefined
-  image: string
-  category: string
-  author: string
-  /** MDX file body */
-  body: MDX
-  slug: string
-}
-
 export type Post = {
   /** File path relative to `contentDirPath` */
   _id: string
@@ -57,6 +40,19 @@ export type Post = {
   /** MDX file body */
   body: MDX
   slug: string
+}
+
+export type Team = {
+  /** File path relative to `contentDirPath` */
+  _id: string
+  _raw: Local.RawDocumentData
+  type: 'Team'
+  name: string
+  position?: string | undefined
+  image: string
+  /** MDX file body */
+  body: MDX
+  slug: string
 }  
 
 /** Nested types */
@@ -67,8 +63,8 @@ export type Post = {
 export type AllTypes = DocumentTypes | NestedTypes
 export type AllTypeNames = DocumentTypeNames | NestedTypeNames
 
-export type DocumentTypes = Departments | Personnel | Post
-export type DocumentTypeNames = 'Departments' | 'Personnel' | 'Post'
+export type DocumentTypes = Departments | Post | Team
+export type DocumentTypeNames = 'Departments' | 'Post' | 'Team'
 
 export type NestedTypes = never
 export type NestedTypeNames = never
@@ -77,7 +73,7 @@ export type DataExports = {
   allDocuments: DocumentTypes[]
   allPosts: Post[]
   allDepartments: Departments[]
-  allPersonnels: Personnel[]
+  allTeams: Team[]
 }
 
 
@@ -98,8 +94,8 @@ declare global {
 
 export type DocumentTypeMap = {
   Departments: Departments
-  Personnel: Personnel
   Post: Post
+  Team: Team
 }
 
 export type NestedTypeMap = {

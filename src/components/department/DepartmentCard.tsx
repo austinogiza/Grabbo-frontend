@@ -48,7 +48,7 @@ const DepartmentCard: FC<DepartmentInfoProps> = (props) => {
 
 const DepartmentCover = styled.div<DepartmentInfoProps>`
   max-width: 850px;
-  min-width: 550px;
+
   width: 100%;
   min-height: 750px;
   display: flex;

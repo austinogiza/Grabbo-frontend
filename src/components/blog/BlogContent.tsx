@@ -21,7 +21,7 @@ const BlogContent = () => {
   )
 }
 const BlogContainer = twc.div`
-
+px-6
 w-full
 mx-auto mt-16 max-w-[1180px] flex flex-col
 `

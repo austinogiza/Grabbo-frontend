@@ -34,7 +34,7 @@ const BlogPostCard: FC<BlogPostCardProps> = (props) => {
   return (
     <>
       <Link href={`/blog/${postLink}`}>
-        <article className="flex flex-row items-start gap-3 justify-between my-4 p-4 border border-greyscale-100 bg-greyscale-0 shadow-2  rounded-lg">
+        <article className="flex flex-col lg:flex-row  items-start gap-3 justify-between my-4 p-4 border border-greyscale-100 bg-greyscale-0 shadow-2  rounded-lg">
           <div className="relative w-full max-w-[550px]">
             <img
               src={imageUrl}

@@ -1,5 +1,6 @@
 export const FooterNavigationData = {
   company: [
+    { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Department", href: "/department" },
     { name: "Blog", href: "/blog" },

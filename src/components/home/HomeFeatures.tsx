@@ -86,7 +86,7 @@ const SectionTopWrapper = styled.div`
   justify-content: center;
   align-items: center;
 
-  background: url("/images/marker.svg") repeat center center/cover;
+  background: url("/images/marker.svg") repeat center center/contain;
   @media only screen and (max-width: 800px) {
     padding: 24px 16px 0 16px;
   }

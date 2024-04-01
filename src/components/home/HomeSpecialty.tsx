@@ -18,7 +18,7 @@ const HomeSpecialty = () => {
     <div className="w-full lg:mt-36 mt-20 min-h-[850px]">
       <div className="max-w-[1180px] mx-auto flex flex-col">
         {" "}
-        <div className="w-full max-w-[850px]  mx-auto">
+        <div className="w-full max-w-[850px]  mx-auto ">
           <UltimateInfoTitle>What’s Our Speciality?</UltimateInfoTitle>
           <UltimateInfoSubText>
             Grabbo Fertility Clinic and Diagnostic Centre is one of the best
@@ -27,7 +27,7 @@ const HomeSpecialty = () => {
             the world.
           </UltimateInfoSubText>
         </div>
-        <div className="lg:my-20 my-10 flex flex-col gap-2">
+        <div className="lg:my-20 my-10 flex flex-col gap-2 px-6">
           <div className="grid lg:grid-cols-3 grid-cols-1 items-center justify-center w-full gap-2">
             {TopSpecialtyData.map((data, index: number) => (
               <ExperiencingSpecialty

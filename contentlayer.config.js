@@ -81,35 +81,20 @@ export const Departments = defineDocumentType(() => ({
     },
   },
 }))
-export const Personnel = defineDocumentType(() => ({
-  name: "Personnel",
+export const Team = defineDocumentType(() => ({
+  name: "Team",
   filePathPattern: `**/*.mdx`,
   contentType: "mdx",
   fields: {
-    title: {
+    name: {
       type: "string",
       required: true,
     },
-    description: {
+    position: {
       type: "string",
     },
-    date: {
-      type: "date",
-      required: true,
-    },
-    featured: {
-      type: "boolean",
-      required: false,
-    },
+
     image: {
-      type: "string",
-      required: true,
-    },
-    category: {
-      type: "string",
-      required: true,
-    },
-    author: {
       type: "string",
       required: true,
     },
@@ -124,5 +109,5 @@ export const Personnel = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: "./src/content",
-  documentTypes: [Post, Departments, Personnel],
+  documentTypes: [Post, Departments, Team],
 })

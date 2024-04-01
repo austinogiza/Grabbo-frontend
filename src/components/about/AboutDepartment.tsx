@@ -8,13 +8,12 @@ import {
 import React from "react"
 import { twc } from "react-twc"
 import InfiniteMovingCards from "../animation/InfiniteMovingCards"
-import { GhostButton } from "@/styles/ButtonStyles"
 import GhostLinkButton from "@/styles/button-container/GhostLinkButton"
 
 const AboutDepartment = () => {
   return (
-    <div className="w-full flex relative flex-col items-center justify-center my-10 lg:my-20 min-h-[850px]">
-      <div className="max-w-[1180px] w-full flex items-center justify-start">
+    <div className="w-full flex relative flex-col items-center overflow-hidden justify-center my-10 lg:my-20 min-h-[850px]">
+      <div className="max-w-[1180px] w-full flex items-center justify-start px-6">
         <div className="max-w-[750px]">
           <DepartmentSubText className="mb-4 label">
             Empowering Your Healthcare Journey

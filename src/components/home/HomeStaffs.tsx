@@ -12,7 +12,7 @@ import PrimaryLinkButton from "@/styles/button-container/PrimaryLinkButton"
 
 const HomeStaffs = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-white px-6">
       <header className="absolute inset-x-0 top-0 z-50"></header>
       <main>
         <div className="relative isolate">

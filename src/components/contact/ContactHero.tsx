@@ -35,7 +35,9 @@ const ContactHero = () => {
   )
 }
 
-const HeroContainer = twc.section` w-full min-h-[650px] py-20 px-20 relative
+const HeroContainer = twc.section`
+w-full min-h-[650px]
+py-20 lg:px-20 px-6 relative
  flex flex-col justify-center items-start
 `
 const ContactInfoSection = twc.div`

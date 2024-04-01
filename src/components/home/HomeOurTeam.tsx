@@ -1,52 +1,17 @@
 "use client"
-import {
-  GrabboHeader4,
-  GrabboHeader5,
-  GrabboHeader6,
-  GrabboHeaderCaption25Large,
-  GrabboLargeBody,
-  MainGrabboHeader4,
-} from "@/styles/TextStyles"
+import { GrabboLargeBody, MainGrabboHeader4 } from "@/styles/TextStyles"
 import React from "react"
+import { allTeams } from "contentlayer/generated"
 import { twc } from "react-twc"
-const people = [
-  {
-    name: "Leslie Alexander",
-    role: "Co-Founder / CEO",
-    imageUrl:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
-    location: "Toronto, Canada",
-  },
+import TeamCard from "./TeamCard"
+import PrimaryLinkButton from "@/styles/button-container/PrimaryLinkButton"
+import SecondaryContactButton from "@/styles/button-container/SecondaryContactButton"
+import styled from "styled-components"
 
-  {
-    name: "Leslie Alexander",
-    role: "Co-Founder / CEO",
-    imageUrl:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
-    location: "Toronto, Canada",
-  },
-  {
-    name: "Whitney Francis",
-    role: "Copywriter",
-    imageUrl:
-      "https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
-    xUrl: "#",
-    linkedinUrl: "#",
-  },
-  {
-    name: "Leonard Krasner",
-    role: "Senior Designer",
-    imageUrl:
-      "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
-    bio: "Quia illum aut in beatae. Possimus dolores aliquid accusantium aut in ut non assumenda. Enim iusto molestias aut deleniti eos aliquid magnam molestiae. At et non possimus ab. Magni labore molestiae nulla qui.",
-  },
-
-  // More people...
-]
 const HomeOurTeam = () => {
   return (
-    <div className="bg-gray-900 py-24 sm:py-32">
-      <div className="mx-auto max-w-[1180px] px-6 lg:px-8">
+    <div className="bg-black ">
+      <SectionTopWrapper className="mx-auto  max-w-[1180px] ">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <HomeInfoTitle>Our team</HomeInfoTitle>
           <HomeInfoSubTitle>
@@ -59,27 +24,41 @@ const HomeOurTeam = () => {
           role="list"
           className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-4 "
         >
-          {people.map((person) => (
-            <li key={person.name}>
-              <img
-                className="aspect-[14/13] w-full rounded-2xl object-cover"
-                src={person.imageUrl}
-                alt=""
+          {allTeams.map((person, index) => (
+            <>
+              <TeamCard
+                key={index}
+                name={person.name}
+                position={person.position}
+                photo={person.image}
               />
-              <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-white">
-                {person.name}
-              </h3>
-              <p className="text-base leading-7 text-gray-300">{person.role}</p>
-              <p className="text-sm leading-6 text-gray-500">
-                {person.location}
-              </p>
-            </li>
+            </>
           ))}
         </ul>
-      </div>
+        <div className="lg:max-w-[450px]  max-w-[750px] w-full mt-20 mx-auto flex lg:flex-row flex-col gap-3">
+          <PrimaryLinkButton href="contact" title="Book an appointment" />{" "}
+          <SecondaryContactButton />
+        </div>
+      </SectionTopWrapper>
     </div>
   )
 }
+const SectionTopWrapper = styled.div`
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 88px 16px;
+  min-height: 750px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  background: url("/images/marker.svg") repeat center center/contain;
+  @media only screen and (max-width: 800px) {
+    padding: 24px 16px;
+  }
+`
 const HomeInfoTitle = twc(MainGrabboHeader4)`
 text-white
 `

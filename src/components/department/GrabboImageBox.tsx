@@ -24,7 +24,7 @@ const GrabboBodyImageWrapper = styled.div`
   min-height: 680px;
   max-height: 680px;
   max-width: 430px;
-  min-width: 430px;
+
   position: relative;
 
   border-radius: 16px;

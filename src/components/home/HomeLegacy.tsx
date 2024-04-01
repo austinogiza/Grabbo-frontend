@@ -12,7 +12,7 @@ const HomeLegacy = () => {
     <div className="min-h-[650px] max-w-[1180px] mx-auto w-full flex items-center justify-center">
       <div className="flex flex-col lg:my-40 my-20">
         {" "}
-        <div className="mx-auto flex lg:flex-row flex-col items-center justify-between w-full gap-4">
+        <div className="mx-auto flex lg:flex-row flex-col items-center justify-between w-full gap-4 px-6">
           <div className="items-center justify-center max-w-[550px]">
             <UltimateInfoTitle>
               Affordable Fertility Solutions
