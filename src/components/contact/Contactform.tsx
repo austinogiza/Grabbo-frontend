@@ -2,6 +2,9 @@ import { FormPrimaryButton } from "@/styles/ButtonStyles"
 import { FormPrimary, FormTextAreaPrimary } from "@/styles/InputStyles"
 import { twc } from "react-twc"
 import { SubmitHandler, useForm } from "react-hook-form"
+import axios from "axios"
+import { toast } from "sonner"
+import { contactFormURL } from "@/api/constant"
 
 interface ContactFormProps {
   firstName?: string
@@ -14,10 +17,26 @@ const Contactform = () => {
   const {
     handleSubmit,
     register,
+    reset,
     formState: { errors, isSubmitting, isSubmitSuccessful },
     watch,
   } = useForm<ContactFormProps>()
-  const onSubmit: SubmitHandler<ContactFormProps> = () => {}
+  const onSubmit: SubmitHandler<ContactFormProps> = (data) => {
+    const name = data.firstName + " " + data.lastName
+    const email = data.email
+    const phone = data.phone
+    const message = data.message
+
+    axios
+      .post(contactFormURL, { name, email, phone, message })
+      .then((res) => {
+        toast.success("Message sent successfully")
+        reset()
+      })
+      .catch((err) => {
+        toast.error("Message sending failed")
+      })
+  }
   return (
     <form
       className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48"

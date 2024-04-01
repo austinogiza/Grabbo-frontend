@@ -5,4 +5,4 @@ const host =
 
 const endpoint = `${host}/api`
 
-const contactFormURL = `${host}/contact`
+export const contactFormURL = `${host}/contact`
