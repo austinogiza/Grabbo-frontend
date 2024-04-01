@@ -1,39 +1,67 @@
 "use client"
-
-import type { NavbarProps } from "@nextui-org/react"
-
-import React, { FC } from "react"
+import { useState } from "react"
 
 import { NavbarData } from "@/data/NavbarData"
-import Link from "next/link"
 import NavbarLogo from "./NavbarLogo"
+
+import styled from "styled-components"
+import NavbarMenuToggle from "./NavbarMenuToggle"
+import NavbarMobileMenu from "./NavbarMobileMenu"
 import NavbarButtons from "./NavbarButtons"
-import { twc } from "react-twc"
 import NavbarColumn from "./NavbarColumn"
 
-const SiteNavbar: FC<NavbarProps> = (props) => {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false)
-
+const SiteNavbar = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen)
+  }
   return (
-    <NavbarCover className="absolute top-0 left-0 z-[10]  w-full flex items-center justify-center ">
-      <NavbarMenuToggle className="max-w-[1180px] w-full flex items-center justify-between" />
+    <div className="w-full absolute top-0 left-0 z-10">
+      {" "}
+      <div className="flex px-3  relative flex-row items-center justify-between max-w-[1230px] mx-auto ">
+        <div className="w-full max-w-[120px]">
+          <NavbarLogo />
+        </div>
+        <NavbarContainer>
+          {NavbarData.map((data, index: number) => (
+            <NavbarColumn key={index} title={data.title} href={data.href} />
+          ))}
+        </NavbarContainer>
+        <NavbarButtonCover>
+          {" "}
+          <NavbarButtons />
+        </NavbarButtonCover>
+        <NavbarMenuToggle
+          navbarClicked={toggleMobileMenu}
+          active={mobileMenuOpen}
+        />
 
-      <NavbarContainer className="max-w-[1180px] mx-auto my-10 flex flex-row items-center justify-between  w-full">
-        {" "}
-        <NavbarLogo />{" "}
-        <NavbarContent className=" w-full">
-          {NavbarData.map((item, index) => (
-            <NavbarColumn key={index} title={item.title} href={item.href} />
-          ))}{" "}
-        </NavbarContent>{" "}
-        <NavbarButtons />
-      </NavbarContainer>
-    </NavbarCover>
+        <NavbarMobileMenu active={mobileMenuOpen} />
+      </div>
+    </div>
   )
 }
-const NavbarContainer = twc.div``
-const NavbarContent = twc.div``
-const NavbarCover = twc.div``
-const NavbarMenuToggle = twc.div``
 
+const NavbarContainer = styled.div`
+  max-width: 650px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  @media only screen and (max-width: 850px) {
+    display: none;
+  }
+`
+const NavbarButtonCover = styled.div`
+  max-width: 190px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  @media only screen and (max-width: 850px) {
+    display: none;
+  }
+`
 export default SiteNavbar

@@ -2,7 +2,6 @@ import { FormPrimaryButton } from "@/styles/ButtonStyles"
 import { FormPrimary, FormTextAreaPrimary } from "@/styles/InputStyles"
 import { twc } from "react-twc"
 import { SubmitHandler, useForm } from "react-hook-form"
-import { register } from "module"
 
 interface ContactFormProps {
   firstName?: string

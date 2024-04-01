@@ -9,7 +9,7 @@ interface NavbarColumnProps {
 const NavbarColumn: FC<NavbarColumnProps> = (props) => {
   const { title, href } = props
   return (
-    <NavbarContainer className="">
+    <NavbarContainer>
       <NavbarItem>
         <Link href={`${href}`}>{title}</Link>
       </NavbarItem>
@@ -17,6 +17,11 @@ const NavbarColumn: FC<NavbarColumnProps> = (props) => {
   )
 }
 
-const NavbarContainer = twc.div``
-const NavbarItem = twc.div``
+const NavbarContainer = twc.div`
+text-white duration-300 transition-all bg-transparent px-4 py-1 rounded-full cursor-pointer
+hover:bg-white hover:text-primary-600 group
+`
+const NavbarItem = twc.div`
+text-white group-hover:text-primary-600
+`
 export default NavbarColumn

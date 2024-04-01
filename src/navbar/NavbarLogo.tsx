@@ -4,7 +4,7 @@ import { twc } from "react-twc"
 
 const NavbarLogo = () => {
   return (
-    <div className="max-w-[144px] mx-auto my-10 flex items-center justify-center">
+    <div className="max-w-[96px] mx-auto my-10 flex items-center justify-center">
       <GrabboLink href="/">
         <LogoImage src="/images/grabbonavlogo.png" />
       </GrabboLink>
