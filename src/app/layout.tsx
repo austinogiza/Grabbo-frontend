@@ -5,7 +5,8 @@ import ReduxProvider from "@/provider/ReduxProvider"
 import "@/styles/globals.css"
 import StyledComponentProvider from "@/provider/StyledComponentProvider"
 import { Toaster } from "sonner"
-export const metadata = {
+import { Metadata } from "next"
+export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
     template: `%s | ${siteConfig.name}`,
