@@ -5,7 +5,6 @@ import ReduxProvider from "@/provider/ReduxProvider"
 import "@/styles/globals.css"
 import StyledComponentProvider from "@/provider/StyledComponentProvider"
 import { Toaster } from "sonner"
-
 export const metadata = {
   title: {
     default: siteConfig.name,
@@ -15,11 +14,11 @@ export const metadata = {
   keywords: [],
   authors: [
     {
-      name: siteConfig.name,
-      url: siteConfig.url,
+      name: `${siteConfig.name}`,
+      url: `${siteConfig.url}`,
     },
   ],
-  creator: siteConfig.name,
+  creator: `${siteConfig.name}`,
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
     { media: "(prefers-color-scheme: dark)", color: "black" },
@@ -36,8 +35,8 @@ export const metadata = {
     card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
-    images: [`${siteConfig.url}/og.png`],
-    creator: siteConfig.social,
+    images: [`${siteConfig.url}/og.jpg`],
+    creator: `${siteConfig.name}`,
   },
   icons: {
     icon: "/favicon.ico",
@@ -46,7 +45,6 @@ export const metadata = {
   },
   manifest: `${siteConfig.url}/site.webmanifest`,
 }
-
 export default function RootLayout({
   children,
 }: Readonly<{
