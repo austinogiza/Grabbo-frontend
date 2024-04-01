@@ -86,6 +86,10 @@ const DelaInfoWrapper = styled.div`
   cursor: pointer;
   overflow: hidden;
   transition: 0.3s ease-in;
+  @media only screen and (max-width: 850px) {
+    min-height: 450px;
+    height: 100%;
+  }
 `
 
 const InfoContentRow = styled.div`

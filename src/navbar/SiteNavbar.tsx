@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 import { NavbarData } from "@/data/NavbarData"
 import NavbarLogo from "./NavbarLogo"
@@ -9,12 +9,27 @@ import NavbarMenuToggle from "./NavbarMenuToggle"
 import NavbarMobileMenu from "./NavbarMobileMenu"
 import NavbarButtons from "./NavbarButtons"
 import NavbarColumn from "./NavbarColumn"
+import { usePathname, useRouter } from "next/navigation"
 
 const SiteNavbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const pathname = usePathname()
+  const router = useRouter()
+
+  useEffect(() => {
+    setMobileMenuOpen(false)
+
+    return () => {
+      setMobileMenuOpen(false)
+    }
+  }, [pathname, router])
+
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen)
   }
+
+  const isDark =
+    pathname === "/about" || pathname === "/department" || pathname === "/blog"
   return (
     <div className="w-full absolute top-0 left-0 z-10">
       {" "}
@@ -32,6 +47,7 @@ const SiteNavbar = () => {
           <NavbarButtons />
         </NavbarButtonCover>
         <NavbarMenuToggle
+          isDark={isDark}
           navbarClicked={toggleMobileMenu}
           active={mobileMenuOpen}
         />

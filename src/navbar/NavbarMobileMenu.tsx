@@ -31,13 +31,14 @@ const NavbarMobileMenu: FC<NavbarProps> = (props) => {
 }
 const MobileNavbarMenu = styled.div<NavbarProps>`
   display: none;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  min-height: 100vh;
   background: ${grabboColors.sweetDark};
-  z-index: 100;
+  z-index: 3;
   padding: 88px 16px 0 16px;
   flex-direction: column;
   width: 100%;

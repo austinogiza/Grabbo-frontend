@@ -28,7 +28,7 @@ const HomeSpecialty = () => {
           </UltimateInfoSubText>
         </div>
         <div className="lg:my-20 my-10 flex flex-col gap-2 px-6">
-          <div className="grid lg:grid-cols-3 grid-cols-1 items-center justify-center w-full gap-2">
+          <div className="grid lg:grid-cols-3 grid-cols-1 items-center justify-center w-full lg:gap-3 gap-6">
             {TopSpecialtyData.map((data, index: number) => (
               <ExperiencingSpecialty
                 key={index}
@@ -39,7 +39,7 @@ const HomeSpecialty = () => {
               />
             ))}
           </div>
-          <div className="grid lg:grid-cols-2 mx-auto w-full grid-cols-1 gap-3 ">
+          <div className="grid lg:grid-cols-2 mx-auto w-full grid-cols-1 lg:gap-3 gap-6 ">
             {BottomSpecialtyData.map((data, index: number) => (
               <ExperiencingInterest
                 key={index}
