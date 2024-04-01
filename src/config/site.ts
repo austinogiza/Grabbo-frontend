@@ -12,7 +12,7 @@ export interface SiteConfig {
 }
 
 export const siteConfig: SiteConfig = {
-  name: "@rabboFertilityClinic",
+  name: "GrabboFertilityClinic",
   social: "@GrabboFertilityClinic",
 
   title: "Grabbo Fertility Clinic",
