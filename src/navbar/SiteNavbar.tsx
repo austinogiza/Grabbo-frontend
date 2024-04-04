@@ -30,6 +30,7 @@ const SiteNavbar = () => {
 
   const isDark =
     pathname === "/about" || pathname === "/department" || pathname === "/blog"
+
   return (
     <div className="w-full absolute top-0 left-0 z-10">
       {" "}
