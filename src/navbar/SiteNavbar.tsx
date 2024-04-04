@@ -65,6 +65,7 @@ const NavbarContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin: 12px 0 0 0;
   @media only screen and (max-width: 850px) {
     display: none;
   }

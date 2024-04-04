@@ -24,7 +24,7 @@ const AboutExpectation = () => {
               </SectionTitle>
             </div>
           </div>
-          <div className="flex lg:flex-row flex-col items-center justify-center w-full gap-10 my-20">
+          <div className="flex lg:flex-row flex-col items-center justify-center w-full gap-2 my-20">
             {["/images/introduction01.webp", "/images/introduction02.webp"].map(
               (image, index) => (
                 <ImageWrapper className="" key={index}>

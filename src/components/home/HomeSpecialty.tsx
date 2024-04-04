@@ -77,6 +77,6 @@ const UltimateInfoSubText = twc(GrabboHeaderCaption25Large)`
 mt-2
 text-neutral-400
 text-center
-max-w-[650px]
+max-w-[650px] mx-auto
 `
 export default HomeSpecialty
