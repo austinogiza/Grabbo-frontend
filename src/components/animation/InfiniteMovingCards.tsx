@@ -82,8 +82,8 @@ const InfiniteMovingCards = ({
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
-        {DepartmentsData.map((post) => (
-          <div className="mx-auto  max-w-[550px]">
+        {DepartmentsData.map((post, index: number) => (
+          <div className="mx-auto w-full max-w-[550px]" key={index}>
             <DepartmentCard
               key={post.id}
               title={post.title}

@@ -26,7 +26,7 @@ const DepartmentCard: FC<DepartmentInfoProps> = (props) => {
   } = props
   return (
     <>
-      <Link href={`/blog/${departmentLink}`}>
+      <Link className="w-full" href={`/blog/${departmentLink}`}>
         <DepartmentCover imageUrl={imageUrl} className="relative group w-full">
           <MainOverlay />
           <BlogContentRow className="">
@@ -48,8 +48,8 @@ const DepartmentCard: FC<DepartmentInfoProps> = (props) => {
 
 const DepartmentCover = styled.div<DepartmentInfoProps>`
   max-width: 850px;
-
   width: 100%;
+  min-width: 550px;
   min-height: 750px;
   display: flex;
   flex-direction: column;

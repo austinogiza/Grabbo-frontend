@@ -18,7 +18,7 @@ const MissingPage = () => {
             Oops! This page does not exist
           </h1>
           <p className="mt-4 text-base leading-7 text-gray-600 sm:mt-6 sm:text-lg sm:leading-8">
-            We might have moved the content you're looking for.
+            We might have moved the content you are looking for.
           </p>
         </div>
         <div className="mx-auto mt-16 flow-root max-w-lg sm:mt-20">

@@ -1,17 +1,20 @@
 import { twc } from "react-twc"
 import BlogPostCard from "./BlogPostCard"
 import { BlogPostsData } from "@/data/BlogData"
+import { allBlogs } from "contentlayer/generated"
 
 const BlogContent = () => {
+  // const blogPost=allBlogs
+  console.log("allBlogssss", allBlogs)
   return (
     <BlogContainer>
-      {BlogPostsData.map((post) => (
+      {allBlogs?.map((post) => (
         <BlogPostCard
-          key={post.id}
+          key={post._id}
           title={post.title}
-          postLink={post.href}
+          postLink={post.slug}
           description={post.description}
-          imageUrl={post.imageUrl}
+          imageUrl={post.image}
           date={post.date}
           category={post.category}
           author={post.author}

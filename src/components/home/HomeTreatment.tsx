@@ -32,7 +32,7 @@ const HomeTreatment = () => {
         </ValuesInfoRow>{" "}
         <ValueContainer className="flex lg:flex-row flex-col gap-10 w-full">
           <MainOverlay />
-          <ValueWrapperIcon src="/images/medical01.webp" alt="" />
+          <ValueWrapperIcon src="/images/healthy.webp" alt="" />
         </ValueContainer>
       </AboutHighlightContainer>
     </div>

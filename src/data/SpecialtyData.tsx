@@ -10,7 +10,7 @@ export const TopSpecialtyData: SpecialtyDataProps[] = [
     description:
       "We provide a clear breakdown of all IVF treatment costs, with no hidden fees.",
     icon: "/icons/breakdown01.svg",
-    image: "/images/quality04.webp",
+    image: "/images/breakdown.webp",
   },
   {
     title: "Highly qualified fertility specialists",

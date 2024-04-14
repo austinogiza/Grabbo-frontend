@@ -39,7 +39,7 @@ const HomeWorldClass = () => {
 }
 
 const WorldClassContainer = styled.div`
-  background: url("/images/worldclass.webp") no-repeat center center/cover;
+  background: url("/images/towards.webp") no-repeat center center/cover;
 `
 const ValuesInfoTitle = twc(GrabboHeader3)`
 mb-2 lg:mb-4

@@ -2,4 +2,4 @@
 
 
 
-export const allAuthors = []
+export const allDepartments = []

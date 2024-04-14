@@ -22,22 +22,21 @@ const AboutDepartment = () => {
             Committed to providing exceptional healthcare services.
           </SectionTitle>
           <SectionSubText>
-            Grabbo's world-class fertility clinic is dedicated to helping you
-            achieve your dream of parenthood. Our renowned team of reproductive
-            endocrinologists, embryologists, and support staff provide
-            personalized fertility solutions tailored to your unique needs.
-          </SectionSubText>{" "}
+            {"Grabbo's"} world-class fertility clinic is dedicated to helping
+            you achieve your dream of parenthood. Our renowned team of
+            reproductive endocrinologists, embryologists, and support staff
+            provide personalized fertility solutions tailored to your unique
+            needs.
+          </SectionSubText>
           <div className="max-w-[280px]">
-            {" "}
             <GhostLinkButton
               href="department"
               title="Checkout our departments"
             />
           </div>
         </div>
-      </div>{" "}
-      <div className="lg:my-20 my-10">
-        {" "}
+      </div>
+      <div className="lg:my-20 my-10 w-full">
         <InfiniteMovingCards />
       </div>
     </div>

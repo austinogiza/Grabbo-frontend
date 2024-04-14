@@ -111,7 +111,7 @@ export const GrabboHeader4 = styled.h4`
   font-weight: 500;
   line-height: 1.2;
   @media only screen and (max-width: 800px) {
-    font-size: 26px;
+    font-size: 24px;
   }
 `
 export const GrabboHeader5 = styled.h5`
