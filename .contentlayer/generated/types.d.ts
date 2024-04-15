@@ -13,13 +13,12 @@ export type Blog = {
   _id: string
   _raw: Local.RawDocumentData
   type: 'Blog'
-  title: string
+  name: string
   description?: string | undefined
   date: IsoDateTimeString
   featured?: boolean | undefined
   image: string
   category: string
-  author: string
   /** MDX file body */
   body: MDX
   slug: string
@@ -30,13 +29,12 @@ export type Department = {
   _id: string
   _raw: Local.RawDocumentData
   type: 'Department'
-  title: string
+  name: string
   description?: string | undefined
   date: IsoDateTimeString
   featured?: boolean | undefined
   image: string
   category: string
-  author: string
   /** MDX file body */
   body: MDX
   slug: string

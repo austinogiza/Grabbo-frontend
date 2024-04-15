@@ -26,7 +26,7 @@ const DepartmentCard: FC<DepartmentInfoProps> = (props) => {
   } = props
   return (
     <>
-      <Link className="w-full" href={`/blog/${departmentLink}`}>
+      <Link className="w-full" href={`/department/${departmentLink}`}>
         <DepartmentCover imageUrl={imageUrl} className="relative group w-full">
           <MainOverlay />
           <BlogContentRow className="">

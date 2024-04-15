@@ -3,10 +3,19 @@ import { grabboColors } from "@/styles/ColorStyles"
 import { GrabboHeader4, GrabboHeaderCaption } from "@/styles/TextStyles"
 import { ArrowLeft } from "iconsax-react"
 import Link from "next/link"
+import { FC } from "react"
 import { twc } from "react-twc"
 import styled from "styled-components"
+import { getMDXComponent } from "next-contentlayer/hooks"
+import { reviewConvertDate } from "@/utils/date"
 
-const BlogDetails = () => {
+interface BlogPostsProps {
+  content?: any
+}
+const BlogDetails: FC<BlogPostsProps> = (props) => {
+  const { content } = props
+  // const Content = getMDXComponent(content?.body?.code || "")
+  console.log("contentttt", content)
   return (
     <BlogDetailsContainer className="bg-white py-24 sm:py-32">
       <div className=" flex flex-col items-center justify-center max-w-[1180px] mx-auto">
@@ -21,22 +30,20 @@ const BlogDetails = () => {
 
           <InfoWrapper>
             <DepartmentSubText className="text-base font-semibold leading-7">
-              Published 20 Jan 2024
+              Published {reviewConvertDate(content?.date)}
             </DepartmentSubText>
             <DepartmentSubTextRow>Health</DepartmentSubTextRow>
           </InfoWrapper>
           <InfoNull />
         </ContentInfoRow>
         <DetailedContentContainer>
-          <BlogDetailsTitle>Our medical departments</BlogDetailsTitle>
+          <BlogDetailsTitle>{content?.name}</BlogDetailsTitle>
           <DepartmentMainText className="text-center mt-2 ">
-            At Grabbo we are dedicated to providing exceptional healthcare
-            services across a wide range of medical fields. Discover the
-            comprehensive care we offer through our specialized departments.
+            {content.description}
           </DepartmentMainText>
         </DetailedContentContainer>
       </div>
-      <ContentMain></ContentMain>
+      <ContentMain>{/* <Content /> */}</ContentMain>
     </BlogDetailsContainer>
   )
 }

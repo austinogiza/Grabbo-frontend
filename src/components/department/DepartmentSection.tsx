@@ -3,8 +3,10 @@
 import { DepartmentsData } from "@/data/DepartmentData"
 import DepartmentCard from "./DepartmentCard"
 import styled from "styled-components"
+import { allDepartments } from "contentlayer/generated"
 
 const DepartmentSection = () => {
+  const departments = allDepartments
   return (
     <div className="bg-white py-24 sm:py-32">
       <DepartmentContainer>
@@ -18,13 +20,13 @@ const DepartmentSection = () => {
           </p>
         </div>
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-          {DepartmentsData.map((post) => (
+          {allDepartments.map((post) => (
             <DepartmentCard
-              key={post.id}
-              title={post.title}
-              departmentLink={post.href}
+              key={post._id}
+              title={post.name}
+              departmentLink={post.slug}
               description={post.description}
-              imageUrl={post.imageUrl}
+              imageUrl={post.image}
             />
           ))}
         </div>

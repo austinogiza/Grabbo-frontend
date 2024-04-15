@@ -5,7 +5,7 @@ export const Blog = defineDocumentType(() => ({
   filePathPattern: `blog/**/*.mdx`,
   contentType: "mdx",
   fields: {
-    title: {
+    name: {
       type: "string",
       required: true,
     },
@@ -25,10 +25,6 @@ export const Blog = defineDocumentType(() => ({
       required: true,
     },
     category: {
-      type: "string",
-      required: true,
-    },
-    author: {
       type: "string",
       required: true,
     },
@@ -46,7 +42,7 @@ export const Department = defineDocumentType(() => ({
   filePathPattern: `department/**/*.mdx`,
   contentType: "mdx",
   fields: {
-    title: {
+    name: {
       type: "string",
       required: true,
     },
@@ -66,10 +62,6 @@ export const Department = defineDocumentType(() => ({
       required: true,
     },
     category: {
-      type: "string",
-      required: true,
-    },
-    author: {
       type: "string",
       required: true,
     },

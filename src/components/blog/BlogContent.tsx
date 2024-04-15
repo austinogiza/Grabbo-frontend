@@ -12,13 +12,13 @@ const BlogContent = () => {
       {allBlogs?.map((post) => (
         <BlogPostCard
           key={post._id}
-          title={post.title}
+          title={post.name}
           postLink={post.slug}
           description={post.description}
           imageUrl={post.image}
           date={post.date}
           category={post.category}
-          author={post.author}
+          // author={post.author}
         />
       ))}
     </BlogContainer>

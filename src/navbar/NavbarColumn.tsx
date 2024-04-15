@@ -13,8 +13,10 @@ const NavbarColumn: FC<NavbarColumnProps> = (props) => {
   const { title, href } = props
   const pathname = usePathname()
   const isDark =
-    pathname === "/about" || pathname === "/department" || pathname === "/blog"
-
+    pathname?.startsWith("/about") ||
+    pathname?.startsWith("/department") ||
+    pathname?.startsWith("/blog")
+  console.log("isDark", isDark)
   return (
     <NavbarContainer
       className={`${
