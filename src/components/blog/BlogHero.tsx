@@ -6,13 +6,15 @@ import styled from "styled-components"
 
 const BlogHero = () => {
   return (
-    <BlogHeroContainer className="bg-white py-10 sm:py-24 mt-10 ">
+    <BlogHeroContainer className="bg-white py-10 sm:py-24 lg:mt-32 mt-20  ">
       <div className=" flex flex-col items-start px-6 justify-center max-w-[1180px]  mx-auto">
-        <div className="max-w-[1180px]">
+        <div className="max-w-[650px]">
           <div className=" items-start flex flex-col">
             {" "}
             <DepartmentSubTextRow> Grabbo Blog</DepartmentSubTextRow>
-            <DepartmentHeroTitle>Resources and insights</DepartmentHeroTitle>
+            <DepartmentHeroTitle>
+              Embark on a Journey Towards Better Health.
+            </DepartmentHeroTitle>
           </div>
         </div>
       </div>
@@ -29,6 +31,8 @@ border border-primary-500
 mb-2
 `
 
-const DepartmentHeroTitle = twc(GrabboHeader3)``
+const DepartmentHeroTitle = twc(GrabboHeader3)`
+my-2
+`
 
 export default BlogHero

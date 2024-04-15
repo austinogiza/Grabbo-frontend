@@ -1,11 +1,6 @@
 "use client"
 import { grabboColors } from "@/styles/ColorStyles"
-import {
-  GrabboHeader3,
-  GrabboHeader4,
-  GrabboHeader5,
-  GrabboHeaderCaption,
-} from "@/styles/TextStyles"
+import { GrabboHeader4, GrabboHeaderCaption } from "@/styles/TextStyles"
 import { ArrowLeft } from "iconsax-react"
 import Link from "next/link"
 import { twc } from "react-twc"

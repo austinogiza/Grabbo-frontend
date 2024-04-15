@@ -1,8 +1,8 @@
 import { defineDocumentType, makeSource } from "contentlayer/source-files"
 
 export const Blog = defineDocumentType(() => ({
-  name: "blog",
-  filePathPattern: `**/*.mdx`,
+  name: "Blog",
+  filePathPattern: `blog/**/*.mdx`,
   contentType: "mdx",
   fields: {
     title: {
@@ -41,9 +41,9 @@ export const Blog = defineDocumentType(() => ({
   },
 }))
 
-export const Departments = defineDocumentType(() => ({
-  name: "department",
-  filePathPattern: `**/*.mdx`,
+export const Department = defineDocumentType(() => ({
+  name: "Department",
+  filePathPattern: `department/**/*.mdx`,
   contentType: "mdx",
   fields: {
     title: {
@@ -82,11 +82,11 @@ export const Departments = defineDocumentType(() => ({
   },
 }))
 export const Team = defineDocumentType(() => ({
-  name: "team",
-  filePathPattern: `**/*.mdx`,
+  name: "Team",
+  filePathPattern: `team/**/*.mdx`,
   contentType: "mdx",
   fields: {
-    title: {
+    name: {
       type: "string",
       required: true,
     },
@@ -109,5 +109,5 @@ export const Team = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: "./src/content",
-  documentTypes: [Blog, Departments, Team],
+  documentTypes: [Blog, Department, Team],
 })

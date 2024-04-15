@@ -27,7 +27,7 @@ shadow-sm
 `
 export const FormTextAreaPrimary = twc.textarea`
 flex
-h-28
+h-32
 bg-white
  w-full rounded-xl
  border border-input

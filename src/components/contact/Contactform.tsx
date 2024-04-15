@@ -58,6 +58,7 @@ const Contactform = () => {
                 {...register("firstName", {
                   required: "First name is required",
                 })}
+                placeholder="First name"
                 autoComplete="on"
                 className={errors.firstName && "border-red-500"}
               />
@@ -72,6 +73,7 @@ const Contactform = () => {
             </label>
             <div className="mt-2.5">
               <ContactFormInput
+                placeholder="Last name"
                 type="text"
                 {...register("lastName", { required: "Last name is required" })}
                 autoComplete="family-name"
@@ -92,6 +94,7 @@ const Contactform = () => {
                 {...register("email", {
                   required: "Email is required",
                 })}
+                placeholder="Your email"
                 className={errors.email && "border-red-500"}
                 autoComplete="email"
               />
@@ -109,6 +112,7 @@ const Contactform = () => {
                 type="tel"
                 id="phone-number"
                 autoComplete="tel"
+                placeholder="Your phone number"
                 {...register("phone", {
                   required: "Phone is required",
                 })}
@@ -129,6 +133,7 @@ const Contactform = () => {
                 {...register("message", {
                   required: "Message is required",
                 })}
+                placeholder="Your message"
                 name="message"
                 id="message"
               />

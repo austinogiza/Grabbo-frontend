@@ -11,6 +11,7 @@ import {
 } from "@/styles/TextStyles"
 import styled from "styled-components"
 import GhostLinkButton from "@/styles/button-container/GhostLinkButton"
+import { Health } from "iconsax-react"
 
 const HomeFeatures = () => {
   return (
@@ -42,9 +43,14 @@ const HomeFeatures = () => {
             ))}
           </dl>
         </div>
-        <div className="max-w-[280px] w-full mx-auto">
+        <div className="max-w-[340px] w-full mx-auto">
           {" "}
-          <GhostLinkButton href="about" title="Learn more about us" />
+          <GhostLinkButton
+            href="about"
+            iconTrue={true}
+            title="Learn more about us"
+            icon={<Health size={20} color="text-black" />}
+          />
         </div>
         <div className="relative overflow-hidden pt-16">
           <div className="mx-auto ">

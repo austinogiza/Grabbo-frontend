@@ -19,15 +19,15 @@ const NavbarColumn: FC<NavbarColumnProps> = (props) => {
     <NavbarContainer
       className={`${
         isDark
-          ? "lg:text-black hover:bg-primary-600 hover:text-white"
-          : "lg:text-white hover:bg-white hover:text-primary-600 "
+          ? "lg:text-black py-1 px-2 hover:bg-primary-600 hover:text-white"
+          : "lg:text-white py-1 px-2 hover:bg-white hover:text-primary-600 "
       }  text-white`}
     >
       <NavbarItem
         className={`${
           isDark
-            ? "lg:text-black   group-hover:text-white"
-            : "lg:text-white   group-hover:text-primary-600 "
+            ? "lg:text-black py-1 px-1 group-hover:text-white"
+            : "lg:text-white py-1 px-1 group-hover:text-primary-600 "
         }  text-white`}
       >
         <Link href={`${href}`}>{title}</Link>

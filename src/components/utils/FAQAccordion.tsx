@@ -23,16 +23,7 @@ interface FAQAccordionProps {
 const FAQAccordion: FC<FAQAccordionProps> = (props) => {
   const { title, description, clickHandler, isOpen, number } = props
   return (
-    <motion.div
-      // initial={{ scale: 1 }}
-      // animate={{ rotate: 0, scale: 1 }}
-      // transition={{
-      //   type: "spring",
-      //   stiffness: 260,
-      //   damping: 20,
-      // }}
-      className="max-w-[880px] mx-auto my-4 cursor-pointer"
-    >
+    <motion.div className="max-w-[880px] mx-auto my-4 cursor-pointer">
       <FAQRowWrapper isOpen={isOpen} onClick={() => clickHandler?.(number)}>
         <div className="max-w-[48px]  min-h-[48px] w-full">
           <FAQIconWrapper>
@@ -61,7 +52,7 @@ const FAQAccordion: FC<FAQAccordionProps> = (props) => {
 }
 
 const FAQIconWrapper = twc.div`
-max-w-[48px]  min-h-[48px] rounded-full bg-smokeWhite border-1 flex items-center justify-center
+max-w-[48px]  min-h-[48px] rounded-full bg-smoothBG border-1 flex items-center justify-center
 
 w-full
 `
@@ -74,15 +65,14 @@ const FAQRowWrapper = styled.div<FAQAccordionProps>`
   justify-content: flex-start;
   gap: 24px;
   background: ${(props) =>
-    props.isOpen ? `${grabboColors.smoothBG}` : `${grabboColors.white}`};
+    props.isOpen ? `${grabboColors.snowWhite}` : `${grabboColors.white}`};
   transition: 0.4s ease-in;
-  padding: 20px 12px;
-  border-radius: 8px;
+  padding: 24px 12px;
+  border-radius: 20px;
   box-shadow: ${(props) =>
     props.isOpen ? `0px 0px 0px 1px rgba(0, 0, 0, 0.08)` : `none`};
   &:hover {
-    background: ${grabboColors.smoothBG};
-    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.08);
+    background: ${grabboColors.snowWhite};
   }
   a {
     color: ${grabboColors.primary[500]};

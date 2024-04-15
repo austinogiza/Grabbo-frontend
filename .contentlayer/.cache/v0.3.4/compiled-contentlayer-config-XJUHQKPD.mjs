@@ -1,8 +1,8 @@
 // contentlayer.config.js
 import { defineDocumentType, makeSource } from "contentlayer/source-files";
 var Blog = defineDocumentType(() => ({
-  name: "blog",
-  filePathPattern: `**/*.mdx`,
+  name: "Blog",
+  filePathPattern: `blog/**/*.mdx`,
   contentType: "mdx",
   fields: {
     title: {
@@ -40,9 +40,9 @@ var Blog = defineDocumentType(() => ({
     }
   }
 }));
-var Departments = defineDocumentType(() => ({
-  name: "department",
-  filePathPattern: `**/*.mdx`,
+var Department = defineDocumentType(() => ({
+  name: "Department",
+  filePathPattern: `department/**/*.mdx`,
   contentType: "mdx",
   fields: {
     title: {
@@ -81,11 +81,11 @@ var Departments = defineDocumentType(() => ({
   }
 }));
 var Team = defineDocumentType(() => ({
-  name: "team",
-  filePathPattern: `**/*.mdx`,
+  name: "Team",
+  filePathPattern: `team/**/*.mdx`,
   contentType: "mdx",
   fields: {
-    title: {
+    name: {
       type: "string",
       required: true
     },
@@ -106,12 +106,12 @@ var Team = defineDocumentType(() => ({
 }));
 var contentlayer_config_default = makeSource({
   contentDirPath: "./src/content",
-  documentTypes: [Blog, Departments, Team]
+  documentTypes: [Blog, Department, Team]
 });
 export {
   Blog,
-  Departments,
+  Department,
   Team,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-ZJVTUCNC.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-XJUHQKPD.mjs.map

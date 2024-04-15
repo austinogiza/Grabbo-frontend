@@ -50,7 +50,7 @@ const HomeSpecialty = () => {
               />
             ))}
           </div>
-          <div className="mx-auto w-full my-20 max-w-[750px] flex flex-col items-center justify-center">
+          <div className="mx-auto w-full my-20 max-w-[750px] flex flex-col  min-h-[250px] items-center justify-center">
             <SectionTitle>
               Let's find the right solution for your fertility journey.
             </SectionTitle>

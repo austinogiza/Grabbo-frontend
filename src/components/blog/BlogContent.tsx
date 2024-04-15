@@ -1,7 +1,8 @@
+"use client"
 import { twc } from "react-twc"
 import BlogPostCard from "./BlogPostCard"
 import { BlogPostsData } from "@/data/BlogData"
-import { allBlogs } from "contentlayer/generated"
+import { allBlogs, Blog } from "contentlayer/generated"
 
 const BlogContent = () => {
   // const blogPost=allBlogs
