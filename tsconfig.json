@@ -31,7 +31,7 @@
       "@/data/*": ["data/*"],
       "@/lib/*": ["lib/*"],
       "@/loader/*": ["loader/*"],
-      "@/store/*": ["store/*"],
+
       "@/helpers/*": ["helpers/*"],
       "@/styles/*": ["styles/*"],
       "@/utils/*": ["utils/*"],

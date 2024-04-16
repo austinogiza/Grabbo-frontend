@@ -5,7 +5,6 @@ import { BlogPostsData } from "@/data/BlogData"
 import { allBlogs, Blog } from "contentlayer/generated"
 
 const BlogContent = () => {
-  // const blogPost=allBlogs
   return (
     <BlogContainer>
       {allBlogs?.map((post) => (
@@ -17,7 +16,6 @@ const BlogContent = () => {
           imageUrl={post.image}
           date={post.date}
           category={post.category}
-          // author={post.author}
         />
       ))}
     </BlogContainer>

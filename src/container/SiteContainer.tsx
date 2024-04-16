@@ -1,8 +1,7 @@
 "use client"
 import React, { useEffect } from "react"
 import "@/styles/globals.css"
-import { authCheckState } from "@/store/actions/authAction"
-import { useAppDispatch } from "@/store/hooks"
+
 import MessageSection from "@/components/utils/MessageSection"
 import SiteNavbar from "@/navbar/SiteNavbar"
 

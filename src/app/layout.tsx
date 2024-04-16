@@ -1,6 +1,5 @@
 import SiteContainer from "@/container/SiteContainer"
 import ReactQueryProvider from "@/provider/ReactQueryProvider"
-import ReduxProvider from "@/provider/ReduxProvider"
 import "@/styles/globals.css"
 import StyledComponentProvider from "@/provider/StyledComponentProvider"
 import { Toaster } from "sonner"
@@ -74,20 +73,17 @@ export default function RootLayout({
   return (
     <StyledComponentProvider>
       <ReactQueryProvider>
-        <ReduxProvider>
-          <html lang="en" suppressHydrationWarning>
-            {/* <SiteHeader /> */}
-            <body>
-              <Toaster
-                position="top-right"
-                richColors
-                expand={true}
-                visibleToasts={1}
-              />
-              <SiteContainer>{children}</SiteContainer>
-            </body>
-          </html>
-        </ReduxProvider>
+        <html lang="en" suppressHydrationWarning>
+          <body>
+            <Toaster
+              position="top-right"
+              richColors
+              expand={true}
+              visibleToasts={1}
+            />
+            <SiteContainer>{children}</SiteContainer>
+          </body>
+        </html>
       </ReactQueryProvider>
     </StyledComponentProvider>
   )
