@@ -5,6 +5,8 @@ import { SubmitHandler, useForm } from "react-hook-form"
 import axios from "axios"
 import { toast } from "sonner"
 import { contactFormURL } from "@/api/constant"
+import LoaderSpinner from "@/utils/LoaderSpinner"
+import { useState } from "react"
 
 interface ContactFormProps {
   firstName?: string
@@ -14,27 +16,32 @@ interface ContactFormProps {
   message?: string
 }
 const Contactform = () => {
+  const [formSubmitting, setFormSubmitting] = useState<boolean>(false)
   const {
     handleSubmit,
     register,
     reset,
-    formState: { errors, isSubmitting, isSubmitSuccessful },
+    formState: { errors },
     watch,
   } = useForm<ContactFormProps>()
   const onSubmit: SubmitHandler<ContactFormProps> = (data) => {
+    setFormSubmitting(true)
     const name = data.firstName + " " + data.lastName
     const email = data.email
     const phone = data.phone
     const message = data.message
-
+    console.log("dataaaa", name, email, phone, message)
     axios
       .post(contactFormURL, { name, email, phone, message })
       .then((res) => {
         toast.success("Message sent successfully")
+
         reset()
+        setFormSubmitting(false)
       })
       .catch((err) => {
         toast.error("Message sending failed")
+        setFormSubmitting(false)
       })
   }
   return (
@@ -56,10 +63,9 @@ const Contactform = () => {
               <ContactFormInput
                 type="text"
                 {...register("firstName", {
-                  required: "First name is required",
+                  required: true,
                 })}
                 placeholder="First name"
-                autoComplete="on"
                 className={errors.firstName && "border-red-500"}
               />
             </div>
@@ -75,8 +81,7 @@ const Contactform = () => {
               <ContactFormInput
                 placeholder="Last name"
                 type="text"
-                {...register("lastName", { required: "Last name is required" })}
-                autoComplete="family-name"
+                {...register("lastName", { required: true })}
                 className={errors.lastName && "border-red-500"}
               />
             </div>
@@ -92,11 +97,10 @@ const Contactform = () => {
               <ContactFormInput
                 type="email"
                 {...register("email", {
-                  required: "Email is required",
+                  required: true,
                 })}
                 placeholder="Your email"
                 className={errors.email && "border-red-500"}
-                autoComplete="email"
               />
             </div>
           </div>
@@ -109,12 +113,11 @@ const Contactform = () => {
             </label>
             <div className="mt-2.5">
               <ContactFormInput
-                type="tel"
+                type="text"
                 id="phone-number"
-                autoComplete="tel"
                 placeholder="Your phone number"
                 {...register("phone", {
-                  required: "Phone is required",
+                  required: true,
                 })}
                 className={errors.phone && "border-red-500"}
               />
@@ -141,7 +144,9 @@ const Contactform = () => {
           </div>
         </div>
         <FormButtonWrapper>
-          <FormMainButton type="submit">Send message</FormMainButton>
+          <FormMainButton type="submit">
+            {!!formSubmitting ? <LoaderSpinner /> : "Send message"}
+          </FormMainButton>
         </FormButtonWrapper>
       </div>
     </form>
