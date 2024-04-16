@@ -15,7 +15,6 @@ interface BlogPostsProps {
 const BlogDetails: FC<BlogPostsProps> = (props) => {
   const { content } = props
   const Content = getMDXComponent(content?.body?.code || "")
-  console.log("contentttt", content)
   return (
     <BlogDetailsContainer className="bg-white py-24 sm:py-32">
       <div className=" flex flex-col items-center justify-center max-w-[1180px] mx-auto mt-10">

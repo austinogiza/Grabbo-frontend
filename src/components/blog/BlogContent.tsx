@@ -6,7 +6,6 @@ import { allBlogs, Blog } from "contentlayer/generated"
 
 const BlogContent = () => {
   // const blogPost=allBlogs
-  console.log("allBlogssss", allBlogs)
   return (
     <BlogContainer>
       {allBlogs?.map((post) => (

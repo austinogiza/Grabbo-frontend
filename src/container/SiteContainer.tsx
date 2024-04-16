@@ -21,7 +21,6 @@ const SiteContainer: React.FC<ContainerProps> = (props) => {
     dispatch(authCheckState())
   }, [dispatch])
   const pathname = usePathname()
-  console.log("pathnameeee", pathname)
   const showMessage =
     pathname === "/" ||
     pathname === "/about" ||
