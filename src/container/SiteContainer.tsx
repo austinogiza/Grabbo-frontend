@@ -14,11 +14,7 @@ interface ContainerProps {
 }
 const SiteContainer: React.FC<ContainerProps> = (props) => {
   const { children } = props
-  const dispatch = useAppDispatch()
 
-  useEffect(() => {
-    dispatch(authCheckState())
-  }, [dispatch])
   const pathname = usePathname()
   const showMessage =
     pathname === "/" ||
