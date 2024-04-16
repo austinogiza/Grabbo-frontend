@@ -23,7 +23,7 @@ const HomePage = () => {
       <HomeWorldClass />
       <HomeOurTeam />
       <HomeLegacy />
-      <AboutDepartment />
+      {/* <AboutDepartment /> */}
       <HomeStaffs />
     </>
   )

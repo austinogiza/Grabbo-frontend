@@ -13,10 +13,10 @@ export const NavbarData: NavbarDataProps[] = [
     title: "About us",
     href: "/about",
   },
-  {
-    title: "Departments",
-    href: "/department",
-  },
+  // {
+  //   title: "Departments",
+  //   href: "/department",
+  // },
   {
     title: "Contact us",
     href: "/contact",
