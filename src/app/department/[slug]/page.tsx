@@ -1,6 +1,7 @@
 import React from "react"
 import DepartmentDetails from "./department-details"
 import { allDepartments } from "contentlayer/generated"
+import { Metadata } from "next"
 type BlogPageProps = {
   params: {
     slug: string
