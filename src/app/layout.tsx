@@ -6,6 +6,8 @@ import "@/styles/globals.css"
 import StyledComponentProvider from "@/provider/StyledComponentProvider"
 import { Toaster } from "sonner"
 import { Metadata } from "next"
+import Head from "next/head"
+import SiteHeader from "@/config/SiteHeader"
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
@@ -57,6 +59,7 @@ export default function RootLayout({
       <ReactQueryProvider>
         <ReduxProvider>
           <html lang="en" suppressHydrationWarning>
+            <SiteHeader />
             <body>
               <Toaster
                 position="top-right"
