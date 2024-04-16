@@ -18,8 +18,7 @@ export const siteConfig: SiteConfig = {
   description:
     "Grabbo Fertility Clinic and Diagnostic Centre is one of the best Medical Centre in Gwarinpa, Abuja, Nigeria. We give you a precise and reliable medical",
   url: "https://grabbofertilityclinic.com",
-  ogImage:
-    "https://res.cloudinary.com/drfdvwyob/image/upload/v1713262481/website/gdxivk1wmlua8bgmte1k.png",
+  ogImage: "https://grabbofertilityclinic.com/og.png",
   links: {
     twitter: "",
   },
