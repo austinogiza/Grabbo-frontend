@@ -6,11 +6,10 @@ import styled from "styled-components"
 
 const BlogHero = () => {
   return (
-    <BlogHeroContainer className="bg-white py-10 sm:py-24 lg:mt-32 mt-20  ">
+    <BlogHeroContainer className="bg-white py-10 lg:mt-32 mt-20  ">
       <div className=" flex flex-col items-start px-6 justify-center max-w-[1180px]  mx-auto">
         <div className="max-w-[650px]">
           <div className=" items-start flex flex-col">
-            {" "}
             <DepartmentSubTextRow> Grabbo Blog</DepartmentSubTextRow>
             <DepartmentHeroTitle>
               Embark on a Journey Towards Better Health.

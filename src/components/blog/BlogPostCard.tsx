@@ -7,6 +7,7 @@ import {
   MediumGrabboHeader6,
 } from "@/styles/TextStyles"
 import SiteImage from "@/utils/SiteImage"
+import { serializeDate } from "@/utils/date"
 import { ArrowUpRight } from "lucide-react"
 import Link from "next/link"
 import React, { FC } from "react"
@@ -48,9 +49,7 @@ const BlogPostCard: FC<BlogPostCardProps> = (props) => {
               <a className="relative z-10 rounded-full bg-primary-50 text-primary-600 px-3 py-1.5 font-medium ">
                 {title}
               </a>
-              <time dateTime={date} className="text-gray-500">
-                {date}
-              </time>
+              <p className="text-gray-500">{serializeDate(date)}</p>
             </div>
             <BlogContentRow className="group relative">
               <div>

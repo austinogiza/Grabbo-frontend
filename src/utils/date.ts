@@ -32,7 +32,7 @@ export const reviewConvertDate = (dateStr: any) => {
   return readableDate
 }
 
-export const serializeDate = (isoDate: string) => {
+export const serializeDate = (isoDate?: any) => {
   const date = new Date(isoDate)
 
   const readableDate = date.toLocaleDateString("en-US", {
