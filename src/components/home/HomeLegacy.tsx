@@ -31,7 +31,7 @@ const HomeLegacy = () => {
 
           <ValuesInfoSubTitle className="max-w-[550px]">
             At Grabbo, we believe that cost should never be a barrier to
-            building a family. That's why we offer transparent pricing and
+            building a family. {"That's"} why we offer transparent pricing and
             flexible financing options to make our world-class fertility
             services accessible to all.
           </ValuesInfoSubTitle>

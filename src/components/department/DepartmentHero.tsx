@@ -1,6 +1,7 @@
 "use client"
 import { grabboColors } from "@/styles/ColorStyles"
 import { GrabboHeader3, GrabboHeaderCaption } from "@/styles/TextStyles"
+import SiteImage from "@/utils/SiteImage"
 import { ArrowRight } from "iconsax-react"
 import { twc } from "react-twc"
 import styled from "styled-components"
@@ -26,7 +27,7 @@ const DepartmentHero = () => {
       </div>
       <div className="relative overflow-hidden pt-16 lg:pt-20 mt-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <img
+          <SiteImage
             className="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-gray-900/10"
             src="/images/staff02.webp"
             alt=""

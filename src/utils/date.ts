@@ -31,3 +31,16 @@ export const reviewConvertDate = (dateStr: any) => {
 
   return readableDate
 }
+
+export const serializeDate = (isoDate: string) => {
+  const date = new Date(isoDate)
+
+  const readableDate = date.toLocaleDateString("en-US", {
+    weekday: "long", // "Monday"
+    year: "numeric", // "2023"
+    month: "long", // "October"
+    day: "numeric", // "31"
+  })
+
+  return `${readableDate} `
+}

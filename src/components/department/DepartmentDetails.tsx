@@ -1,3 +1,4 @@
+import SiteImage from "@/utils/SiteImage"
 import {
   CheckCircleIcon,
   InformationCircleIcon,
@@ -94,7 +95,7 @@ const DepartmentDetails = () => {
               </p>
             </blockquote>
             <figcaption className="mt-6 flex gap-x-4">
-              <img
+              <SiteImage
                 className="h-6 w-6 flex-none rounded-full bg-gray-50"
                 src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                 alt=""
@@ -115,7 +116,7 @@ const DepartmentDetails = () => {
           </p>
         </div>
         <figure className="mt-16">
-          <img
+          <SiteImage
             className="aspect-video rounded-xl bg-gray-50 object-cover"
             src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&w=1310&h=873&q=80&facepad=3"
             alt=""

@@ -1,6 +1,7 @@
 "use client"
 
 import { GrabboHeader6, GrabboHeaderCaptionRegular } from "@/styles/TextStyles"
+import SiteImage from "@/utils/SiteImage"
 import React, { FC } from "react"
 import { twc } from "react-twc"
 import styled from "styled-components"
@@ -13,11 +14,10 @@ const TeamCard: FC<TeamCardProps> = (props) => {
   const { name, photo, position } = props
   return (
     <div>
-      {" "}
       <li>
         <div className="aspect-[14/13] w-full rounded-2xl relative">
           <MainOverlay />
-          <img
+          <SiteImage
             className="aspect-[14/13] w-full rounded-2xl object-cover"
             src={photo}
             alt=""

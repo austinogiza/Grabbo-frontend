@@ -6,6 +6,7 @@ import {
   GrabboHeaderCaption25Large,
   MediumGrabboHeader6,
 } from "@/styles/TextStyles"
+import SiteImage from "@/utils/SiteImage"
 import { ArrowUpRight } from "lucide-react"
 import Link from "next/link"
 import React, { FC } from "react"
@@ -36,7 +37,7 @@ const BlogPostCard: FC<BlogPostCardProps> = (props) => {
       <Link href={`/blog/${postLink}`}>
         <article className="flex flex-col lg:flex-row  items-start gap-10 justify-start my-4 p-4 border border-greyscale-100 bg-greyscale-0 shadow-2  rounded-lg">
           <div className="relative w-full max-w-[550px]">
-            <img
+            <SiteImage
               src={imageUrl}
               alt=""
               className="aspect-[16/9] w-full rounded-md bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"

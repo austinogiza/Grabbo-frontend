@@ -52,7 +52,7 @@ const HomeSpecialty = () => {
           </div>
           <div className="mx-auto w-full my-20 max-w-[750px] flex flex-col  min-h-[250px] items-center justify-center">
             <SectionTitle>
-              Let's find the right solution for your fertility journey.
+              {"Let's"} find the right solution for your fertility journey.
             </SectionTitle>
             <div className="lg:max-w-[450px] max-w-[750px] w-full lg:mx-0 mx-auto flex lg:flex-row flex-col gap-3">
               <PrimaryLinkButton href="contact" title="Book an appointment" />{" "}

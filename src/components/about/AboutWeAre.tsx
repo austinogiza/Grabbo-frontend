@@ -11,6 +11,7 @@ import React from "react"
 import { twc } from "react-twc"
 import styled from "styled-components"
 import AboutShowCase from "./AboutShowCase"
+import SiteImage from "@/utils/SiteImage"
 
 const AboutWeAre = () => {
   return (
@@ -46,7 +47,7 @@ const AboutWeAre = () => {
         </AboutWrapper>{" "}
         <div className="relative overflow-hidden pt-16">
           <div className="mx-auto ">
-            <img
+            <SiteImage
               src="/images/welcome.webp"
               alt="Grabbo Welcome"
               className="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-white/10"

@@ -12,6 +12,7 @@ import {
 import styled from "styled-components"
 import GhostLinkButton from "@/styles/button-container/GhostLinkButton"
 import { Health } from "iconsax-react"
+import SiteImage from "@/utils/SiteImage"
 
 const HomeFeatures = () => {
   return (
@@ -54,7 +55,7 @@ const HomeFeatures = () => {
         </div>
         <div className="relative overflow-hidden pt-16">
           <div className="mx-auto ">
-            <img
+            <SiteImage
               src="/images/diagnostic.webp"
               alt="Grabbo Welcome"
               className="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-white/10"

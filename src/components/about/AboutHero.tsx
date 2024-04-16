@@ -5,6 +5,7 @@ import {
   GrabboHeaderCaption,
   GrabboSubtitle,
 } from "@/styles/TextStyles"
+import SiteImage from "@/utils/SiteImage"
 import { ArrowRight } from "iconsax-react"
 import { twc } from "react-twc"
 import styled from "styled-components"
@@ -30,7 +31,7 @@ const AboutHero = () => {
         <div className="relative overflow-hidden  mt-20 ">
           <MainOverlay />
           <div className="mx-auto max-w-7xl  ">
-            <img
+            <SiteImage
               className="rounded-xl "
               src="/images/abouthero.webp"
               alt="grabbo about us hero"

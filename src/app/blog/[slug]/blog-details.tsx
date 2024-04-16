@@ -7,18 +7,18 @@ import { FC } from "react"
 import { twc } from "react-twc"
 import styled from "styled-components"
 import { getMDXComponent } from "next-contentlayer/hooks"
-import { reviewConvertDate } from "@/utils/date"
+import { serializeDate } from "@/utils/date"
 
 interface BlogPostsProps {
   content?: any
 }
 const BlogDetails: FC<BlogPostsProps> = (props) => {
   const { content } = props
-  // const Content = getMDXComponent(content?.body?.code || "")
+  const Content = getMDXComponent(content?.body?.code || "")
   console.log("contentttt", content)
   return (
     <BlogDetailsContainer className="bg-white py-24 sm:py-32">
-      <div className=" flex flex-col items-center justify-center max-w-[1180px] mx-auto">
+      <div className=" flex flex-col items-center justify-center max-w-[1180px] mx-auto mt-10">
         <ContentInfoRow>
           <Link href="/blog">
             {" "}
@@ -30,7 +30,7 @@ const BlogDetails: FC<BlogPostsProps> = (props) => {
 
           <InfoWrapper>
             <DepartmentSubText className="text-base font-semibold leading-7">
-              Published {reviewConvertDate(content?.date)}
+              Published {serializeDate(content?.date)}
             </DepartmentSubText>
             <DepartmentSubTextRow>Health</DepartmentSubTextRow>
           </InfoWrapper>
@@ -38,12 +38,20 @@ const BlogDetails: FC<BlogPostsProps> = (props) => {
         </ContentInfoRow>
         <DetailedContentContainer>
           <BlogDetailsTitle>{content?.name}</BlogDetailsTitle>
-          <DepartmentMainText className="text-center mt-2 ">
-            {content.description}
-          </DepartmentMainText>
         </DetailedContentContainer>
       </div>
-      <ContentMain>{/* <Content /> */}</ContentMain>
+      <ContentMainImageCover className="text-center mt-2 ">
+        <BlogMainImage
+          src={content.image}
+          alt={`Grabbo Blog ${content.description}`}
+        />
+      </ContentMainImageCover>
+      <ContentMain>
+        <ContentInfoContainer>
+          {" "}
+          <Content />
+        </ContentInfoContainer>
+      </ContentMain>
     </BlogDetailsContainer>
   )
 }
@@ -51,10 +59,7 @@ const DetailedContentContainer = twc.div`
 my-7
 max-w-[850px]
 `
-const BlogDetailsContainer = styled.div`
-  background: url("/images/backgroundpattern.webp") no-repeat center
-    center/contain;
-`
+const BlogDetailsContainer = styled.div``
 
 const ContentInfoRow = twc.div`
 flex flex-row items-center justify-between gap-2
@@ -65,10 +70,22 @@ const InfoNull = twc.div`
 
 
 `
+
+const ContentInfoContainer = twc.div`
+max-w-[950px] mx-auto w-full
+`
+const ContentMainImageCover = twc.div`
+max-w-[950px] mx-auto w-full
+flex items-center justify-center
+
+`
+const BlogMainImage = twc.img`
+max-h-[550px] object-contain
+min-h-[250px]
+`
 const InfoWrapper = twc.div`
 flex flex-row items-center justify-center gap-2
 w-full
-
 max-w-[360px]
 `
 

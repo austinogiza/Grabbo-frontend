@@ -15,8 +15,8 @@ const HomeOurTeam = () => {
         <div className="mt-20 max-w-[750px]">
           <HomeInfoTitle>Our team</HomeInfoTitle>
           <HomeInfoSubTitle>
-            Our dedicated team ensures that here, you're not just a patient;
-            you're part of a community dedicated to helping you achieve your
+            Our dedicated team ensures that here, {"you're"} not just a patient;
+            {"you're"} part of a community dedicated to helping you achieve your
             dreams of parenthood.
           </HomeInfoSubTitle>
         </div>
