@@ -5,7 +5,7 @@ import { twc } from "react-twc"
 const NavbarButtons = () => {
   return (
     <div className="max-w-[210px] mt-[-24px] w-full items-center justify-center flex">
-      <SiteBookButton href="contact" title="Book Appointment" />
+      <SiteBookButton href="contact" title="Book an Appointment" />
     </div>
   )
 }

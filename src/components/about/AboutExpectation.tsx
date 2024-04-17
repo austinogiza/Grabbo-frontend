@@ -25,7 +25,7 @@ const AboutExpectation = () => {
             </div>
           </div>
           <div className="flex lg:flex-row flex-col items-center justify-center w-full gap-2 my-20">
-            {["/images/exceptional01.webp", "/images/exceptional02.webp"].map(
+            {["/images/grabbo-mri.webp", "/images/grabbo-hospital.webp"].map(
               (image, index) => (
                 <ImageWrapper className="" key={index}>
                   <MainOverlay />
@@ -65,7 +65,7 @@ mx-auto
 const MainOverlay = styled.div`
   position: absolute;
   z-index: 2;
-  background: rgba(0, 0, 0, 0.24);
+  background: rgba(0, 0, 0, 0.14);
   top: 0;
   left: 0;
   width: 100%;

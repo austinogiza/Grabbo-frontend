@@ -32,11 +32,14 @@ const AboutHighlight = () => {
             committed to staying at the forefront of reproductive medicine.
           </ValuesInfoSubTitle>
 
-          <PrimaryLinkButton title="Contact us" href="contact" />
+          <div className="max-w-[280px] w-full">
+            {" "}
+            <PrimaryLinkButton title="Book an Appointment" href="contact" />
+          </div>
         </ValuesInfoRow>
         <ValueContainer className="flex lg:flex-row flex-col gap-10 w-full">
           <MainOverlay />
-          <ValueWrapperIcon src="/images/satisfaction.webp" alt="" />
+          <ValueWrapperIcon src="/images/comprehensive.webp" alt="" />
         </ValueContainer>
       </AboutHighlightContainer>
     </div>

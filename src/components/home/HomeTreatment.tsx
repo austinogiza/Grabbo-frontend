@@ -25,9 +25,9 @@ const HomeTreatment = () => {
             health and well-being. Our dedicated team of professionals is here
             to provide exceptional medical care tailored to your needs.
           </ValuesInfoSubTitle>
-          <div className="max-w-[280px] w-full ">
+          <div className="max-w-[340px] w-full ">
             {" "}
-            <PrimaryLinkButton href="contact" title="Get in touch" />
+            <PrimaryLinkButton href="contact" title="Book an Appointment" />
           </div>
         </ValuesInfoRow>{" "}
         <ValueContainer className="flex lg:flex-row flex-col gap-10 w-full">

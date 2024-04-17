@@ -69,8 +69,11 @@ const HomeStaffs = () => {
                     centers in Nigeria. Our unmatched success rates and
                     commitment to innovation define our legacy of excellence.
                   </HomeInfoSubTitle>
-                  <div className="max-w-[160px]">
-                    <PrimaryLinkButton href="contact" title="Get in touch" />
+                  <div className="max-w-[340px]">
+                    <PrimaryLinkButton
+                      href="contact"
+                      title="Book an Appointment"
+                    />
                   </div>
                 </div>
                 <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">

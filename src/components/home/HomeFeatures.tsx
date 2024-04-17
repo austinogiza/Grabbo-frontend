@@ -27,9 +27,10 @@ const HomeFeatures = () => {
             World Class IVF Center In Nigeria
           </SectionTitle>
           <SectionSubText>
-            The leading IVF clinic and diagnostic center in Nigeria. We are at
-            the forefront of reproductive health, offering innovative treatments
-            and comprehensive care in a compassionate, supportive environment.
+            We are at the forefront of reproductive health, offering innovative
+            treatments and comprehensive care in a compassionate, supportive
+            environment which is why we are the leading IVF clinic and
+            diagnostic center in Nigeria.
           </SectionSubText>
         </FeaturesContentRow>{" "}
         <div className="mx-auto  max-w-[1180px]  px-6 lg:my-24 my-16 lg:px-8">
@@ -49,7 +50,7 @@ const HomeFeatures = () => {
           <GhostLinkButton
             href="about"
             iconTrue={true}
-            title="Learn more about us"
+            title="Learn more about Grabbo"
             icon={<Health size={20} color="text-black" />}
           />
         </div>

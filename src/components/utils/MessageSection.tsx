@@ -14,7 +14,7 @@ const MessageSection = () => {
   return (
     <MessageContainer>
       <div className="mx-auto   min-h-[750px] flex items-center justify-center px-6 lg:px-8 relative">
-        <MessageMainImage src="/images/message.webp" alt="Grabbo " />
+        <MessageMainImage src="/images/abuja.webp" alt="Grabbo " />
         <MainOverlay />
         <MessageInfoRow>
           <MessageTitle>Need a Doctor ?</MessageTitle>
@@ -23,7 +23,7 @@ const MessageSection = () => {
             your health priority. Contact us.
           </MessageText>{" "}
           <div className="lg:max-w-[450px] max-w-[750px] w-full lg:mx-0 mx-auto flex lg:flex-row flex-col gap-3">
-            <PrimaryLinkButton href="contact" title="Book an appointment" />{" "}
+            <PrimaryLinkButton href="contact" title="Book an Appointment" />{" "}
             <SecondaryContactButton />
           </div>
         </MessageInfoRow>
@@ -58,7 +58,7 @@ text-center
 const MainOverlay = styled.div`
   position: absolute;
   z-index: 2;
-  background: rgba(0, 0, 0, 0.34);
+  background: rgba(0, 0, 0, 0.44);
   top: 0;
   left: 0;
   width: 100%;

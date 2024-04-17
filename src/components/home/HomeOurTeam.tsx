@@ -36,7 +36,7 @@ const HomeOurTeam = () => {
           ))}
         </ul>
         <div className="lg:max-w-[450px]  max-w-[750px] w-full mt-20 mx-auto flex lg:flex-row flex-col gap-3">
-          <PrimaryLinkButton href="contact" title="Book an appointment" />{" "}
+          <PrimaryLinkButton href="contact" title="Book an Appointment" />{" "}
           <SecondaryContactButton />
         </div>
       </SectionTopWrapper>

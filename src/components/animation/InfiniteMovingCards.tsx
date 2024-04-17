@@ -3,7 +3,6 @@
 import { DepartmentsData } from "@/data/DepartmentData"
 import { cn } from "@/utils/cn"
 import React, { useEffect, useState } from "react"
-import GrabboImageBox from "../department/GrabboImageBox"
 import DepartmentCard from "../department/DepartmentCard"
 
 const InfiniteMovingCards = ({

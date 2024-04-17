@@ -16,22 +16,19 @@ const HomeWorldClass = () => {
     <WorldClassContainer className="w-full items-center justify-center flex min-h-[850px] relative">
       <MainOverlay />
       <div className="max-w-[1180px] mx-auto my-20 flex flex-col items-center justify-center relative z-[10]">
-        {" "}
         <ValuesInfoSubTitle>
           Take the first step towards building your family today.
         </ValuesInfoSubTitle>
         <ValuesInfoTitle>
           We take immense pride in our outstanding IVF success rates
-        </ValuesInfoTitle>{" "}
+        </ValuesInfoTitle>
         <UltimateInfoSubText>
-          {" "}
-          Discover how Grabbo can help make your dreams of parenthood a reality
-          with our world-class fertility services, exceptional IVF success
-          rates, and affordable, compassionate care.
+          At Grabbo we help couples and people make your dreams of parenthood a
+          reality with our high success rate fertility services, exceptional IVF
+          success rates, which we ensure it is very affordable.
         </UltimateInfoSubText>
-        <div className="max-w-[280px] w-full mx-auto">
-          {" "}
-          <GhostLinkButton href="contact" title="Get in touch with us" />
+        <div className="max-w-[340px] w-full mx-auto">
+          <GhostLinkButton href="contact" title="Book an Appointment" />
         </div>
       </div>
     </WorldClassContainer>
@@ -53,14 +50,14 @@ text-center
 max-w-[650px]
 `
 const ValuesInfoSubTitle = twc(GrabboHeader6)`
-text-neutral-100 my-1
+text-primary-50 my-1
 max-w-[950px]
 border border-primary-500 rounded-full px-3 py-2
 `
 const MainOverlay = styled.div`
   position: absolute;
   z-index: 2;
-  background: rgba(0, 0, 0, 0.34);
+  background: rgba(0, 0, 0, 0.54);
   top: 0;
   left: 0;
   width: 100%;
