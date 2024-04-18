@@ -12,7 +12,7 @@ import styled from "styled-components"
 
 const AboutHero = () => {
   return (
-    <AboutHeroContainer className="bg-white py-10 sm:py-24 mt-10 lg:px-0 px-4 ">
+    <AboutHeroContainer className="bg-white py-10 px-4 mt-28 lg:mt-40">
       <div className=" flex flex-col items-start justify-center max-w-[1180px]  mx-auto">
         <div className="max-w-[1180px]">
           <div className=" items-start flex flex-col">
@@ -28,11 +28,11 @@ const AboutHero = () => {
             </AboutMainText>
           </div>
         </div>
-        <div className="relative overflow-hidden  mt-20 ">
+        <div className="relative overflow-hidden  lg:mt-20 mt-10 ">
           <MainOverlay />
           <div className="mx-auto max-w-7xl  ">
             <SiteImage
-              className="rounded-xl "
+              className="rounded-xl w-full"
               src="/images/abouthero.webp"
               alt="grabbo about us hero"
             />

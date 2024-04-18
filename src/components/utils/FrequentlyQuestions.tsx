@@ -39,7 +39,7 @@ const FrequentlyQuestions = () => {
                 title={data.title}
                 isOpen={selectedFAQ === index}
                 number={index}
-                description={data.description}
+                answer={data.answer}
               />
             ))}
           </div>

@@ -33,7 +33,6 @@ const AboutHighlight = () => {
           </ValuesInfoSubTitle>
 
           <div className="max-w-[280px] w-full">
-            {" "}
             <PrimaryLinkButton title="Book an Appointment" href="contact" />
           </div>
         </ValuesInfoRow>

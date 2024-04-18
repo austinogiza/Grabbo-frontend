@@ -15,13 +15,13 @@ import { grabboColors } from "@/styles/ColorStyles"
 
 interface FAQAccordionProps {
   title?: string
-  description?: any
+  answer?: any
   clickHandler?: (number?: any) => void
   isOpen?: boolean
   number?: number
 }
 const FAQAccordion: FC<FAQAccordionProps> = (props) => {
-  const { title, description, clickHandler, isOpen, number } = props
+  const { title, answer, clickHandler, isOpen, number } = props
   return (
     <motion.div className="max-w-[880px] mx-auto my-4 cursor-pointer">
       <FAQRowWrapper isOpen={isOpen} onClick={() => clickHandler?.(number)}>
@@ -43,7 +43,7 @@ const FAQAccordion: FC<FAQAccordionProps> = (props) => {
           <QuestionsTitle>{title}</QuestionsTitle>
           <QuestionsSubText
             isOpen={isOpen}
-            dangerouslySetInnerHTML={{ __html: description }}
+            dangerouslySetInnerHTML={{ __html: answer }}
           />
         </div>
       </FAQRowWrapper>

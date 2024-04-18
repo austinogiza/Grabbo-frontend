@@ -58,6 +58,9 @@ export const GrabboHeader3 = styled.h3`
   @media only screen and (max-width: 800px) {
     font-size: 32px;
   }
+  @media only screen and (max-width: 650px) {
+    font-size: 26px;
+  }
 `
 export const GrabboHeader3Regular = styled.h3`
   font-family: "Geist-Regular";
@@ -179,6 +182,9 @@ export const GrabboHeader7 = styled.h4`
   line-height: 1.4;
   @media only screen and (max-width: 800px) {
     font-size: 19px;
+  }
+  @media only screen and (max-width: 650px) {
+    font-size: 16px;
   }
 `
 
