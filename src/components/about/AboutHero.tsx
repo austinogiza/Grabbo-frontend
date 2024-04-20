@@ -3,7 +3,6 @@ import {
   GrabboHeader3,
   GrabboHeader7,
   GrabboHeaderCaption,
-  GrabboSubtitle,
 } from "@/styles/TextStyles"
 import SiteImage from "@/utils/SiteImage"
 import { ArrowRight } from "iconsax-react"
@@ -12,7 +11,7 @@ import styled from "styled-components"
 
 const AboutHero = () => {
   return (
-    <AboutHeroContainer className="bg-white py-10 px-4 mt-28 lg:mt-40">
+    <AboutHeroContainer className="bg-white py-10 px-4 mt-28 lg:mt-40  ">
       <div className=" flex flex-col items-start justify-center max-w-[1180px]  mx-auto">
         <div className="max-w-[1180px]">
           <div className=" items-start flex flex-col">
@@ -22,9 +21,10 @@ const AboutHero = () => {
             </AboutHeroTitle>
             <AboutMainText>
               Grabbo Fertility Clinic® is a world-class fertility center in
-              Gwarimpa Abuja. With more than 10 years of collective reproductive
-              clinic experience diagnosing and treating infertility, GFC is a
-              leading provider of IVF and fertility care in the Nigeria.
+              Gwarimpa Abuja. With MainFAQDataore than 10 years of collective
+              reproductive clinic experience diagnosing and treating
+              infertility, GFC is a leading provider of IVF and fertility care
+              in the Nigeria.
             </AboutMainText>
           </div>
         </div>

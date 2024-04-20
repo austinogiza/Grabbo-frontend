@@ -1,12 +1,10 @@
 "use client"
 
-import { DepartmentsData } from "@/data/DepartmentData"
 import DepartmentCard from "./DepartmentCard"
 import styled from "styled-components"
 import { allDepartments } from "contentlayer/generated"
 
 const DepartmentSection = () => {
-  const departments = allDepartments
   return (
     <div className="bg-white py-24 sm:py-32">
       <DepartmentContainer>
