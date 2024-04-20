@@ -1,8 +1,8 @@
-import React from "react"
+import React, { FC, useMemo } from "react"
 import DepartmentDetails from "./department-details"
 import { allDepartments } from "contentlayer/generated"
 import { Metadata } from "next"
-type BlogPageProps = {
+type DepartmentPageProps = {
   params: {
     slug: string
   }
@@ -23,7 +23,7 @@ async function getDocFromParams(params: any) {
 }
 export async function generateMetadata({
   params,
-}: BlogPageProps): Promise<Metadata> {
+}: DepartmentPageProps): Promise<Metadata> {
   const post = await getDocFromParams(params)
 
   if (!post) {
@@ -57,12 +57,23 @@ export async function generateMetadata({
     },
   }
 }
-const page = () => {
+
+const DepartmentPage: FC<DepartmentPageProps> = (props) => {
+  const { slug } = props.params
+  const departmentInfo: any = useMemo(
+    () =>
+      allDepartments?.find(
+        (post: any) =>
+          String(post.slug).trim().toLowerCase() ===
+          String(slug).trim().toLowerCase()
+      ),
+    [slug]
+  )
   return (
     <>
-      <DepartmentDetails />
+      <DepartmentDetails content={departmentInfo} />
     </>
   )
 }
 
-export default page
+export default DepartmentPage

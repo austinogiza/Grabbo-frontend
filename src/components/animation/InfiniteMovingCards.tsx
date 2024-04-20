@@ -4,6 +4,7 @@ import { DepartmentsData } from "@/data/DepartmentData"
 import { cn } from "@/utils/cn"
 import React, { useEffect, useState } from "react"
 import DepartmentCard from "../department/DepartmentCard"
+import { allDepartments } from "contentlayer/generated"
 
 const InfiniteMovingCards = ({
   direction = "left",
@@ -81,15 +82,14 @@ const InfiniteMovingCards = ({
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
-        {DepartmentsData.map((post, index: number) => (
-          <div className="mx-auto w-full max-w-[550px]" key={index}>
-            <DepartmentCard
-              key={post.id}
-              title={post.title}
-              departmentLink={post.href}
-              imageUrl={post.imageUrl}
-            />{" "}
-          </div>
+        {allDepartments.map((post) => (
+          <DepartmentCard
+            key={post._id}
+            title={post.name}
+            departmentLink={post.slug}
+            description={post.description}
+            imageUrl={post.image}
+          />
         ))}
       </ul>
     </div>

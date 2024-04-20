@@ -24,14 +24,25 @@ const SiteContainer: React.FC<ContainerProps> = (props) => {
     pathname === "/department" ||
     pathname.startsWith("/department") ||
     pathname.startsWith("/blog")
+  const showFAQSection = pathname === "/" || pathname === "/about"
+  const showSection =
+    pathname === "/" ||
+    pathname === "/about" ||
+    pathname === "/department" ||
+    pathname === "/blog"
   return (
     <>
       <SiteNavbar />
       {children}
 
-      {showMessage ? (
+      {showFAQSection ? (
         <>
+          {" "}
           <FrequentlyQuestions />
+        </>
+      ) : null}
+      {showSection ? (
+        <>
           <MessageSection />
         </>
       ) : null}

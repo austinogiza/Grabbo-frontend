@@ -56,7 +56,7 @@ const DepartmentCover = styled.div<DepartmentInfoProps>`
   align-items: center;
   justify-content: flex-end;
   padding: 12px 24px;
-  border-radius: 20px;
+  border-radius: 32px;
   background: ${(props) =>
     props.imageUrl && `url(${props.imageUrl}) no-repeat center center/cover`};
 `
@@ -68,7 +68,7 @@ w-full
 `
 const MainOverlay = styled.div`
   position: absolute;
-  border-radius: 20px;
+  border-radius: 32px;
   z-index: 2;
   background: rgba(0, 0, 0, 0.44);
   top: 0;

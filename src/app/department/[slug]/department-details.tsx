@@ -1,14 +1,21 @@
 "use client"
 import { grabboColors } from "@/styles/ColorStyles"
 import { GrabboHeader4, GrabboHeaderCaption } from "@/styles/TextStyles"
+import { serializeDate } from "@/utils/date"
 import { ArrowLeft } from "iconsax-react"
+import { getMDXComponent } from "next-contentlayer/hooks"
 import Link from "next/link"
+import { FC } from "react"
 import { twc } from "react-twc"
 import styled from "styled-components"
-
-const DepartmentDetails = () => {
+interface DepartmentDetailsProps {
+  content?: any
+}
+const DepartmentDetails: FC<DepartmentDetailsProps> = (props) => {
+  const { content } = props
+  const Content = getMDXComponent(content?.body?.code || "")
   return (
-    <DepartmentDetailsContainer className="bg-white py-24 sm:py-32">
+    <DepartmentDetailsContainer className="bg-white px-4 pt-44">
       <div className=" flex flex-col items-center justify-center max-w-[1180px] mx-auto">
         <ContentInfoRow>
           <Link href="/department">
@@ -21,24 +28,26 @@ const DepartmentDetails = () => {
 
           <InfoWrapper>
             <DepartmentSubText className="text-base font-semibold leading-7">
-              Published 20 Jan 2024
+              Published {serializeDate(content?.date)}
             </DepartmentSubText>
             <DepartmentSubTextRow>Health</DepartmentSubTextRow>
           </InfoWrapper>
           <InfoNull />
-        </ContentInfoRow>
+        </ContentInfoRow>{" "}
         <DetailedContentContainer>
-          <DepartmentDetailsTitle>
-            Our medical departments
-          </DepartmentDetailsTitle>
-          <DepartmentMainText className="text-center mt-2 ">
-            At Grabbo we are dedicated to providing exceptional healthcare
-            services across a wide range of medical fields. Discover the
-            comprehensive care we offer through our specialized departments.
-          </DepartmentMainText>
+          <DepartmentDetailsTitle>{content?.name}</DepartmentDetailsTitle>
         </DetailedContentContainer>
+        <ContentMainImageCover className="text-center mt-2 ">
+          <DepartmentMainImage
+            src={content.image}
+            alt={`Grabbo Department ${content.description}`}
+          />
+        </ContentMainImageCover>{" "}
+        <ContentMain>
+          {" "}
+          <Content />
+        </ContentMain>
       </div>
-      <ContentMain></ContentMain>
     </DepartmentDetailsContainer>
   )
 }
@@ -50,7 +59,15 @@ const DepartmentDetailsContainer = styled.div`
   background: url("/images/backgroundpattern.webp") no-repeat center
     center/contain;
 `
-
+const DepartmentMainImage = twc.img`
+max-h-[550px] object-contain
+min-h-[250px]
+`
+const ContentMainImageCover = twc.div`
+max-w-[950px] mx-auto w-full
+flex items-center justify-center
+mb-10
+`
 const ContentInfoRow = twc.div`
 flex flex-row items-center justify-between gap-2
 w-full
@@ -89,8 +106,8 @@ const ContentMain = styled.div`
     min-height: 550px !important;
   }
   h1 {
-    font-family: "Geist-Bold";
-    font-size: 88px;
+    font-family: "Geist-Medium";
+    font-size: 44px;
     font-weight: 500;
     line-height: 1.2;
     margin: 8px 0;
@@ -112,7 +129,7 @@ const ContentMain = styled.div`
   h2 {
     text-align: left !important;
     font-family: "Geist-Medium";
-    font-size: 64px;
+    font-size: 32px;
     font-weight: 500;
     margin: 8px 0;
     line-height: 1.2;
@@ -124,8 +141,8 @@ const ContentMain = styled.div`
     text-align: left !important;
     margin: 8px 0;
     font-family: "Geist-Medium";
-    font-size: 44px;
-    font-weight: 600;
+    font-size: 24px;
+    font-weight: 500;
     line-height: 1.2;
     @media only screen and (max-width: 800px) {
       font-size: 32px;

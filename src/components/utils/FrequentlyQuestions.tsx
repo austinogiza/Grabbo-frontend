@@ -20,6 +20,7 @@ const FrequentlyQuestions = () => {
     if (selectedFAQ === number) return
     setSelectedFAQ(number)
   }
+
   return (
     <div className="bg-white w-full min-h-[650px]">
       <div className="flex flex-col items-center gap-0-10 justify-center max-w-[1180px] mx-auto lg:my-20 my-10 px-4">

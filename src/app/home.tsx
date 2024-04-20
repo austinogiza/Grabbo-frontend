@@ -1,5 +1,6 @@
 "use client"
 
+import AboutDepartment from "@/components/about/AboutDepartment"
 import HomeFeatures from "@/components/home/HomeFeatures"
 import HomeFertility from "@/components/home/HomeFertility"
 import HomeHero from "@/components/home/HomeHero"
@@ -23,7 +24,7 @@ const HomePage = () => {
       <HomeSpecialty />
       <HomeOurTeam />
       <HomeLegacy />
-      {/* <AboutDepartment /> */}
+      <AboutDepartment />
       <HomeStaffs />
     </>
   )

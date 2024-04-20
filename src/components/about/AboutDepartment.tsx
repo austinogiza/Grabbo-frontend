@@ -31,7 +31,7 @@ const AboutDepartment = () => {
           <div className="max-w-[280px]">
             <GhostLinkButton
               href="department"
-              title="Checkout our departments"
+              title="Check out our departments"
             />
           </div>
         </div>

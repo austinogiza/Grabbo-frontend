@@ -16,7 +16,7 @@ const BlogDetails: FC<BlogPostsProps> = (props) => {
   const { content } = props
   const Content = getMDXComponent(content?.body?.code || "")
   return (
-    <BlogDetailsContainer className="bg-white py-24 sm:py-32">
+    <BlogDetailsContainer className="bg-white py-24 sm:py-32 ">
       <div className=" flex flex-col items-center justify-center max-w-[1180px] mx-auto mt-10">
         <ContentInfoRow>
           <Link href="/blog">
@@ -110,8 +110,8 @@ const ContentMain = styled.div`
     min-height: 550px !important;
   }
   h1 {
-    font-family: "Geist-Bold";
-    font-size: 88px;
+    font-family: "Geist-Medium";
+    font-size: 44px;
     font-weight: 500;
     line-height: 1.2;
     margin: 8px 0;
@@ -133,7 +133,7 @@ const ContentMain = styled.div`
   h2 {
     text-align: left !important;
     font-family: "Geist-Medium";
-    font-size: 64px;
+    font-size: 32px;
     font-weight: 500;
     margin: 8px 0;
     line-height: 1.2;
@@ -145,8 +145,8 @@ const ContentMain = styled.div`
     text-align: left !important;
     margin: 8px 0;
     font-family: "Geist-Medium";
-    font-size: 44px;
-    font-weight: 600;
+    font-size: 24px;
+    font-weight: 500;
     line-height: 1.2;
     @media only screen and (max-width: 800px) {
       font-size: 32px;
