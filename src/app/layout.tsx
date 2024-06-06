@@ -4,6 +4,7 @@ import "@/styles/globals.css"
 import StyledComponentProvider from "@/provider/StyledComponentProvider"
 import { Toaster } from "sonner"
 import { siteConfig } from "@/config/site"
+import Head from "next/head"
 // import Head from "next/head"
 // import SiteHeader from "@/config/SiteHeader"
 // export const metadata: Metadata = {
@@ -74,6 +75,16 @@ export default function RootLayout({
     <StyledComponentProvider>
       <ReactQueryProvider>
         <html lang="en" suppressHydrationWarning>
+          <Head>
+            {" "}
+            <link
+              rel="preload"
+              href="/fonts/Geist/Geist-Regular.otf"
+              as="font"
+              type="font/otf"
+              crossOrigin="anonymous"
+            />
+          </Head>
           <body>
             <Toaster
               position="top-right"
