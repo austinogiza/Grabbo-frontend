@@ -31,7 +31,9 @@ const NavbarColumn: FC<NavbarColumnProps> = (props) => {
             : "lg:text-white py-1 px-1 group-hover:text-primary-600 "
         }  text-white`}
       >
-        <Link href={`${href}`}>{title}</Link>
+        <Link href={`${href}`} prefetch={true}>
+          {title}
+        </Link>
       </NavbarItem>
     </NavbarContainer>
   )

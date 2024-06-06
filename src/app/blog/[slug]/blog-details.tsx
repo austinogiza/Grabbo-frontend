@@ -19,7 +19,7 @@ const BlogDetails: FC<BlogPostsProps> = (props) => {
     <BlogDetailsContainer className="bg-white py-24 sm:py-32 ">
       <div className=" flex flex-col items-center justify-center max-w-[1180px] mx-auto mt-10">
         <ContentInfoRow>
-          <Link href="/blog">
+          <Link href="/blog" prefetch={true}>
             {" "}
             <BackButtonCover>
               <DepartmentArrow />

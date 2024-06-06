@@ -18,7 +18,7 @@ const DepartmentDetails: FC<DepartmentDetailsProps> = (props) => {
     <DepartmentDetailsContainer className="bg-white px-4 pt-44">
       <div className=" flex flex-col items-center justify-center max-w-[1180px] mx-auto">
         <ContentInfoRow>
-          <Link href="/department">
+          <Link href="/department" prefetch={true}>
             {" "}
             <BackButtonCover>
               <DepartmentArrow />

@@ -50,6 +50,7 @@ const FrequentlyQuestions = () => {
               {" "}
               Can’t find the answer you’re looking for?{" "}
               <Link
+                prefetch={true}
                 href="/contact"
                 className="font-semibold text-indigo-600 hover:text-indigo-500"
               >

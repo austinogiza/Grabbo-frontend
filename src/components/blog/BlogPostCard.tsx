@@ -35,7 +35,7 @@ const BlogPostCard: FC<BlogPostCardProps> = (props) => {
   } = props
   return (
     <>
-      <Link href={`/blog/${postLink}`}>
+      <Link href={`/blog/${postLink}`} prefetch={true}>
         <article className="flex flex-col lg:flex-row  items-start gap-10 justify-start my-4 p-4 border border-greyscale-100 bg-greyscale-0 shadow-2  rounded-lg">
           <div className="relative w-full max-w-[550px]">
             <SiteImage

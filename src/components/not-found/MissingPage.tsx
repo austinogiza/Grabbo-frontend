@@ -57,6 +57,7 @@ const MissingPage = () => {
           </ul>
           <div className="mt-10 flex justify-center">
             <Link
+              prefetch={true}
               href="/"
               className="text-sm flex flex-row font-semibold leading-6 text-primary-600 bg-primary-50 px-5 py-2 hover:bg-primary-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 rounded-full hover:border hover:border-primary-600 duration-200"
             >
