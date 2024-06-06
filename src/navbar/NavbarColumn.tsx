@@ -17,7 +17,8 @@ const NavbarColumn: FC<NavbarColumnProps> = (props) => {
     pathname?.startsWith("/department") ||
     pathname?.startsWith("/blog")
   return (
-    <>
+    <div>
+      {" "}
       <Link href={`${href}`} prefetch={true}>
         <NavbarContainer
           className={`${
@@ -34,10 +35,10 @@ const NavbarColumn: FC<NavbarColumnProps> = (props) => {
             }  text-white`}
           >
             {title}
-          </NavbarItem>
+          </NavbarItem>{" "}
         </NavbarContainer>
       </Link>
-    </>
+    </div>
   )
 }
 
