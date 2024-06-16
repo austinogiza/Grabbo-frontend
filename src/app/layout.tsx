@@ -5,49 +5,8 @@ import StyledComponentProvider from "@/provider/StyledComponentProvider"
 import { Toaster } from "sonner"
 import { siteConfig } from "@/config/site"
 import Head from "next/head"
-// import Head from "next/head"
-// import SiteHeader from "@/config/SiteHeader"
-// export const metadata: Metadata = {
-//   title: {
-//     default: siteConfig.name,
-//     template: `%s | ${siteConfig.name}`,
-//   },
-//   description: siteConfig.description,
-//   keywords: [],
-//   authors: [
-//     {
-//       name: `${siteConfig.name}`,
-//       url: `${siteConfig.url}`,
-//     },
-//   ],
-//   creator: `${siteConfig.name}`,
-//   themeColor: [
-//     { media: "(prefers-color-scheme: light)", color: "white" },
-//     { media: "(prefers-color-scheme: dark)", color: "black" },
-//   ],
-//   openGraph: {
-//     type: "website",
-//     locale: "en_US",
-//     url: siteConfig.url,
-//     title: siteConfig.name,
-//     description: siteConfig.description,
-//     siteName: siteConfig.name,
-//   },
+import Script from "next/script"
 
-//   twitter: {
-//     card: "summary_large_image",
-//     title: siteConfig.name,
-//     description: siteConfig.description,
-//     images: `${siteConfig.ogImage}`,
-//     creator: `${siteConfig.name}`,
-//   },
-//   icons: {
-//     icon: "/favicon.ico",
-//     shortcut: "/favicon-16x16.png",
-//     apple: "/apple-touch-icon.png",
-//   },
-//   manifest: `${siteConfig.url}/site.webmanifest`,
-// }
 export const metadata = {
   title: `${siteConfig.title}`,
   description: `${siteConfig.description}`,
@@ -76,7 +35,6 @@ export default function RootLayout({
       <ReactQueryProvider>
         <html lang="en" suppressHydrationWarning>
           <Head>
-            {" "}
             <link
               rel="preload"
               href="/fonts/Geist/Geist-Regular.otf"
@@ -93,6 +51,22 @@ export default function RootLayout({
               visibleToasts={1}
             />
             <SiteContainer>{children}</SiteContainer>
+            <Script
+              strategy="afterInteractive"
+              src="https://www.googletagmanager.com/gtag/js?id=G-FRS6TMLZL3"
+            />
+            <Script
+              id="gtag-init"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', 'G-FRS6TMLZL3');
+                `,
+              }}
+            />
           </body>
         </html>
       </ReactQueryProvider>
