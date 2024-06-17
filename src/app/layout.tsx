@@ -42,6 +42,27 @@ export default function RootLayout({
               type="font/otf"
               crossOrigin="anonymous"
             />
+            <link
+              rel="preload"
+              href="/fonts/Geist/Geist-Medium.otf"
+              as="font"
+              type="font/otf"
+              crossOrigin="anonymous"
+            />
+            <link
+              rel="preload"
+              href="/fonts/Geist/Geist-Bold.otf"
+              as="font"
+              type="font/otf"
+              crossOrigin="anonymous"
+            />
+            <link
+              rel="preload"
+              href="/fonts/Geist/Geist-SemiBold.otf"
+              as="font"
+              type="font/otf"
+              crossOrigin="anonymous"
+            />
           </Head>
           <body>
             <Toaster
