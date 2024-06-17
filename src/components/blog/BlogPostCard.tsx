@@ -9,6 +9,7 @@ import {
 import SiteImage from "@/utils/SiteImage"
 import { serializeDate } from "@/utils/date"
 import { ArrowUpRight } from "lucide-react"
+import Image from "next/image"
 import Link from "next/link"
 import React, { FC } from "react"
 import { twc } from "react-twc"
@@ -29,26 +30,28 @@ const BlogPostCard: FC<BlogPostCardProps> = (props) => {
     date,
 
     title,
-
+category,
     postLink,
     description,
   } = props
   return (
     <>
+
       <Link href={`/blog/${postLink}`} prefetch={true}>
-        <article className="flex flex-col lg:flex-row  items-start gap-10 justify-start my-4 p-4 border border-greyscale-100 bg-greyscale-0 shadow-2  rounded-lg">
-          <div className="relative w-full max-w-[550px]">
-            <SiteImage
-              src={imageUrl}
+        <article className="flex flex-col lg:flex-row transition-all duration-300 hover:border-neutral-600 group  items-start gap-10 justify-start my-4 p-4 border border-greyscale-100 bg-greyscale-0 shadow-2  rounded-xl">
+          <div className="relative w-full max-w-[450px] min-h-[350px]">
+            <SiteImageContainer
+              src={`${imageUrl}`}
               alt=""
-              className="aspect-[16/9] w-full rounded-md bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
+              fill
+              className="aspect-[16/9] transition-all duration-300 group-hover:border-primary-200 w-full rounded-lg border border-gray-100 object-cover  max-w-[450px] min-h-[350px]"
             />
           </div>
           <div className="max-w-[800px] ml-2 mt-6">
             <div className="mt-8 flex items-center gap-x-4 text-xs">
-              <a className="relative z-10 rounded-full bg-primary-50 text-primary-600 px-3 py-1.5 font-medium ">
-                {title}
-              </a>
+              <p className="relative z-10 rounded-full bg-primary-50 capitalize text-primary-600 px-3 py-1.5 font-medium ">
+                {category}
+              </p>
               <p className="text-gray-500">{serializeDate(date)}</p>
             </div>
             <BlogContentRow className="group relative">
@@ -66,6 +69,10 @@ const BlogPostCard: FC<BlogPostCardProps> = (props) => {
     </>
   )
 }
+
+const SiteImageContainer = twc(Image)`
+
+`
 const BlogContentRow = twc.div`
 flex flex-col justify-between items-start
 `
@@ -77,16 +84,17 @@ mt-2 line-clamp-3
 `
 const BlogArrow = twc(ArrowUpRight)`
 text-black w-6 h-6 ml-2
-duration-200
+transition-all duration-300
 group-hover:text-white
-group-hover:border-primary-200
+group-hover:border-none
+group-hover:rotate-45
 `
 
 const CardReadMore = twc(GrabboHeaderCaption25Large)`
 border border-black rounded-full px-3 py-2 flex flex-row items-center justify-center
-hover:bg-primary-800  duration-200 hover:border-primary-200 hover:text-white
+hover:bg-primary-800  transition-all duration-300 hover:border-none hover:text-white
 group-hover:text-white
 group-hover:bg-primary-800
-group-hover:border-primary-200
+group-hover:border-none
 mt-8`
 export default BlogPostCard
