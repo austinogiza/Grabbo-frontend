@@ -203,9 +203,9 @@ const ContentMain = styled.div`
   }
   strong,
   b {
-    font-family: "SharpGrotesk-Medium25";
+    font-family: "Geist-SemiBold";
     font-weight: 600 !important;
-    font-size: 18px;
+    font-size: 22px;
   }
   img {
     width: 100%;
