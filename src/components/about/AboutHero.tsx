@@ -21,7 +21,7 @@ const AboutHero = () => {
             </AboutHeroTitle>
             <AboutMainText>
               Grabbo Fertility Clinic® is a world-class fertility center in
-              Gwarimpa Abuja. With MainFAQDataore than 10 years of collective
+              Gwarimpa Abuja. With more than 10 years of collective
               reproductive clinic experience diagnosing and treating
               infertility, GFC is a leading provider of IVF and fertility care
               in the Nigeria.
