@@ -3,11 +3,22 @@ import { twc } from "react-twc"
 import BlogPostCard from "./BlogPostCard"
 import { BlogPostsData } from "@/data/BlogData"
 import { allBlogs, Blog } from "contentlayer/generated"
+import { useEffect, useState } from "react"
 
 const BlogContent = () => {
+  const [blogData, setBlogData] = useState<any>(undefined)
+  useEffect(() => {
+    if (!allBlogs) return
+    const data = allBlogs.sort(
+      (a: any, b: any) =>
+        new Date(b.date).getTime() - new Date(a.date).getTime()
+    )
+    setBlogData(data)
+  }, [allBlogs])
+
   return (
     <BlogContainer>
-      {allBlogs?.map((post) => (
+      {blogData?.map((post: any) => (
         <BlogPostCard
           key={post._id}
           title={post.name}

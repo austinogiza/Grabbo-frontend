@@ -30,21 +30,20 @@ const BlogPostCard: FC<BlogPostCardProps> = (props) => {
     date,
 
     title,
-category,
+    category,
     postLink,
     description,
   } = props
   return (
     <>
-
       <Link href={`/blog/${postLink}`} prefetch={true}>
         <article className="flex flex-col lg:flex-row transition-all duration-300 hover:border-neutral-600 group  items-start gap-10 justify-start my-4 p-4 border border-greyscale-100 bg-greyscale-0 shadow-2  rounded-xl">
-          <div className="relative w-full max-w-[450px] min-h-[350px]">
+          <div className="relative w-full max-w-[400px] min-h-[350px]">
             <SiteImageContainer
               src={`${imageUrl}`}
               alt=""
               fill
-              className="aspect-[16/9] transition-all duration-300 group-hover:border-primary-200 w-full rounded-lg border border-gray-100 object-cover  max-w-[450px] min-h-[350px]"
+              className="aspect-[16/9] transition-all duration-300 group-hover:border-primary-200 w-full rounded-lg border border-gray-100 object-cover  max-w-[400px] min-h-[350px]"
             />
           </div>
           <div className="max-w-[800px] ml-2 mt-6">
