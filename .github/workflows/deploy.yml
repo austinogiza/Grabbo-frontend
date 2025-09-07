@@ -1,4 +1,4 @@
-name: Deploy Next.js App to Nginx
+name: Grabbo Frontend NGINX Deployment
 
 on:
   push:
