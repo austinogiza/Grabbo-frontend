@@ -187,6 +187,15 @@ export const GrabboHeader7 = styled.h4`
     font-size: 16px;
   }
 `
+export const GrabboBlogTitle = styled.h3`
+  font-family: "Geist-SemiBold";
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  @media only screen and (max-width: 800px) {
+    font-size: 16px;
+  }
+`
 
 export const GrabboLargeBody = styled.h3`
   font-family: "Geist-Regular";

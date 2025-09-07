@@ -46,7 +46,7 @@ const DepartmentHeroContainer = styled.div`
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
-  background-color: ${grabboColors.warmLightBG};
+  background-color: ${grabboColors.cleanBg};
 `
 
 const DepartmentSubText = twc(GrabboHeaderCaption)`
@@ -56,8 +56,8 @@ bg-white rounded-full px-3 py-1
 const DepartmentSubTextRow = twc(GrabboHeaderCaption)`
 flex flex-row items-center justify-center gap-2
 bg-primary-50 text-primary-800  rounded-full
-px-2 py-1
-border border-primary-500
+px-1.5 py-1 cursor-pointer
+border-[0.5px] border-primary-500
 mb-2
 
 `

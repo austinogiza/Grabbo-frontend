@@ -25,7 +25,7 @@ const BlogHeroContainer = styled.div``
 const DepartmentSubTextRow = twc(GrabboHeaderCaption)`
 flex flex-row items-center justify-center gap-2
 bg-primary-50 text-primary-800  rounded-full
-px-2 py-1
+px-3 py-1
 border border-primary-500
 mb-2
 `
