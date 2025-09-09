@@ -10,8 +10,7 @@ const BlogContent = () => {
   useEffect(() => {
     if (!allBlogs) return
     const data = allBlogs.sort(
-      (a: any, b: any) =>
-        new Date(b.date).getTime() - new Date(a.date).getTime()
+      (a: any, b: any) => Number(b.number) - Number(a.number)
     )
     setBlogData(data)
   }, [allBlogs])

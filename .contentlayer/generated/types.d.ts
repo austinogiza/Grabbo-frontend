@@ -14,6 +14,7 @@ export type Blog = {
   _raw: Local.RawDocumentData
   type: 'Blog'
   name: string
+  number?: number | undefined
   description?: string | undefined
   date: IsoDateTimeString
   featured?: boolean | undefined
