@@ -75,7 +75,7 @@ export const GhostButton = styled(Link)`
   outline: none;
   cursor: pointer;
   padding: 14px 8px;
-  border: 1px solid ${grabboColors.outlineColor};
+  border: 1px solid ${grabboColors.primary[600]};
   font-family: "Geist-Medium";
   font-size: 15px;
   font-style: normal;
@@ -88,8 +88,8 @@ export const GhostButton = styled(Link)`
     transition: 0.4s ease-in;
   }
   &:hover {
-    border: 1px solid ${grabboColors.outlineColor};
-    background: ${grabboColors.dark};
+    border: 1px solid ${grabboColors.primary[600]};
+    background: ${grabboColors.primary[600]};
     transition: 0.4s ease-in;
     color: ${grabboColors.white};
   }
@@ -115,7 +115,7 @@ export const GhostHrefButton = styled.button`
   outline: none;
   cursor: pointer;
   padding: 14px 8px;
-  border: 1px solid ${grabboColors.outlineColor};
+  border: 1px solid ${grabboColors.primary[600]};
   font-family: "Geist-Medium";
   font-size: 15px;
   font-style: normal;
@@ -128,8 +128,8 @@ export const GhostHrefButton = styled.button`
     transition: 0.4s ease-in;
   }
   &:hover {
-    border: 1px solid ${grabboColors.outlineColor};
-    background: ${grabboColors.dark};
+    border: 1px solid ${grabboColors.primary[600]};
+    background: ${grabboColors.primary[600]};
     transition: 0.4s ease-in;
     color: ${grabboColors.white};
   }

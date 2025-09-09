@@ -4,8 +4,8 @@ import blog__advancingFertilityCareCriticalRoleRadiologyGrabboMdx from './blog__
 import blog__doubleJoyBeautifulTwinSuccessStoryGrabboFertilityClinicMdx from './blog__double-joy-beautiful-twin-success-story-grabbo-fertility-clinic.mdx.json' assert { type: 'json' }
 import blog__grabbosStateArtCtScanServicesMdx from './blog__grabbos-state-art-ct-scan-services.mdx.json' assert { type: 'json' }
 import blog__megaPromo_2024Mdx from './blog__mega-promo-2024.mdx.json' assert { type: 'json' }
+import blog__megaPromo_2025Mdx from './blog__mega-promo-2025.mdx.json' assert { type: 'json' }
 import blog__specialIvfOfferGrabboFertilityClinicMdx from './blog__special-ivf-offer-grabbo-fertility-clinic.mdx.json' assert { type: 'json' }
 import blog__understandingUrologyServicesJustKidneyCareGrabboMdx from './blog__understanding-urology-services-just-kidney-care-grabbo.mdx.json' assert { type: 'json' }
-import blog__megaPromo_2025Mdx from './blog__mega-promo-2025.mdx.json' assert { type: 'json' }
 
-export const allBlogs = [blog__advancingFertilityCareCriticalRoleRadiologyGrabboMdx, blog__doubleJoyBeautifulTwinSuccessStoryGrabboFertilityClinicMdx, blog__grabbosStateArtCtScanServicesMdx, blog__megaPromo_2024Mdx, blog__specialIvfOfferGrabboFertilityClinicMdx, blog__understandingUrologyServicesJustKidneyCareGrabboMdx, blog__megaPromo_2025Mdx]
+export const allBlogs = [blog__advancingFertilityCareCriticalRoleRadiologyGrabboMdx, blog__doubleJoyBeautifulTwinSuccessStoryGrabboFertilityClinicMdx, blog__grabbosStateArtCtScanServicesMdx, blog__megaPromo_2024Mdx, blog__megaPromo_2025Mdx, blog__specialIvfOfferGrabboFertilityClinicMdx, blog__understandingUrologyServicesJustKidneyCareGrabboMdx]

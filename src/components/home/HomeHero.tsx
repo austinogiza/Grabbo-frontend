@@ -6,10 +6,10 @@ import styled from "styled-components"
 
 const HomeHero = () => {
   return (
-    <HomeContainer className="relative after:absolute after:inset-0 after:z-2 after:bg-gradient-to-b after:from-black/40 after:to-black/0 before:absolute before:inset-0 before:z-1 before:bg-radial-gradient before:opacity-40">
+    <HomeContainer className="relative after:absolute after:inset-0 after:z-2 after:bg-gradient-to-b after:from-black/40 after:to-black/0 before:absolute before:inset-0 before:z-1 before:bg-radial-gradient before:opacity-40 min-h-[800px]">
       <MainOverlay />
       <div className="max-w-[1180px] mx-auto relative z-[2] px-6">
-        <div className="container relative z-3 flex items-end min-h-[750px] pb-24">
+        <div className="container relative z-3 flex items-end min-h-[800px] pb-32">
           <div className="flex flex-col mb-20">
             <ValuesInfoTitle>
               Your Health,Your Fertility, Our Mission

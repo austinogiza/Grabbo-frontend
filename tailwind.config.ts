@@ -28,7 +28,7 @@ module.exports = {
         smokeWhite: "#f4f4f5",
         snowWhite: "#F6F7F9",
         smoothBG: "#FFFDFB",
-        outlineColor: "#DEE0E3",
+
         strokeColor: "#C2C8DC",
         warmLightBG: "#fdf6ec",
         coolLightBG: "#fff8e2",
