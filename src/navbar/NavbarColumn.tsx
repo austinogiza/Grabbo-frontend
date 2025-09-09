@@ -19,7 +19,7 @@ const NavbarColumn: FC<NavbarColumnProps> = (props) => {
   return (
     <div>
       {" "}
-      <Link href={`${href}`} prefetch={true}>
+      <Link href={`${href}`} prefetch>
         <NavbarContainer
           className={`${
             isDark
